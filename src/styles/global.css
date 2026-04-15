@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #EA580C;
-  --color-primary-dark: #C2410C;
-  --color-primary-light: #FFF7ED;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-cream: #FCF9F2;
+  --color-charcoal: #2D2D2D;
+  --color-saffron: #FF9933;
+  --color-primary: #FF9933;
+  --color-primary-dark: #E68A2E;
+  --color-primary-light: #FFF5E6;
   --color-primary-100: #FFEDD5;
-  --color-primary-200: #FED7AA;
-  --color-text: #1A1A1A;
-  --color-text-light: #6B7280;
-  --color-bg: #FFFFFF;
-  --color-bg-light: #F9FAFB;
-  --color-border: #E5E7EB;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-primary-200: #FFD699;
+  --color-text: #2D2D2D;
+  --color-text-light: #7A7570;
+  --color-bg: #FCF9F2;
+  --color-bg-light: #F5F0E8;
+  --color-border: #E5E0D8;
 }
 
 @layer base {
@@ -19,9 +23,6 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: var(--font-sans);
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    -webkit-font-smoothing: antialiased;
+    @apply bg-cream text-charcoal font-sans antialiased selection:bg-saffron/30;
   }
 }
