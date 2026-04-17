@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import dailyData from '../data/daily-horoscope.json';
 
 const signs = [
   { id: "aries", symbol: "\u2648", nameEn: "Mesha", subEn: "Aries", nameHi: "\u092E\u0947\u0937", subHi: "Aries" },
@@ -183,6 +184,10 @@ const signs = [
   }
 </style>
 
+<script is:inline define:vars={{ dailyJson: JSON.stringify(dailyData) }}>
+  window.__dailyData = JSON.parse(dailyJson);
+</script>
+
 <script>
   const signsData = [
     {
@@ -306,6 +311,18 @@ const signs = [
       probability: 76
     }
   ];
+
+  // Override guidance with daily-generated data from build pipeline
+  const _daily = (window as any).__dailyData;
+  if (_daily?.signs) {
+    for (const sign of signsData) {
+      const d = _daily.signs.find((s: any) => s.id === sign.id);
+      if (d) {
+        sign.guidance = d.guidance;
+        sign.probability = d.probability;
+      }
+    }
+  }
 
   const uiText: Record<string, Record<string, string>> = {
     en: {
