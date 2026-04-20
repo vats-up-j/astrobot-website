@@ -1,121 +1,121 @@
 {
-  "date": "2026-04-19",
+  "date": "2026-04-20",
   "panchang": {
     "tithi": {
-      "en": "Shukla Tritiya",
-      "hi": "शुक्ल तृतीया"
+      "en": "Shukla Chaturthi",
+      "hi": "शुक्ल चतुर्थी"
     },
     "nakshatra": {
-      "en": "Krittika",
-      "hi": "कृत्तिका"
+      "en": "Rohini",
+      "hi": "रोहिणी"
     },
     "yoga": {
-      "en": "Ayushman",
-      "hi": "आयुष्मान"
+      "en": "Shobhana",
+      "hi": "शोभन"
     },
     "karana": {
-      "en": "Taitila",
-      "hi": "तैतिल"
+      "en": "Vanija",
+      "hi": "वणिज"
     },
     "var": {
-      "en": "Sunday",
-      "hi": "रविवार"
+      "en": "Monday",
+      "hi": "सोमवार"
     }
   },
   "signs": [
     {
       "id": "aries",
       "guidance": {
-        "en": "The Moon's presence in your 2 house stirs finances and family bonds for you today, Mesha. With Sun in your 1 house, a steady approach to self-expression and personal energy serves you well. Balance ambition with caution — weigh your options carefully today.",
-        "hi": "आपके 2 भाव में चंद्रमा की उपस्थिति आज वित्त और पारिवारिक संबंध को प्रेरित करती है, मेष। आपके 1 भाव में सूर्य के साथ, आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा के प्रति स्थिर दृष्टिकोण आपके लिए अच्छा रहेगा। महत्वाकांक्षा और सावधानी में संतुलन बनाएं — आज अपने विकल्पों को ध्यान से तौलें।"
+        "en": "Today the Moon illuminates your 2 house, Mesha. Expect a focus on finances and family bonds. Sun steadily moves through your 1 house, keeping self-expression and personal energy in balance. A day of mixed energies — focus on what you can control.",
+        "hi": "आज चंद्रमा आपके 2 भाव को प्रकाशित कर रहा है, मेष। वित्त और पारिवारिक संबंध पर ध्यान केंद्रित रहेगा। सूर्य आपके 1 भाव से स्थिर गति से गुजर रहा है, आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा में संतुलन बनाए रखता है। मिश्रित ऊर्जा का दिन — जो आपके नियंत्रण में है उस पर ध्यान दें।"
       },
       "probability": 75
     },
     {
       "id": "taurus",
       "guidance": {
-        "en": "Today the Moon illuminates your 1 house, Vrishabha. Expect a focus on self-expression and personal energy. The grace of Venus in your 1 house supports growth in self-expression and personal energy. A good day to take initiative — the stars support bold moves.",
-        "hi": "आज चंद्रमा आपके 1 भाव को प्रकाशित कर रहा है, वृषभ। आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा पर ध्यान केंद्रित रहेगा। आपके 1 भाव में शुक्र की कृपा आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा में विकास का समर्थन करती है। पहल करने का अच्छा दिन — ग्रह साहसिक कदमों का समर्थन करते हैं।"
+        "en": "With the Moon transiting your 1 house, self-expression and personal energy takes center stage today, Vrishabha. Venus's supportive presence in your 1 house brings opportunities in self-expression and personal energy. Channel this positive energy into your most important goals.",
+        "hi": "वृषभ, चंद्रमा आपके 1 भाव में गोचर कर रहा है — आज आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा केंद्र में रहेगा। आपके 1 भाव में शुक्र की अनुकूल उपस्थिति आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा में अवसर लाती है। इस सकारात्मक ऊर्जा को अपने सबसे महत्वपूर्ण लक्ष्यों में लगाएं।"
       },
       "probability": 95
     },
     {
       "id": "gemini",
       "guidance": {
-        "en": "With the Moon transiting your 12 house, introspection, spirituality, and rest takes center stage today, Mithuna. The grace of Jupiter in your 1 house supports growth in self-expression and personal energy. Channel this positive energy into your most important goals.",
-        "hi": "मिथुन, चंद्रमा आपके 12 भाव में गोचर कर रहा है — आज आत्मनिरीक्षण, आध्यात्मिकता और विश्राम केंद्र में रहेगा। आपके 1 भाव में बृहस्पति की कृपा आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा में विकास का समर्थन करती है। इस सकारात्मक ऊर्जा को अपने सबसे महत्वपूर्ण लक्ष्यों में लगाएं।"
+        "en": "Mithuna, the lunar energy today highlights introspection, spirituality, and rest as the Moon moves through your 12 house. Jupiter's supportive presence in your 1 house brings opportunities in self-expression and personal energy. Favorable alignments make this a productive day for decisive action.",
+        "hi": "मिथुन, चंद्र ऊर्जा आज आत्मनिरीक्षण, आध्यात्मिकता और विश्राम को उजागर करती है जब चंद्रमा आपके 12 भाव से गुजर रहा है। आपके 1 भाव में बृहस्पति की अनुकूल उपस्थिति आत्म-अभिव्यक्ति और व्यक्तिगत ऊर्जा में अवसर लाती है। अनुकूल ग्रह स्थिति इसे निर्णायक कार्रवाई के लिए उत्पादक दिन बनाती है।"
       },
       "probability": 87
     },
     {
       "id": "cancer",
       "guidance": {
-        "en": "Karka, the lunar energy today highlights gains, friendships, and aspirations as the Moon moves through your 11 house. Be mindful of Saturn's influence on your 9 house — fortune, higher learning, and long journeys requires extra care today. Patience and flexibility will be your greatest strengths today.",
-        "hi": "कर्क, चंद्र ऊर्जा आज लाभ, मित्रता और आकांक्षाएं को उजागर करती है जब चंद्रमा आपके 11 भाव से गुजर रहा है। आपके 9 भाव पर शनि के प्रभाव के प्रति सचेत रहें — भाग्य, उच्च शिक्षा और लंबी यात्राएं को आज अतिरिक्त ध्यान की आवश्यकता है। धैर्य और लचीलापन आज आपकी सबसे बड़ी ताकत होगी।"
+        "en": "The Moon's presence in your 11 house stirs gains, friendships, and aspirations for you today, Karka. Saturn in your 9 house calls for patience regarding fortune, higher learning, and long journeys. Balance ambition with caution — weigh your options carefully today.",
+        "hi": "आपके 11 भाव में चंद्रमा की उपस्थिति आज लाभ, मित्रता और आकांक्षाएं को प्रेरित करती है, कर्क। आपके 9 भाव में शनि भाग्य, उच्च शिक्षा और लंबी यात्राएं के संबंध में धैर्य की मांग करता है। महत्वाकांक्षा और सावधानी में संतुलन बनाएं — आज अपने विकल्पों को ध्यान से तौलें।"
       },
       "probability": 75
     },
     {
       "id": "leo",
       "guidance": {
-        "en": "The Moon's presence in your 10 house stirs career and public reputation for you today, Simha. The grace of Venus in your 10 house supports growth in career and public reputation. A day of mixed energies — focus on what you can control.",
-        "hi": "आपके 10 भाव में चंद्रमा की उपस्थिति आज करियर और सार्वजनिक प्रतिष्ठा को प्रेरित करती है, सिंह। आपके 10 भाव में शुक्र की कृपा करियर और सार्वजनिक प्रतिष्ठा में विकास का समर्थन करती है। मिश्रित ऊर्जा का दिन — जो आपके नियंत्रण में है उस पर ध्यान दें।"
+        "en": "Today the Moon illuminates your 10 house, Simha. Expect a focus on career and public reputation. Venus's supportive presence in your 10 house brings opportunities in career and public reputation. Stay adaptable — the day brings both opportunities and small challenges.",
+        "hi": "आज चंद्रमा आपके 10 भाव को प्रकाशित कर रहा है, सिंह। करियर और सार्वजनिक प्रतिष्ठा पर ध्यान केंद्रित रहेगा। आपके 10 भाव में शुक्र की अनुकूल उपस्थिति करियर और सार्वजनिक प्रतिष्ठा में अवसर लाती है। अनुकूल बने रहें — दिन अवसर और छोटी चुनौतियां दोनों लाता है।"
       },
       "probability": 75
     },
     {
       "id": "virgo",
       "guidance": {
-        "en": "Today the Moon illuminates your 9 house, Kanya. Expect a focus on fortune, higher learning, and long journeys. The grace of Jupiter in your 10 house supports growth in career and public reputation. Stay adaptable — the day brings both opportunities and small challenges.",
-        "hi": "आज चंद्रमा आपके 9 भाव को प्रकाशित कर रहा है, कन्या। भाग्य, उच्च शिक्षा और लंबी यात्राएं पर ध्यान केंद्रित रहेगा। आपके 10 भाव में बृहस्पति की कृपा करियर और सार्वजनिक प्रतिष्ठा में विकास का समर्थन करती है। अनुकूल बने रहें — दिन अवसर और छोटी चुनौतियां दोनों लाता है।"
+        "en": "With the Moon transiting your 9 house, fortune, higher learning, and long journeys takes center stage today, Kanya. Jupiter's supportive presence in your 10 house brings opportunities in career and public reputation. Patience and flexibility will be your greatest strengths today.",
+        "hi": "कन्या, चंद्रमा आपके 9 भाव में गोचर कर रहा है — आज भाग्य, उच्च शिक्षा और लंबी यात्राएं केंद्र में रहेगा। आपके 10 भाव में बृहस्पति की अनुकूल उपस्थिति करियर और सार्वजनिक प्रतिष्ठा में अवसर लाती है। धैर्य और लचीलापन आज आपकी सबसे बड़ी ताकत होगी।"
       },
       "probability": 79
     },
     {
       "id": "libra",
       "guidance": {
-        "en": "With the Moon transiting your 8 house, transformation and deep change takes center stage today, Tula. The grace of Jupiter in your 9 house supports growth in fortune, higher learning, and long journeys. Channel this positive energy into your most important goals.",
-        "hi": "तुला, चंद्रमा आपके 8 भाव में गोचर कर रहा है — आज परिवर्तन और गहरा बदलाव केंद्र में रहेगा। आपके 9 भाव में बृहस्पति की कृपा भाग्य, उच्च शिक्षा और लंबी यात्राएं में विकास का समर्थन करती है। इस सकारात्मक ऊर्जा को अपने सबसे महत्वपूर्ण लक्ष्यों में लगाएं।"
+        "en": "Tula, the lunar energy today highlights transformation and deep change as the Moon moves through your 8 house. Jupiter's supportive presence in your 9 house brings opportunities in fortune, higher learning, and long journeys. Favorable alignments make this a productive day for decisive action.",
+        "hi": "तुला, चंद्र ऊर्जा आज परिवर्तन और गहरा बदलाव को उजागर करती है जब चंद्रमा आपके 8 भाव से गुजर रहा है। आपके 9 भाव में बृहस्पति की अनुकूल उपस्थिति भाग्य, उच्च शिक्षा और लंबी यात्राएं में अवसर लाती है। अनुकूल ग्रह स्थिति इसे निर्णायक कार्रवाई के लिए उत्पादक दिन बनाती है।"
       },
       "probability": 83
     },
     {
       "id": "scorpio",
       "guidance": {
-        "en": "Vrishchika, the lunar energy today highlights partnerships and relationships as the Moon moves through your 7 house. Be mindful of Saturn's influence on your 5 house — creativity, romance, and learning requires extra care today. Favorable alignments make this a productive day for decisive action.",
-        "hi": "वृश्चिक, चंद्र ऊर्जा आज साझेदारी और रिश्ते को उजागर करती है जब चंद्रमा आपके 7 भाव से गुजर रहा है। आपके 5 भाव पर शनि के प्रभाव के प्रति सचेत रहें — रचनात्मकता, प्रेम और शिक्षा को आज अतिरिक्त ध्यान की आवश्यकता है। अनुकूल ग्रह स्थिति इसे निर्णायक कार्रवाई के लिए उत्पादक दिन बनाती है।"
+        "en": "The Moon's presence in your 7 house stirs partnerships and relationships for you today, Vrishchika. Saturn in your 5 house calls for patience regarding creativity, romance, and learning. Trust your instincts and make the most of this favorable energy.",
+        "hi": "आपके 7 भाव में चंद्रमा की उपस्थिति आज साझेदारी और रिश्ते को प्रेरित करती है, वृश्चिक। आपके 5 भाव में शनि रचनात्मकता, प्रेम और शिक्षा के संबंध में धैर्य की मांग करता है। अपनी प्रवृत्ति पर भरोसा करें और इस अनुकूल ऊर्जा का अधिकतम लाभ उठाएं।"
       },
       "probability": 83
     },
     {
       "id": "sagittarius",
       "guidance": {
-        "en": "The Moon's presence in your 6 house stirs health, routine, and overcoming obstacles for you today, Dhanu. The grace of Jupiter in your 7 house supports growth in partnerships and relationships. Stay adaptable — the day brings both opportunities and small challenges.",
-        "hi": "आपके 6 भाव में चंद्रमा की उपस्थिति आज स्वास्थ्य, दिनचर्या और बाधाओं पर विजय को प्रेरित करती है, धनु। आपके 7 भाव में बृहस्पति की कृपा साझेदारी और रिश्ते में विकास का समर्थन करती है। अनुकूल बने रहें — दिन अवसर और छोटी चुनौतियां दोनों लाता है।"
+        "en": "Today the Moon illuminates your 6 house, Dhanu. Expect a focus on health, routine, and overcoming obstacles. Jupiter's supportive presence in your 7 house brings opportunities in partnerships and relationships. Patience and flexibility will be your greatest strengths today.",
+        "hi": "आज चंद्रमा आपके 6 भाव को प्रकाशित कर रहा है, धनु। स्वास्थ्य, दिनचर्या और बाधाओं पर विजय पर ध्यान केंद्रित रहेगा। आपके 7 भाव में बृहस्पति की अनुकूल उपस्थिति साझेदारी और रिश्ते में अवसर लाती है। धैर्य और लचीलापन आज आपकी सबसे बड़ी ताकत होगी।"
       },
       "probability": 79
     },
     {
       "id": "capricorn",
       "guidance": {
-        "en": "Today the Moon illuminates your 5 house, Makara. Expect a focus on creativity, romance, and learning. The grace of Venus in your 5 house supports growth in creativity, romance, and learning. A day of mixed energies — focus on what you can control.",
-        "hi": "आज चंद्रमा आपके 5 भाव को प्रकाशित कर रहा है, मकर। रचनात्मकता, प्रेम और शिक्षा पर ध्यान केंद्रित रहेगा। आपके 5 भाव में शुक्र की कृपा रचनात्मकता, प्रेम और शिक्षा में विकास का समर्थन करती है। मिश्रित ऊर्जा का दिन — जो आपके नियंत्रण में है उस पर ध्यान दें।"
+        "en": "With the Moon transiting your 5 house, creativity, romance, and learning takes center stage today, Makara. Venus's supportive presence in your 5 house brings opportunities in creativity, romance, and learning. Stay adaptable — the day brings both opportunities and small challenges.",
+        "hi": "मकर, चंद्रमा आपके 5 भाव में गोचर कर रहा है — आज रचनात्मकता, प्रेम और शिक्षा केंद्र में रहेगा। आपके 5 भाव में शुक्र की अनुकूल उपस्थिति रचनात्मकता, प्रेम और शिक्षा में अवसर लाती है। अनुकूल बने रहें — दिन अवसर और छोटी चुनौतियां दोनों लाता है।"
       },
       "probability": 75
     },
     {
       "id": "aquarius",
       "guidance": {
-        "en": "With the Moon transiting your 4 house, home life and emotional well-being takes center stage today, Kumbha. The grace of Jupiter in your 5 house supports growth in creativity, romance, and learning. Channel this positive energy into your most important goals.",
-        "hi": "कुंभ, चंद्रमा आपके 4 भाव में गोचर कर रहा है — आज गृह जीवन और भावनात्मक कल्याण केंद्र में रहेगा। आपके 5 भाव में बृहस्पति की कृपा रचनात्मकता, प्रेम और शिक्षा में विकास का समर्थन करती है। इस सकारात्मक ऊर्जा को अपने सबसे महत्वपूर्ण लक्ष्यों में लगाएं।"
+        "en": "Kumbha, the lunar energy today highlights home life and emotional well-being as the Moon moves through your 4 house. Jupiter's supportive presence in your 5 house brings opportunities in creativity, romance, and learning. Favorable alignments make this a productive day for decisive action.",
+        "hi": "कुंभ, चंद्र ऊर्जा आज गृह जीवन और भावनात्मक कल्याण को उजागर करती है जब चंद्रमा आपके 4 भाव से गुजर रहा है। आपके 5 भाव में बृहस्पति की अनुकूल उपस्थिति रचनात्मकता, प्रेम और शिक्षा में अवसर लाती है। अनुकूल ग्रह स्थिति इसे निर्णायक कार्रवाई के लिए उत्पादक दिन बनाती है।"
       },
       "probability": 83
     },
     {
       "id": "pisces",
       "guidance": {
-        "en": "Meena, the lunar energy today highlights communication and short journeys as the Moon moves through your 3 house. The grace of Jupiter in your 4 house supports growth in home life and emotional well-being. Stay adaptable — the day brings both opportunities and small challenges.",
-        "hi": "मीन, चंद्र ऊर्जा आज संचार और छोटी यात्राएं को उजागर करती है जब चंद्रमा आपके 3 भाव से गुजर रहा है। आपके 4 भाव में बृहस्पति की कृपा गृह जीवन और भावनात्मक कल्याण में विकास का समर्थन करती है। अनुकूल बने रहें — दिन अवसर और छोटी चुनौतियां दोनों लाता है।"
+        "en": "The Moon's presence in your 3 house stirs communication and short journeys for you today, Meena. Jupiter's supportive presence in your 4 house brings opportunities in home life and emotional well-being. Patience and flexibility will be your greatest strengths today.",
+        "hi": "आपके 3 भाव में चंद्रमा की उपस्थिति आज संचार और छोटी यात्राएं को प्रेरित करती है, मीन। आपके 4 भाव में बृहस्पति की अनुकूल उपस्थिति गृह जीवन और भावनात्मक कल्याण में अवसर लाती है। धैर्य और लचीलापन आज आपकी सबसे बड़ी ताकत होगी।"
       },
       "probability": 75
     }
