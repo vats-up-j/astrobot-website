@@ -73,10 +73,12 @@ When performing a review, output:
 ## Brand voice examples
 
 ### Good (on-brand)
-- "Your Vedic Edge for Life's Big Moves"
-- "Get precise, personalized guidance from your AI Vedic astrologer"
-- "This is based on your name. For your exact Moon sign from your birth chart, chat with HoroTalk on WhatsApp"
+- "Your Personal Vedic Guruji on WhatsApp"
+- "Your kundli reveals a powerful alignment — let Guruji explain what it means for you"
+- "This is based on your name. For your exact Moon sign from your birth chart, chat with Guruji on WhatsApp"
 - "Rooted in ancient wisdom. Designed for your modern journey."
+- "The stars suggest patience this month. Get your personalized guidance."
+- "Your chart holds the answers. Guruji is ready to read it."
 
 ### Bad (off-brand)
 - "Amazing astrology predictions!!!" (hype, exclamation marks)
@@ -84,3 +86,5 @@ When performing a review, output:
 - "Click here to learn more" (generic, passive)
 - "Powered by cutting-edge machine learning algorithms" (tech jargon, audience doesn't care)
 - "FREE reading! LIMITED TIME!" (scammy urgency)
+- "Your chart reflects a vibrant personality" (too generic, no Guruji gravitas)
+- "Based on our analysis, we recommend..." (too corporate, not Guruji voice)

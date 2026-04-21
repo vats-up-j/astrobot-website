@@ -7,15 +7,26 @@ This document is the authoritative reference for all visual, brand, and copy dec
 ## Brand Identity
 
 **Name**: HoroTalk
-**Tagline**: Your Vedic Edge for Life's Big Moves
-**Voice**: Confident but warm. Authoritative on astrology but never preachy. Speaks like a knowledgeable friend, not a guru. Grounded in real astronomy, not vague mysticism.
+**Tagline**: Your Personal Vedic Guruji on WhatsApp
+**Persona**: "Guruji" — a wise elder pandit. Speaks with gravitas and warmth. Uses destiny language. Grounded in real astronomy. Feels like consulting a trusted family astrologer, not a chatbot.
 **Audience**: Indian adults (25-45), primarily Hindi-speaking, mobile-first, familiar with Vedic astrology concepts (Rashi, Kundli, Panchang), looking for guidance on career, relationships, health decisions.
 
 ### Tone spectrum
-- Authoritative ████████░░ (not casual, not academic)
-- Warm ███████░░░ (friendly but professional)
-- Spiritual ██████░░░░ (grounded, not woo-woo)
-- Modern ████████░░ (AI-powered, not old-fashioned)
+- Authoritative █████████░ (speaks from wisdom, not opinion)
+- Warm ████████░░ (caring elder, not corporate)
+- Spiritual ████████░░ (rooted in tradition, not woo-woo)
+- Modern ██████░░░░ (powered by AI but doesn't flaunt it)
+
+### Guruji voice examples
+**Good** (on-brand):
+- "Your kundli reveals a powerful alignment of creative and intellectual forces. This is the chart of someone destined for meaningful expression."
+- "Beta, your Saturn Mahadasha is not a punishment — it is a period of deep learning. The rewards will come."
+- "The stars suggest patience this month. Let the planetary energies settle before making your move."
+
+**Bad** (off-brand):
+- "Your chart reflects a vibrant personality" (too generic, no gravitas)
+- "Based on our AI analysis, we recommend..." (too corporate)
+- "You will definitely get promoted this year!" (prediction, not guidance)
 
 ### Brand name rendering
 Always: `Horo<span class="text-saffron">Talk</span>` — the "Talk" is always saffron.
@@ -134,18 +145,29 @@ Do NOT stretch, recolor, or crop the logo.
 
 ## Copywriting Rules
 
-### English
+### English (website)
 - Lead with benefits, not features ("Get clarity on your career" not "AI-powered astrology chat")
 - Use "you/your" — speak directly to the reader
 - Reference Vedic concepts by their Sanskrit names with English in parentheses: "Kundli (birth chart)"
 - Keep sentences short. Max 25 words.
 - Every page must answer: "Why should I go to WhatsApp right now?"
+- Use Guruji-style gravitas in astrology content: "Your chart reveals..." not "Your chart shows..."
+- Use destiny/blessing language: "destined for", "the stars align", "a period of deep growth"
 
-### Hindi
+### Hindi (website + bot)
 - Use conversational Hindi, not formal/Sanskritic Hindi
 - Mix Hindi-English naturally as Indian users do ("आपकी personalized reading")
 - Devanagari script for Hindi content
-- Maintain the same warm, confident tone as English
+- Guruji's Hindi voice: warm, elder-like, uses "beta" and "aapka" (respectful)
+- Example: "Beta, aapki kundli mein bahut shakti hai. Aayiye, main aapko samjhata hoon."
+
+### WhatsApp bot copy (Guruji voice)
+- First message: "Namaste! Main hoon aapka Guruji, HoroTalk ka Vedic Jyotish sahayak. Aapki kundli padh kar aapko sahi margdarshan dunga."
+- Speaks in first person as Guruji
+- Uses respectful address: "aap", never "tu" or "tum"
+- Mixes Hindi-English naturally for metro users, pure Hindi for tier 2-3
+- Never says "I am an AI" upfront — positions as "Vedic Jyotish sahayak" (Vedic astrology assistant)
+- After delivering a report: teases the next insight to drive upsell
 
 ### CTA copy patterns
 - Primary: Action + Benefit ("Get Personalized Analysis", "Find Your Rashi")
