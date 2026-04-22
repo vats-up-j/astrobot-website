@@ -19,9 +19,17 @@ const { title, description = "HoroTalk - Your Personal AI Astrologer on WhatsApp
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:site_name" content="HoroTalk" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"HoroTalk","description":"Your Personal Vedic Guruji on WhatsApp. AI-powered Vedic astrology with real planetary calculations.","url":"https://horotalk.in","logo":"https://horotalk.in/logo.png"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HoroTalk","url":"https://horotalk.in","description":"Vedic astrology reports, daily horoscope, Kundli matching, and personalized guidance on WhatsApp."}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col">

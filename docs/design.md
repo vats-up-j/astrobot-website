@@ -174,6 +174,7 @@ Do NOT stretch, recolor, or crop the logo.
 - WhatsApp: Always include the WhatsApp icon SVG before text
 - Urgency (soft): "Today's reading", not "Limited time offer"
 - Never: ALL CAPS CTAs, exclamation marks, "Click here"
+- **NEVER use em dashes (—) in any live user-facing text.** Use periods, commas, or separate sentences instead. This applies to all page copy, generated horoscope text, CTA text, and template strings.
 
 ### Astrology content guidelines
 - Always specify "Vedic" when referring to the sidereal system

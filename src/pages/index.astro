@@ -16,172 +16,260 @@ const signs = [
   { id: "aquarius", symbol: "\u2652", nameEn: "Kumbha", subEn: "Aquarius", nameHi: "\u0915\u0941\u0902\u092D", subHi: "Aquarius" },
   { id: "pisces", symbol: "\u2653", nameEn: "Meena", subEn: "Pisces", nameHi: "\u092E\u0940\u0928", subHi: "Pisces" },
 ];
+
+const faqs = [
+  { q: { en: "What is Janam Kundli and why does it matter?", hi: "\u091C\u0928\u094D\u092E \u0915\u0941\u0902\u0921\u0932\u0940 \u0915\u094D\u092F\u093E \u0939\u0948 \u0914\u0930 \u092F\u0939 \u092E\u0939\u0924\u094D\u0935\u092A\u0942\u0930\u094D\u0923 \u0915\u094D\u092F\u094B\u0902 \u0939\u0948?" }, a: { en: "Your Janam Kundli is a map of the sky at the exact moment you were born. It records the positions of all nine planets across 12 houses, each governing a different area of your life. From career timing to relationship compatibility, your Kundli holds the blueprint. HoroTalk calculates it using degree-level planetary data, not generic tables, so every chart is unique to you.", hi: "\u091C\u0928\u094D\u092E \u0915\u0941\u0902\u0921\u0932\u0940 \u0906\u092A\u0915\u0947 \u091C\u0928\u094D\u092E \u0915\u0947 \u0938\u092E\u092F \u0906\u0915\u093E\u0936 \u0915\u093E \u0928\u0915\u094D\u0936\u093E \u0939\u0948\u0964 \u092F\u0939 \u0928\u094C \u0917\u094D\u0930\u0939\u094B\u0902 \u0915\u0940 12 \u092D\u093E\u0935\u094B\u0902 \u092E\u0947\u0902 \u0938\u094D\u0925\u093F\u0924\u093F \u0926\u0930\u094D\u091C \u0915\u0930\u0924\u0940 \u0939\u0948\u0964 \u0915\u0930\u093F\u092F\u0930 \u0938\u0947 \u0930\u093F\u0936\u094D\u0924\u094B\u0902 \u0924\u0915, \u0938\u092C \u0915\u0941\u091B \u0907\u0938\u092E\u0947\u0902 \u091B\u093F\u092A\u093E \u0939\u0948\u0964 HoroTalk \u0921\u093F\u0917\u094D\u0930\u0940-\u0938\u094D\u0924\u0930 \u0915\u0940 \u0917\u0923\u0928\u093E \u0915\u0930\u0924\u093E \u0939\u0948, \u0907\u0938\u0932\u093F\u090F \u0939\u0930 \u0915\u0941\u0902\u0921\u0932\u0940 \u0905\u0928\u0942\u0920\u0940 \u0939\u094B\u0924\u0940 \u0939\u0948\u0964" } },
+  { q: { en: "How does HoroTalk calculate my birth chart?", hi: "HoroTalk \u092E\u0947\u0930\u0940 \u0915\u0941\u0902\u0921\u0932\u0940 \u0915\u0948\u0938\u0947 \u092C\u0928\u093E\u0924\u093E \u0939\u0948?" }, a: { en: "HoroTalk uses Swiss Ephemeris-grade astronomical algorithms to compute the exact longitude of each planet at your birth time. We apply the Lahiri ayanamsa to convert tropical positions to the Vedic sidereal zodiac. This is the same method used by professional Vedic astrologers, but delivered in seconds through AI trained on classical texts like Brihat Parashara Hora Shastra and Phaladeepika.", hi: "HoroTalk Swiss Ephemeris \u0938\u094D\u0924\u0930 \u0915\u0947 \u0916\u0917\u094B\u0932\u0940\u092F \u090F\u0932\u094D\u0917\u094B\u0930\u093F\u0926\u092E \u0938\u0947 \u0939\u0930 \u0917\u094D\u0930\u0939 \u0915\u0940 \u0938\u091F\u0940\u0915 \u0938\u094D\u0925\u093F\u0924\u093F \u0917\u0923\u0928\u093E \u0915\u0930\u0924\u093E \u0939\u0948\u0964 \u0932\u093E\u0939\u093F\u0930\u0940 \u0905\u092F\u0928\u093E\u0902\u0936 \u0932\u093E\u0917\u0942 \u0915\u0930 \u0935\u0948\u0926\u093F\u0915 \u0938\u093E\u092F\u0928 \u0930\u093E\u0936\u093F\u091A\u0915\u094D\u0930 \u092E\u0947\u0902 \u092C\u0926\u0932\u093E \u091C\u093E\u0924\u093E \u0939\u0948\u0964 \u092F\u0939\u0940 \u0924\u0930\u0940\u0915\u093E \u092A\u0947\u0936\u0947\u0935\u0930 \u091C\u094D\u092F\u094B\u0924\u093F\u0937\u0940 \u0909\u092A\u092F\u094B\u0917 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964" } },
+  { q: { en: "What is the difference between Vedic and Western astrology?", hi: "\u0935\u0948\u0926\u093F\u0915 \u0914\u0930 \u092A\u0936\u094D\u091A\u093F\u092E\u0940 \u091C\u094D\u092F\u094B\u0924\u093F\u0937 \u092E\u0947\u0902 \u0915\u094D\u092F\u093E \u0905\u0902\u0924\u0930 \u0939\u0948?" }, a: { en: "Vedic astrology (Jyotish) uses the sidereal zodiac, which tracks the actual positions of stars as they appear in the sky today. Western astrology uses the tropical zodiac, which is based on the seasons and has drifted roughly 24 degrees from the real star positions over centuries. Vedic astrology also includes the Vimshottari Dasha system, a powerful timing tool that maps which planet rules each phase of your life. This is why Vedic readings tend to be more specific about when events will unfold.", hi: "\u0935\u0948\u0926\u093F\u0915 \u091C\u094D\u092F\u094B\u0924\u093F\u0937 \u0924\u093E\u0930\u094B\u0902 \u0915\u0940 \u0935\u093E\u0938\u094D\u0924\u0935\u093F\u0915 \u0938\u094D\u0925\u093F\u0924\u093F \u092A\u0930 \u0906\u0927\u093E\u0930\u093F\u0924 \u0939\u0948\u0964 \u092A\u0936\u094D\u091A\u093F\u092E\u0940 \u091C\u094D\u092F\u094B\u0924\u093F\u0937 \u092E\u094C\u0938\u092E\u094B\u0902 \u092A\u0930 \u0906\u0927\u093E\u0930\u093F\u0924 \u0939\u0948 \u0914\u0930 \u0938\u0926\u093F\u092F\u094B\u0902 \u092E\u0947\u0902 \u0932\u0917\u092D\u0917 24 \u0905\u0902\u0936 \u0916\u093F\u0938\u0915 \u0917\u0908 \u0939\u0948\u0964 \u0935\u0948\u0926\u093F\u0915 \u092E\u0947\u0902 \u0935\u093F\u092E\u094D\u0936\u094B\u0924\u094D\u0924\u0930\u0940 \u0926\u0936\u093E \u092A\u094D\u0930\u0923\u093E\u0932\u0940 \u092D\u0940 \u0939\u0948 \u091C\u094B \u092C\u0924\u093E\u0924\u0940 \u0939\u0948 \u0915\u093F \u0918\u091F\u0928\u093E\u090F\u0902 \u0915\u092C \u0939\u094B\u0902\u0917\u0940\u0964" } },
+  { q: { en: "How does Kundli matching work for marriage?", hi: "\u0935\u093F\u0935\u093E\u0939 \u0915\u0947 \u0932\u093F\u090F \u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928 \u0915\u0948\u0938\u0947 \u0915\u093E\u092E \u0915\u0930\u0924\u093E \u0939\u0948?" }, a: { en: "Kundli matching uses the Ashtakoot Guna Milan system to compare two birth charts across 36 points in eight categories: temperament (Varna), physical compatibility (Vashya), birth star harmony (Tara), species (Yoni), planetary friendship (Graha Maitri), offspring (Gana), health and longevity (Bhakoot), and mental compatibility (Nadi). A score above 18 out of 36 is considered favorable. HoroTalk also checks for Manglik dosha and other specific compatibility factors.", hi: "\u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928 \u0905\u0937\u094D\u091F\u0915\u0942\u091F \u0917\u0941\u0923 \u092E\u093F\u0932\u093E\u0928 \u092A\u094D\u0930\u0923\u093E\u0932\u0940 \u0938\u0947 \u0906\u0920 \u0936\u094D\u0930\u0947\u0923\u093F\u092F\u094B\u0902 \u092E\u0947\u0902 36 \u0917\u0941\u0923\u094B\u0902 \u0915\u0940 \u0924\u0941\u0932\u0928\u093E \u0915\u0930\u0924\u093E \u0939\u0948: \u0935\u0930\u094D\u0923, \u0935\u0936\u094D\u092F, \u0924\u093E\u0930\u093E, \u092F\u094B\u0928\u093F, \u0917\u094D\u0930\u0939 \u092E\u0948\u0924\u094D\u0930\u0940, \u0917\u0923, \u092D\u0915\u0942\u091F \u0914\u0930 \u0928\u093E\u0921\u0940\u0964 36 \u092E\u0947\u0902 \u0938\u0947 18 \u0938\u0947 \u0905\u0927\u093F\u0915 \u0905\u0902\u0915 \u0936\u0941\u092D \u092E\u093E\u0928\u093E \u091C\u093E\u0924\u093E \u0939\u0948\u0964 HoroTalk \u092E\u093E\u0902\u0917\u0932\u093F\u0915 \u0926\u094B\u0937 \u0915\u0940 \u092D\u0940 \u091C\u093E\u0902\u091A \u0915\u0930\u0924\u093E \u0939\u0948\u0964" } },
+  { q: { en: "What is Dasha and how does it affect my life?", hi: "\u0926\u0936\u093E \u0915\u094D\u092F\u093E \u0939\u0948 \u0914\u0930 \u092F\u0939 \u092E\u0947\u0930\u0947 \u091C\u0940\u0935\u0928 \u0915\u094B \u0915\u0948\u0938\u0947 \u092A\u094D\u0930\u092D\u093E\u0935\u093F\u0924 \u0915\u0930\u0924\u0940 \u0939\u0948?" }, a: { en: "Dasha is Vedic astrology's timing system. The Vimshottari Dasha divides your life into planetary periods. Each Mahadasha (major period) lasts 6 to 20 years and is ruled by a specific planet. Within each Mahadasha are Antardashas (sub-periods) that create more specific timing windows. Knowing your current Dasha helps you understand why certain themes dominate your life right now and when shifts will come. For example, Saturn Mahadasha emphasizes discipline and career growth, while Venus Mahadasha brings relationships and comfort into focus.", hi: "\u0926\u0936\u093E \u0935\u0948\u0926\u093F\u0915 \u091C\u094D\u092F\u094B\u0924\u093F\u0937 \u0915\u0940 \u0938\u092E\u092F \u092A\u094D\u0930\u0923\u093E\u0932\u0940 \u0939\u0948\u0964 \u0935\u093F\u092E\u094D\u0936\u094B\u0924\u094D\u0924\u0930\u0940 \u0926\u0936\u093E \u0906\u092A\u0915\u0947 \u091C\u0940\u0935\u0928 \u0915\u094B \u0917\u094D\u0930\u0939 \u0915\u093E\u0932 \u092E\u0947\u0902 \u092C\u093E\u0902\u091F\u0924\u0940 \u0939\u0948\u0964 \u0939\u0930 \u092E\u0939\u093E\u0926\u0936\u093E 6 \u0938\u0947 20 \u0938\u093E\u0932 \u091A\u0932\u0924\u0940 \u0939\u0948\u0964 \u0905\u092A\u0928\u0940 \u0935\u0930\u094D\u0924\u092E\u093E\u0928 \u0926\u0936\u093E \u091C\u093E\u0928\u0928\u0947 \u0938\u0947 \u0906\u092A \u0938\u092E\u091D \u0938\u0915\u0924\u0947 \u0939\u0948\u0902 \u0915\u093F \u091C\u0940\u0935\u0928 \u092E\u0947\u0902 \u092C\u0926\u0932\u093E\u0935 \u0915\u092C \u0914\u0930 \u0915\u0948\u0938\u0947 \u0906\u090F\u0917\u093E\u0964" } },
+  { q: { en: "Is AI-powered Vedic astrology reliable?", hi: "\u0915\u094D\u092F\u093E AI \u0935\u0948\u0926\u093F\u0915 \u091C\u094D\u092F\u094B\u0924\u093F\u0937 \u092D\u0930\u094B\u0938\u0947\u092E\u0902\u0926 \u0939\u0948?" }, a: { en: "The astronomical calculations behind your chart are mathematically precise. HoroTalk computes real planetary longitudes, applies the Lahiri ayanamsa, and generates Lagna, Navamsa, and divisional charts from actual data. The AI interprets these charts using principles from classical texts like Brihat Parashara Hora Shastra, Jataka Parijata, and Phaladeepika. The result is a reading grounded in the same tradition that Vedic astrologers have followed for thousands of years, made accessible instantly through WhatsApp.", hi: "\u0906\u092A\u0915\u0940 \u0915\u0941\u0902\u0921\u0932\u0940 \u0915\u0940 \u0916\u0917\u094B\u0932\u0940\u092F \u0917\u0923\u0928\u093E\u090F\u0902 \u0917\u0923\u093F\u0924\u0940\u092F \u0930\u0942\u092A \u0938\u0947 \u0938\u091F\u0940\u0915 \u0939\u0948\u0902\u0964 HoroTalk \u0935\u093E\u0938\u094D\u0924\u0935\u093F\u0915 \u0917\u094D\u0930\u0939 \u0938\u094D\u0925\u093F\u0924\u093F, \u0932\u093E\u0939\u093F\u0930\u0940 \u0905\u092F\u0928\u093E\u0902\u0936, \u0914\u0930 \u0932\u0917\u094D\u0928, \u0928\u0935\u093E\u0902\u0936 \u091A\u093E\u0930\u094D\u091F \u092C\u0928\u093E\u0924\u093E \u0939\u0948\u0964 AI \u092C\u0943\u0939\u0924 \u092A\u0930\u093E\u0936\u0930 \u0939\u094B\u0930\u093E \u0936\u093E\u0938\u094D\u0924\u094D\u0930 \u091C\u0948\u0938\u0947 \u0936\u093E\u0938\u094D\u0924\u094D\u0930\u0940\u092F \u0917\u094D\u0930\u0902\u0925\u094B\u0902 \u0915\u0947 \u0938\u093F\u0926\u094D\u0927\u093E\u0902\u0924\u094B\u0902 \u0938\u0947 \u0935\u094D\u092F\u093E\u0916\u094D\u092F\u093E \u0915\u0930\u0924\u093E \u0939\u0948\u0964 \u092F\u0939 \u0935\u0939\u0940 \u092A\u0930\u0902\u092A\u0930\u093E \u0939\u0948 \u091C\u094B \u0939\u091C\u093E\u0930\u094B\u0902 \u0938\u093E\u0932\u094B\u0902 \u0938\u0947 \u091A\u0932\u0940 \u0906 \u0930\u0939\u0940 \u0939\u0948\u0964" } },
+];
+
+const faqSchemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q.en,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a.en }
+  }))
+});
 ---
 
-<Layout title="HoroTalk - Your Personal AI Astrologer on WhatsApp">
+<Layout title="HoroTalk - Your Personal Vedic Guruji on WhatsApp">
 
-  <!-- Background Glow -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(circle_at_center,_#FF9933_0%,_transparent_70%)] opacity-[0.05] pointer-events-none"></div>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={faqSchemaJson} />
 
-  <!-- Main Content Grid -->
-  <div class="relative grid lg:grid-cols-[450px_1fr] gap-8 lg:gap-10 max-w-7xl mx-auto w-full px-4 sm:px-12 py-8 lg:py-10 items-start">
-
-    <!-- Left Column: Hero -->
-    <div class="flex flex-col gap-10 hero-animate">
-      <section class="flex flex-col gap-6">
-        <div class="flex flex-col gap-4 sm:gap-6 text-center lg:text-left">
-          <h1 class="text-4xl sm:text-5xl lg:text-[48px] font-bold tracking-tight text-charcoal leading-[1.1]">
-            <span id="hero-title">Your Vedic Edge for</span> <br class="hidden sm:block" />
-            <span class="text-saffron italic" id="hero-title-italic">Life's Big Moves.</span>
-          </h1>
-          <p id="hero-sub" class="text-sm sm:text-base text-charcoal/70 leading-relaxed max-w-lg mx-auto lg:mx-0">
-            Rooted in ancient wisdom. Designed for your modern journey. Get precise, personalized guidance from your AI Vedic astrologer — right on WhatsApp.
-          </p>
+  <!-- ═══ 1. HERO ═══ -->
+  <section class="relative overflow-hidden pt-6 pb-8 sm:pt-10 sm:pb-12">
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle,_#7B2D26_0%,_transparent_70%)] opacity-[0.03] pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1fr_280px] gap-8 items-center">
+      <div class="text-center lg:text-left">
+        <h1 class="text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] font-bold tracking-tight text-charcoal leading-[1.1]">
+          <span id="hero-title" class="i18n" data-en="Your Personal Vedic" data-hi="\u0935\u0948\u0926\u093F\u0915 \u091C\u094D\u092F\u094B\u0924\u093F\u0937">Your Personal Vedic</span><br />
+          <span class="text-maroon" id="hero-title-italic" data-en="Guruji on WhatsApp" data-hi="WhatsApp \u092A\u0930">Guruji on WhatsApp</span>
+        </h1>
+        <p class="i18n mt-3 text-sm sm:text-base text-charcoal/55 max-w-md mx-auto lg:mx-0" id="hero-sub"
+          data-en="Free Kundli. Career guidance. Life predictions. Powered by real Vedic calculations. Instant on WhatsApp."
+          data-hi="\u092E\u0941\u092B\u094D\u0924 \u0915\u0941\u0902\u0921\u0932\u0940\u0964 \u0915\u0930\u093F\u092F\u0930 \u092E\u093E\u0930\u094D\u0917\u0926\u0930\u094D\u0936\u0928\u0964 \u091C\u0940\u0935\u0928 \u092D\u0935\u093F\u0937\u094D\u092F\u0935\u093E\u0923\u0940\u0964 \u0938\u091F\u0940\u0915 \u0935\u0948\u0926\u093F\u0915 \u0917\u0923\u0928\u093E\u0964 WhatsApp \u092A\u0930 \u0924\u0941\u0930\u0902\u0924\u0964">
+          Free Kundli. Career guidance. Life predictions. Powered by real Vedic calculations. Instant on WhatsApp.
+        </p>
+        <div class="mt-5">
+          <a href="https://wa.me/919999999999?text=Hi%20HoroTalk" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-7 py-3.5 rounded-lg text-sm transition-all shadow-lg shadow-[#25D366]/20 active:scale-[0.97]">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="i18n" data-en="Start Free on WhatsApp" data-hi="WhatsApp \u092A\u0930 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902">Start Free on WhatsApp</span>
+          </a>
         </div>
-      </section>
-    </div>
-
-    <!-- Right Column: Guidance Panel -->
-    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-charcoal/5 flex flex-col gap-6 sm:gap-8 relative">
-
-      <div class="flex flex-col sm:flex-row justify-between items-center sm:items-baseline gap-2">
-        <h2 id="todays-light-title" class="text-lg sm:text-xl font-bold text-charcoal">Today's Light</h2>
-        <span id="date-display" class="text-[10px] sm:text-[12px] opacity-50 font-bold uppercase tracking-widest"></span>
+        <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1 justify-center lg:justify-start text-[10px] font-medium text-charcoal/40">
+          <span class="flex items-center gap-1"><svg class="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="i18n" data-en="Real Vedic Calculations" data-hi="\u0938\u091F\u0940\u0915 \u0935\u0948\u0926\u093F\u0915 \u0917\u0923\u0928\u093E">Real Vedic Calculations</span></span>
+          <span class="flex items-center gap-1"><svg class="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="i18n" data-en="500+ Kundlis delivered" data-hi="500+ \u0915\u0941\u0902\u0921\u0932\u0940">500+ Kundlis delivered</span></span>
+          <span class="flex items-center gap-1"><svg class="w-3 h-3 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="i18n" data-en="Free to start" data-hi="\u092E\u0941\u092B\u094D\u0924 \u0936\u0941\u0930\u0942\u0906\u0924">Free to start</span></span>
+        </div>
       </div>
-
-      <!-- Zodiac Grid -->
-      <div id="zodiac-grid" class="grid grid-cols-4 sm:grid-cols-6 gap-3 sm:gap-4">
-        {signs.map((sign, i) => (
-          <div
-            class={`zodiac-sign flex flex-col items-center gap-2 cursor-pointer${i === 0 ? ' active' : ''}`}
-            data-index={i}
-            style={`animation-delay: ${i * 50}ms`}
-          >
-            <div class="zodiac-circle w-10 h-10 sm:w-11 sm:h-11 rounded-full border-[1.5px] flex items-center justify-center">
-              <span class="zodiac-symbol text-base sm:text-lg leading-none">{sign.symbol}</span>
-            </div>
-            <span class="zodiac-label text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-center leading-tight">
-              <span class="sign-name-top">{sign.nameEn}</span><br /><span class="sign-name-bottom">{sign.subEn}</span>
-            </span>
+      <!-- Chat preview (desktop only, no phone frame) -->
+      <div class="hidden lg:block">
+        <div class="w-[260px] rounded-2xl overflow-hidden shadow-xl shadow-charcoal/15 border border-charcoal/10">
+          <!-- WhatsApp header -->
+          <div class="bg-[#075e54] px-3 py-2 flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full overflow-hidden bg-white/20 flex-shrink-0"><img src="/logo.png" alt="" class="w-full h-full object-cover" /></div>
+            <div><div class="text-white text-[11px] font-semibold">HoroTalk</div><div class="text-white/70 text-[8px]">online</div></div>
           </div>
+          <!-- Chat body (WhatsApp light theme) -->
+          <div class="bg-[#ece5dd] px-2.5 py-3 h-[280px] overflow-hidden flex flex-col justify-end gap-1.5" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><rect fill=%22%23ece5dd%22 width=%2260%22 height=%2260%22/><path d=%22M30 5c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM10 25c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM50 45c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z%22 fill=%22%23d4cdc5%22 opacity=%22.3%22/></svg>')">
+            <div class="chat-msg" style="animation-delay:0.3s"><div class="bg-white text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tl-sm max-w-[88%] shadow-sm leading-relaxed"><span class="chat-en">Welcome! &#x1F64F; What would you like to know?</span><span class="chat-hi hidden">\u0928\u092E\u0938\u094D\u0924\u0947! &#x1F64F; \u0906\u092A \u0915\u094D\u092F\u093E \u091C\u093E\u0928\u0928\u093E \u091A\u093E\u0939\u0947\u0902\u0917\u0947?</span></div></div>
+            <div class="chat-msg" style="animation-delay:1s"><div class="flex flex-col gap-1 max-w-[88%]">
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4AC; Ask a question</span><span class="chat-hi hidden">&#x1F4AC; \u092A\u094D\u0930\u0936\u094D\u0928 \u092A\u0942\u091B\u0947\u0902;</span></div>
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4C4; All Reports</span><span class="chat-hi hidden">&#x1F4C4; \u0938\u092D\u0940 \u0930\u093F\u092A\u094B\u0930\u094D\u091F;</span></div>
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F491; Kundli Matching</span><span class="chat-hi hidden">&#x1F491; \u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928;</span></div>
+            </div></div>
+            <div class="chat-msg" style="animation-delay:2.5s"><div class="bg-[#d9fdd3] text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tr-sm max-w-[78%] ml-auto shadow-sm"><span class="chat-en">Will I get promoted this year?</span><span class="chat-hi hidden">\u0915\u094D\u092F\u093E \u092E\u0941\u091D\u0947 \u092A\u094D\u0930\u092E\u094B\u0936\u0928 \u092E\u093F\u0932\u0947\u0917\u093E?</span></div></div>
+            <div class="chat-msg" style="animation-delay:4s"><div class="bg-white text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tl-sm max-w-[88%] shadow-sm leading-relaxed"><span class="chat-en">Jupiter in your 10th house shows strong career growth this year. The stars favor your ambition. &#x2728;</span><span class="chat-hi hidden">&#x092C;&#x0943;&#x0939;&#x0938;&#x094D;&#x092A;&#x0924;&#x093F; &#x0906;&#x092A;&#x0915;&#x0947; 10&#x0935;&#x0947;&#x0902; &#x092D;&#x093E;&#x0935; &#x092E;&#x0947;&#x0902; &#x0915;&#x0930;&#x093F;&#x092F;&#x0930; &#x0935;&#x0943;&#x0926;&#x094D;&#x0927;&#x093F; &#x0926;&#x093F;&#x0916;&#x093E;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964; &#x2728;</span></div></div>
+          </div>
+          <!-- Input bar -->
+          <div class="bg-[#f0f0f0] px-2.5 py-2 flex items-center gap-2">
+            <div class="flex-1 bg-white rounded-full px-3 py-1.5 text-[9px] text-charcoal/40">Type a message</div>
+            <div class="w-7 h-7 bg-[#075e54] rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. QUICK TOOLS BAR ═══ -->
+  <section class="py-4 sm:py-6 border-t border-charcoal/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+        <a href="/panchang" class="tool-card"><span class="text-lg">&#x1F4C5;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Today's Panchang" data-hi="\u0906\u091C \u0915\u093E \u092A\u0902\u091A\u093E\u0902\u0917">Today's Panchang</span><span class="text-[8px] text-charcoal/40 i18n" data-en="Tithi, Nakshatra, Yoga" data-hi="\u0924\u093F\u0925\u093F, \u0928\u0915\u094D\u0937\u0924\u094D\u0930, \u092F\u094B\u0917">Tithi, Nakshatra, Yoga</span></a>
+        <a href="/rashi-calculator" class="tool-card"><span class="text-lg">&#x2648;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Find Your Rashi" data-hi="\u0930\u093E\u0936\u093F \u091C\u093E\u0928\u0947\u0902">Find Your Rashi</span><span class="text-[8px] text-charcoal/40 i18n" data-en="By name or birth details" data-hi="\u0928\u093E\u092E \u0938\u0947 \u0930\u093E\u0936\u093F">By name or birth details</span></a>
+        <a href="#horoscope" class="tool-card"><span class="text-lg">&#x1F52E;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Daily Horoscope" data-hi="\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932">Daily Horoscope</span><span class="text-[8px] text-charcoal/40 i18n" data-en="All 12 signs" data-hi="\u0938\u092D\u0940 12 \u0930\u093E\u0936\u093F\u092F\u093E\u0902">All 12 signs</span></a>
+        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20I%20want%20Kundli%20Matching" target="_blank" rel="noopener noreferrer" class="tool-card"><span class="text-lg">&#x1F491;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Kundli Matching" data-hi="\u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928">Kundli Matching</span><span class="text-[8px] text-charcoal/40 i18n" data-en="36 Guna Milan" data-hi="36 \u0917\u0941\u0923 \u092E\u093F\u0932\u093E\u0928">36 Guna Milan</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 3. TODAY'S HOROSCOPE ═══ -->
+  <section id="horoscope" class="py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="flex justify-between items-baseline mb-4">
+        <h2 id="todays-light-title" class="text-lg sm:text-xl font-bold text-charcoal">Today's Rashifal</h2>
+        <span id="date-display" class="text-[8px] sm:text-[10px] opacity-35 font-bold uppercase tracking-widest"></span>
+      </div>
+      <div class="grid lg:grid-cols-[200px_1fr] gap-4">
+        <!-- Left: sign list -->
+        <div id="zodiac-grid" class="flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-hide">
+          {signs.map((sign, i) => (
+            <div class={`zodiac-sign flex items-center gap-2 cursor-pointer px-3 py-2 rounded-lg border border-transparent flex-shrink-0 transition-all${i === 0 ? ' active' : ''}`} data-index={i} style={`animation-delay:${i*20}ms`}>
+              <div class="zodiac-circle w-8 h-8 rounded-lg border-[1.5px] flex items-center justify-center flex-shrink-0"><span class="zodiac-symbol text-sm leading-none">{sign.symbol}</span></div>
+              <div class="flex flex-col">
+                <span class="zodiac-label text-[11px] font-semibold leading-tight"><span class="sign-name-top">{sign.nameEn}</span></span>
+                <span class="text-[9px] text-charcoal/40 leading-tight"><span class="sign-name-bottom">{sign.subEn}</span></span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <!-- Right: reading detail -->
+        <div id="guidance-card" class="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-charcoal/5 flex flex-col justify-between min-h-[200px]">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <div id="guidance-symbol" class="w-12 h-12 rounded-xl bg-maroon/8 border border-maroon/15 flex items-center justify-center text-xl"></div>
+              <div>
+                <h3 id="guidance-sign-name" class="text-base font-bold text-charcoal"></h3>
+                <div id="guidance-date-label" class="text-[10px] text-charcoal/40 font-medium i18n" data-en="Today's Reading" data-hi="\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932">Today's Reading</div>
+              </div>
+            </div>
+            <p id="guidance-text" class="text-sm text-charcoal/70 leading-relaxed"></p>
+          </div>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-charcoal/5">
+            <div>
+              <div id="success-prob-label" class="text-[8px] uppercase tracking-widest font-bold text-charcoal/30">Success Probability</div>
+              <div id="guidance-prob" class="text-lg font-bold text-maroon"></div>
+            </div>
+            <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20tell%20me%20more%20about%20my%20sign" target="_blank" rel="noopener noreferrer"
+              class="bg-maroon/8 hover:bg-maroon/15 text-maroon text-xs font-semibold px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-1">
+              <span class="i18n" data-en="Get full reading" data-hi="\u092A\u0942\u0930\u0940 \u0930\u0940\u0921\u093F\u0902\u0917 \u092A\u093E\u090F\u0902">Get full reading</span>
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 4. REPORTS SHOWCASE (dark) ═══ -->
+  <section class="bg-navy py-10 sm:py-14 star-bg">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-white text-center mb-1 i18n" data-en="What Guruji Can Reveal" data-hi="\u0917\u0941\u0930\u0941\u091C\u0940 \u0915\u094D\u092F\u093E \u092C\u0924\u093E \u0938\u0915\u0924\u0947 \u0939\u0948\u0902">What Guruji Can Reveal</h2>
+      <div class="flex justify-center mb-8"><div class="w-10 h-0.5 bg-gold/40 rounded-full"></div></div>
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="flex justify-center items-center">
+          <div class="relative h-[260px] sm:h-[320px] w-full max-w-[340px]">
+            <div class="absolute left-0 bottom-0 w-[130px] sm:w-[160px] rounded-lg overflow-hidden shadow-xl border border-gold/20 -rotate-6 hover:-rotate-3 transition-transform duration-500"><div class="bg-[#0a0a2e] p-3 text-center aspect-[3/4] flex flex-col items-center justify-center gap-2"><div class="text-3xl">&#x1F4BC;</div><div class="text-gold text-[9px] font-bold font-heading">HoroTalk</div><div class="w-8 h-px bg-gold/30"></div><div class="text-white text-sm font-bold font-heading">Career &amp; Finance</div><div class="text-white/35 text-[8px]">12-15 Pages</div></div></div>
+            <div class="absolute left-1/2 -translate-x-1/2 bottom-0 w-[140px] sm:w-[175px] rounded-lg overflow-hidden shadow-2xl border border-gold/30 z-10 hover:scale-105 transition-transform duration-500"><img src="/images/report-cover.png" alt="Janam Kundli" class="w-full h-auto" /></div>
+            <div class="absolute right-0 bottom-0 w-[130px] sm:w-[160px] rounded-lg overflow-hidden shadow-xl border border-gold/20 rotate-6 hover:rotate-3 transition-transform duration-500"><div class="bg-[#0a0a2e] p-3 text-center aspect-[3/4] flex flex-col items-center justify-center gap-2"><div class="text-3xl">&#x2764;&#xFE0F;</div><div class="text-gold text-[9px] font-bold font-heading">HoroTalk</div><div class="w-8 h-px bg-gold/30"></div><div class="text-white text-sm font-bold font-heading">Love &amp; Marriage</div><div class="text-white/35 text-[8px]">12-15 Pages</div></div></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="rpt-card"><span>&#x2728;</span><span class="i18n" data-en="Janam Kundli" data-hi="\u091C\u0928\u094D\u092E \u0915\u0941\u0902\u0921\u0932\u0940">Janam Kundli</span><span class="text-[8px] text-white/35 i18n" data-en="Complete birth chart" data-hi="\u092A\u0942\u0930\u094D\u0923 \u091C\u0928\u094D\u092E \u0915\u0941\u0902\u0921\u0932\u0940">Complete birth chart</span></div>
+          <div class="rpt-card"><span>&#x1F4BC;</span><span class="i18n" data-en="Career &amp; Finance" data-hi="\u0915\u0930\u093F\u092F\u0930 \u0914\u0930 \u0935\u093F\u0924\u094D\u0924;">Career & Finance</span><span class="text-[8px] text-white/35 i18n" data-en="Career path and outlook" data-hi="\u0915\u0930\u093F\u092F\u0930 \u092A\u0925;">Career path and outlook</span></div>
+          <div class="rpt-card"><span>&#x2764;&#xFE0F;</span><span class="i18n" data-en="Love &amp; Marriage" data-hi="\u092A\u094D\u0930\u0947\u092E \u0914\u0930 \u0935\u093F\u0935\u093E\u0939">Love & Marriage</span><span class="text-[8px] text-white/35 i18n" data-en="Partner and timing" data-hi="\u0938\u093E\u0925\u0940 \u0914\u0930 \u0938\u092E\u092F;">Partner and timing</span></div>
+          <div class="rpt-card"><span>&#x1F52E;</span><span class="i18n" data-en="Life Phases" data-hi="\u091C\u0940\u0935\u0928 \u091A\u0930\u0923">Life Phases</span><span class="text-[8px] text-white/35 i18n" data-en="Dasha timeline" data-hi="\u0926\u0936\u093E \u0938\u092E\u092F\u0930\u0947\u0916\u093E;">Dasha timeline</span></div>
+          <div class="rpt-card"><span>&#x1F491;</span><span class="i18n" data-en="Kundli Matching" data-hi="\u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928">Kundli Matching</span><span class="text-[8px] text-white/35 i18n" data-en="Guna Milan" data-hi="\u0917\u0941\u0923 \u092E\u093F\u0932\u093E\u0928;">Guna Milan</span></div>
+          <div class="rpt-card !bg-gold/10 !border-gold/30"><span>&#x1F4AC;</span><span class="text-gold i18n" data-en="Ask Anything" data-hi="\u0915\u0941\u091B \u092D\u0940 \u092A\u0942\u091B\u0947\u0902">Ask Anything</span><span class="text-[8px] text-gold/40 i18n" data-en="Free-form Q&amp;A" data-hi="\u0915\u094B\u0908 \u092D\u0940 \u0938\u0935\u093E\u0932;">Free-form Q&A</span></div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20free%20Kundli" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-6 py-3 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
+          <span class="i18n" data-en="Get Your Free Kundli" data-hi="\u092E\u0941\u092B\u094D\u0924 \u0915\u0941\u0902\u0921\u0932\u0940 \u092A\u093E\u090F\u0902">Get Your Free Kundli</span><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5. FAQ (AEO) ═══ -->
+  <section class="py-10 sm:py-14">
+    <div class="max-w-3xl mx-auto px-4 sm:px-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-charcoal text-center mb-1 i18n" data-en="Frequently Asked Questions" data-hi="\u0905\u0915\u094D\u0938\u0930 \u092A\u0942\u091B\u0947 \u091C\u093E\u0928\u0947 \u0935\u093E\u0932\u0947 \u092A\u094D\u0930\u0936\u094D\u0928">Frequently Asked Questions</h2>
+      <div class="flex justify-center mb-8"><div class="w-10 h-0.5 bg-gold rounded-full"></div></div>
+      <div class="space-y-3">
+        {faqs.map(faq => (
+          <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm hover:shadow-md transition-shadow">
+            <summary class="px-4 py-3 cursor-pointer flex justify-between items-center gap-2 text-sm font-semibold text-charcoal list-none">
+              <span class="i18n" data-en={faq.q.en} data-hi={faq.q.hi}>{faq.q.en}</span>
+              <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-4 pb-3 text-xs text-charcoal/60 leading-relaxed border-l-3 border-maroon ml-4">
+              <span class="i18n" data-en={faq.a.en} data-hi={faq.a.hi}>{faq.a.en}</span>
+            </div>
+          </details>
         ))}
       </div>
-
-      <!-- Guidance Card -->
-      <div id="guidance-card" class="bg-cream p-4 sm:p-5 rounded-2xl border-l-4 border-saffron min-h-[160px] flex flex-col justify-between">
-        <div>
-          <h4 id="guidance-sign-name" class="text-sm sm:text-base font-bold text-charcoal mb-2"></h4>
-          <p id="guidance-text" class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic"></p>
-        </div>
-        <div class="mt-4 pt-4 border-t border-charcoal/5 flex items-center justify-between">
-          <div id="success-prob-label" class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40">Success Probability</div>
-          <div id="guidance-prob" class="text-lg font-bold text-saffron"></div>
-        </div>
-      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- WhatsApp CTA Section -->
-  <section class="max-w-7xl mx-auto w-full px-4 sm:px-12 pb-12 sm:pb-20">
-    <div class="scroll-animate bg-white p-6 sm:p-10 rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-center md:text-left">
-      <div class="max-w-xl">
-        <h3 id="deeper-clarity" class="text-xl sm:text-2xl font-bold text-charcoal mb-2 sm:mb-3">
-          Need Deeper Clarity? Get Tactical.
-        </h3>
-        <p id="whatsapp-sub" class="text-sm sm:text-base text-charcoal/60 leading-relaxed">
-          Your generic sign is only 10% of the story. For the full 100% — including personal chart analysis, Dasha predictions, and your definitive guidance — chat with HoroTalk on WhatsApp.
-        </p>
+  <!-- ═══ 6. HOW IT WORKS + FINAL CTA ═══ -->
+  <section class="py-8 sm:py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1fr_1fr] gap-8 items-center">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-charcoal mb-1 i18n" data-en="How It Works" data-hi="\u0915\u0948\u0938\u0947 \u0915\u093E\u092E \u0915\u0930\u0924\u093E \u0939\u0948">How It Works</h2>
+        <div class="w-10 h-0.5 bg-gold rounded-full mb-5"></div>
+        <div class="space-y-4">
+          <div class="flex gap-3"><div class="w-7 h-7 bg-maroon text-white rounded-md flex items-center justify-center text-xs font-bold font-heading flex-shrink-0">1</div><div><div class="text-sm font-semibold text-charcoal i18n font-sans" data-en='Send "Hi" on WhatsApp' data-hi='WhatsApp \u092A\u0930 "Hi" \u092D\u0947\u091C\u0947\u0902'>Send "Hi" on WhatsApp</div><div class="text-[11px] text-charcoal/45 mt-0.5 i18n" data-en="No sign-up needed." data-hi="\u0915\u094B\u0908 \u0938\u093E\u0907\u0928-\u0905\u092A \u0928\u0939\u0940\u0902\u0964">No sign-up needed.</div></div></div>
+          <div class="flex gap-3"><div class="w-7 h-7 bg-maroon text-white rounded-md flex items-center justify-center text-xs font-bold font-heading flex-shrink-0">2</div><div><div class="text-sm font-semibold text-charcoal i18n font-sans" data-en="Share birth details" data-hi="\u091C\u0928\u094D\u092E \u0935\u093F\u0935\u0930\u0923 \u0926\u0947\u0902">Share birth details</div><div class="text-[11px] text-charcoal/45 mt-0.5 i18n" data-en="Name, date, time, place." data-hi="\u0928\u093E\u092E, \u0924\u093E\u0930\u0940\u0916, \u0938\u092E\u092F, \u0938\u094D\u0925\u093E\u0928\u0964">Name, date, time, place.</div></div></div>
+          <div class="flex gap-3"><div class="w-7 h-7 bg-maroon text-white rounded-md flex items-center justify-center text-xs font-bold font-heading flex-shrink-0">3</div><div><div class="text-sm font-semibold text-charcoal i18n font-sans" data-en="Get your Kundli" data-hi="\u0915\u0941\u0902\u0921\u0932\u0940 \u092A\u093E\u090F\u0902">Get your Kundli</div><div class="text-[11px] text-charcoal/45 mt-0.5 i18n" data-en="PDF report in seconds." data-hi="\u0938\u0947\u0915\u0902\u0921\u094B\u0902 \u092E\u0947\u0902 PDF\u0964">PDF report in seconds.</div></div></div>
+        </div>
       </div>
-      <a
-        href="https://wa.me/919999999999?text=Hi%20HoroTalk"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full md:w-auto whitespace-nowrap bg-[#25D366] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:bg-[#25D366]/90 transition-all shadow-xl shadow-[#25D366]/20 flex items-center justify-center gap-3 active:scale-95"
-      >
-        <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        <span id="get-analysis-text">Get Personalized Analysis</span>
-      </a>
+      <div class="bg-maroon rounded-2xl p-6 sm:p-8 text-center shadow-xl shadow-maroon/20">
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-2 i18n" data-en="Your Stars Have a Message" data-hi="\u0906\u092A\u0915\u0947 \u0938\u093F\u0924\u093E\u0930\u094B\u0902 \u0915\u093E \u0938\u0902\u0926\u0947\u0936">Your Stars Have a Message</h3>
+        <p class="text-xs text-white/60 mb-5 i18n" data-en="Free Kundli + 3 questions. No payment needed." data-hi="\u092E\u0941\u092B\u094D\u0924 \u0915\u0941\u0902\u0921\u0932\u0940 + 3 \u092A\u094D\u0930\u0936\u094D\u0928\u0964 \u092D\u0941\u0917\u0924\u093E\u0928 \u0928\u0939\u0940\u0902\u0964">Free Kundli + 3 questions. No payment needed.</p>
+        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-7 py-3.5 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="i18n" data-en="Start Free on WhatsApp" data-hi="WhatsApp \u092A\u0930 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902">Start Free on WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
 
 </Layout>
 
 <style>
-  /* Hero animation */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .hero-animate {
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
+  /* Tools bar */
+  .tool-card { display: flex; flex-direction: column; gap: 2px; min-width: 140px; padding: 0.75rem; background: white; border: 1px solid rgba(45,24,16,0.06); border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: all 0.2s; flex-shrink: 0; text-decoration: none; }
+  .tool-card:hover { border-color: rgba(201,168,76,0.3); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-  /* Zodiac grid stagger animation */
-  .zodiac-sign {
-    opacity: 0;
-    animation: fadeScale 0.3s ease forwards;
-  }
-  @keyframes fadeScale {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
+  /* Report cards */
+  .rpt-card { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0.875rem 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; transition: all 0.2s; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; color: white; }
+  .rpt-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(201,168,76,0.3); }
 
-  /* Zodiac icon default state */
-  .zodiac-circle {
-    border-color: rgba(255, 153, 51, 0.3);
-    transition: all 0.3s;
-  }
-  .zodiac-symbol {
-    color: rgba(255, 153, 51, 0.4);
-    transition: color 0.3s;
-    font-variant-emoji: text;
-  }
-  .zodiac-label {
-    color: rgba(45, 45, 45, 0.4);
-    transition: color 0.3s;
-  }
+  /* Star background for dark section */
+  .star-bg { background-image: radial-gradient(1px 1px at 10% 20%, rgba(201,168,76,0.15) 0%, transparent 100%), radial-gradient(1px 1px at 80% 40%, rgba(201,168,76,0.1) 0%, transparent 100%), radial-gradient(1px 1px at 40% 80%, rgba(201,168,76,0.12) 0%, transparent 100%), radial-gradient(1px 1px at 90% 10%, rgba(201,168,76,0.08) 0%, transparent 100%); }
 
-  /* Zodiac hover */
-  .zodiac-sign:hover .zodiac-circle {
-    border-color: #FF9933;
-    background-color: rgba(255, 153, 51, 0.05);
-  }
-  .zodiac-sign:hover .zodiac-symbol {
-    color: #FF9933;
-  }
-  .zodiac-sign:hover .zodiac-label {
-    color: #2D2D2D;
-  }
+  /* Chat */
+  .chat-msg { opacity: 0; animation: chatIn 0.3s ease-out forwards; }
+  @keyframes chatIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
 
-  /* Zodiac active */
-  .zodiac-sign.active .zodiac-circle {
-    border-color: #FF9933;
-    background-color: rgba(255, 153, 51, 0.1);
-  }
-  .zodiac-sign.active .zodiac-symbol {
-    color: #FF9933;
-  }
-  .zodiac-sign.active .zodiac-label {
-    color: #2D2D2D;
-  }
+  /* Zodiac */
+  .zodiac-sign { opacity: 0; animation: zIn 0.2s ease forwards; }
+  @keyframes zIn { from { opacity:0; transform:scale(0.9); } to { opacity:1; transform:scale(1); } }
+  .zodiac-circle { border-color: rgba(45,24,16,0.12); transition: all 0.2s; }
+  .zodiac-symbol { color: rgba(45,24,16,0.45); transition: color 0.2s; font-variant-emoji: text; }
+  .zodiac-label { color: rgba(45,24,16,0.65); transition: color 0.2s; }
+  .zodiac-sign:hover { background: rgba(201,168,76,0.06); border-color: rgba(201,168,76,0.2); }
+  .zodiac-sign:hover .zodiac-circle { border-color: #C9A84C; }
+  .zodiac-sign:hover .zodiac-symbol { color: #C9A84C; }
+  .zodiac-sign.active { background: rgba(123,45,38,0.06); border-color: rgba(123,45,38,0.15); }
+  .zodiac-sign.active .zodiac-circle { border-color: #7B2D26; background: rgba(123,45,38,0.08); }
+  .zodiac-sign.active .zodiac-symbol { color: #7B2D26; }
+  .zodiac-sign.active .zodiac-label { color: #2D1810; font-weight: 700; }
+  #guidance-card { transition: opacity 0.25s, transform 0.25s; }
 
-  /* Guidance card transition */
-  #guidance-card {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  /* Scroll animation */
-  .scroll-animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .scroll-animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* FAQ details */
+  details summary::-webkit-details-marker { display: none; }
 </style>
 
 <script is:inline define:vars={{ dailyJson: JSON.stringify(dailyData) }}>
@@ -190,268 +278,28 @@ const signs = [
 
 <script>
   const signsData = [
-    {
-      id: "aries",
-      name: { en: "Mesha / Aries", hi: "\u092E\u0947\u0937 / Aries" },
-      nameTop: { en: "Mesha", hi: "\u092E\u0947\u0937" },
-      guidance: {
-        en: "A day of high creative energy, Mesha. Mercury retrograde suggests caution in communication, but your hustle is matching the vibe needed for your main project.",
-        hi: "\u092E\u0947\u0937 \u0930\u093E\u0936\u093F \u0935\u093E\u0932\u094B\u0902 \u0915\u0947 \u0932\u093F\u090F \u0906\u091C \u0915\u093E \u0926\u093F\u0928 \u0909\u091A\u094D\u091A \u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915 \u090A\u0930\u094D\u091C\u093E \u0915\u093E \u0939\u0948\u0964 \u092C\u0941\u0927 \u0935\u0915\u094D\u0930\u0940 \u0938\u0902\u091A\u093E\u0930 \u092E\u0947\u0902 \u0938\u093E\u0935\u0927\u093E\u0928\u0940 \u092C\u0930\u0924\u0928\u0947 \u0915\u093E \u0938\u0941\u091D\u093E\u0935 \u0926\u0947\u0924\u093E \u0939\u0948, \u0932\u0947\u0915\u093F\u0928 \u0906\u092A\u0915\u0940 \u092E\u0947\u0939\u0928\u0924 \u0906\u092A\u0915\u0947 \u092E\u0941\u0916\u094D\u092F \u092A\u094D\u0930\u094B\u091C\u0947\u0915\u094D\u091F \u0915\u0947 \u0932\u093F\u090F \u0906\u0935\u0936\u094D\u092F\u0915 \u090A\u0930\u094D\u091C\u093E \u0938\u0947 \u092E\u0947\u0932 \u0916\u093E \u0930\u0939\u0940 \u0939\u0948\u0964"
-      },
-      probability: 85
-    },
-    {
-      id: "taurus",
-      name: { en: "Vrishabha / Taurus", hi: "\u0935\u0943\u0937\u092D / Taurus" },
-      nameTop: { en: "Vrishabha", hi: "\u0935\u0943\u0937\u092D" },
-      guidance: {
-        en: "Stability is your strength today, Vrishabha. Financial gains are likely if you stick to your long-term plan. Avoid impulsive luxury purchases.",
-        hi: "\u0935\u0943\u0937\u092D \u0930\u093E\u0936\u093F, \u0906\u091C \u0938\u094D\u0925\u093F\u0930\u0924\u093E \u0906\u092A\u0915\u0940 \u0924\u093E\u0915\u0924 \u0939\u0948\u0964 \u092F\u0926\u093F \u0906\u092A \u0905\u092A\u0928\u0940 \u0926\u0940\u0930\u094D\u0918\u0915\u093E\u0932\u093F\u0915 \u092F\u094B\u091C\u0928\u093E \u092A\u0930 \u091F\u093F\u0915\u0947 \u0930\u0939\u0924\u0947 \u0939\u0948\u0902 \u0924\u094B \u0935\u093F\u0924\u094D\u0924\u0940\u092F \u0932\u093E\u092D \u0915\u0940 \u0938\u0902\u092D\u093E\u0935\u0928\u093E \u0939\u0948\u0964 \u0935\u093F\u0932\u093E\u0938\u093F\u0924\u093E \u0915\u0940 \u0935\u0938\u094D\u0924\u0941\u0913\u0902 \u0915\u0940 \u091C\u0932\u094D\u0926\u092C\u093E\u091C\u0940 \u092E\u0947\u0902 \u0916\u0930\u0940\u0926\u093E\u0930\u0940 \u0938\u0947 \u092C\u091A\u0947\u0902\u0964"
-      },
-      probability: 78
-    },
-    {
-      id: "gemini",
-      name: { en: "Mithuna / Gemini", hi: "\u092E\u093F\u0925\u0941\u0928 / Gemini" },
-      nameTop: { en: "Mithuna", hi: "\u092E\u093F\u0925\u0941\u0928" },
-      guidance: {
-        en: "Your social charm is at its peak, Mithuna. A networking opportunity could lead to a significant career breakthrough. Stay open to new ideas.",
-        hi: "\u092E\u093F\u0925\u0941\u0928 \u0930\u093E\u0936\u093F, \u0906\u092A\u0915\u093E \u0938\u093E\u092E\u093E\u091C\u093F\u0915 \u0906\u0915\u0930\u094D\u0937\u0923 \u0906\u091C \u091A\u0930\u092E \u092A\u0930 \u0939\u0948\u0964 \u0928\u0947\u091F\u0935\u0930\u094D\u0915\u093F\u0902\u0917 \u0915\u093E \u090F\u0915 \u0905\u0935\u0938\u0930 \u0915\u0930\u093F\u092F\u0930 \u092E\u0947\u0902 \u092E\u0939\u0924\u094D\u0935\u092A\u0942\u0930\u094D\u0923 \u0938\u092B\u0932\u0924\u093E \u0926\u093F\u0932\u093E \u0938\u0915\u0924\u093E \u0939\u0948\u0964 \u0928\u090F \u0935\u093F\u091A\u093E\u0930\u094B\u0902 \u0915\u0947 \u092A\u094D\u0930\u0924\u093F \u0916\u0941\u0932\u0947 \u0930\u0939\u0947\u0902\u0964"
-      },
-      probability: 92
-    },
-    {
-      id: "cancer",
-      name: { en: "Karka / Cancer", hi: "\u0915\u0930\u094D\u0915 / Cancer" },
-      nameTop: { en: "Karka", hi: "\u0915\u0930\u094D\u0915" },
-      guidance: {
-        en: "Focus on home and emotional well-being, Karka. Intuition is strong today; trust your gut feeling regarding a family matter.",
-        hi: "\u0915\u0930\u094D\u0915 \u0930\u093E\u0936\u093F, \u0918\u0930 \u0914\u0930 \u092D\u093E\u0935\u0928\u093E\u0924\u094D\u092E\u0915 \u0915\u0932\u094D\u092F\u093E\u0923 \u092A\u0930 \u0927\u094D\u092F\u093E\u0928 \u0926\u0947\u0902\u0964 \u0906\u091C \u0905\u0902\u0924\u0930\u094D\u091C\u094D\u091E\u093E\u0928 \u092E\u091C\u092C\u0942\u0924 \u0939\u0948; \u092A\u093E\u0930\u093F\u0935\u093E\u0930\u093F\u0915 \u092E\u093E\u092E\u0932\u0947 \u092E\u0947\u0902 \u0905\u092A\u0928\u0947 \u092E\u0928 \u0915\u0940 \u0906\u0935\u093E\u091C \u092A\u0930 \u092D\u0930\u094B\u0938\u093E \u0915\u0930\u0947\u0902\u0964"
-      },
-      probability: 74
-    },
-    {
-      id: "leo",
-      name: { en: "Simha / Leo", hi: "\u0938\u093F\u0902\u0939 / Leo" },
-      nameTop: { en: "Simha", hi: "\u0938\u093F\u0902\u0939" },
-      guidance: {
-        en: "The spotlight is on you, Simha. Your leadership skills will be tested; lead with empathy and confidence for the best results.",
-        hi: "\u0938\u093F\u0902\u0939 \u0930\u093E\u0936\u093F, \u0906\u091C \u0938\u092C\u0915\u0940 \u0928\u095B\u0930\u0947\u0902 \u0906\u092A \u092A\u0930 \u0939\u0948\u0902\u0964 \u0906\u092A\u0915\u0947 \u0928\u0947\u0924\u0943\u0924\u094D\u0935 \u0915\u094C\u0936\u0932 \u0915\u0940 \u092A\u0930\u0940\u0915\u094D\u0937\u093E \u0939\u094B\u0917\u0940; \u0938\u0930\u094D\u0935\u094B\u0924\u094D\u0924\u092E \u092A\u0930\u093F\u0923\u093E\u092E\u094B\u0902 \u0915\u0947 \u0932\u093F\u090F \u0938\u0939\u093E\u0928\u0941\u092D\u0942\u0924\u093F \u0914\u0930 \u0906\u0924\u094D\u092E\u0935\u093F\u0936\u094D\u0935\u093E\u0938 \u0915\u0947 \u0938\u093E\u0925 \u0928\u0947\u0924\u0943\u0924\u094D\u0935 \u0915\u0930\u0947\u0902\u0964"
-      },
-      probability: 88
-    },
-    {
-      id: "virgo",
-      name: { en: "Kanya / Virgo", hi: "\u0915\u0928\u094D\u092F\u093E / Virgo" },
-      nameTop: { en: "Kanya", hi: "\u0915\u0928\u094D\u092F\u093E" },
-      guidance: {
-        en: "Attention to detail pays off, Kanya. A complex problem at work will finally find its solution through your methodical approach.",
-        hi: "\u0915\u0928\u094D\u092F\u093E \u0930\u093E\u0936\u093F, \u0935\u093F\u0935\u0930\u0923\u094B\u0902 \u092A\u0930 \u0927\u094D\u092F\u093E\u0928 \u0926\u0947\u0928\u093E \u092B\u0932\u0926\u093E\u092F\u0940 \u0939\u094B\u0917\u093E\u0964 \u0915\u093E\u092E \u092A\u0930 \u090F\u0915 \u091C\u091F\u093F\u0932 \u0938\u092E\u0938\u094D\u092F\u093E \u0915\u093E \u0938\u092E\u093E\u0927\u093E\u0928 \u0905\u0902\u0924\u0924\u0903 \u0906\u092A\u0915\u0947 \u0935\u094D\u092F\u0935\u0938\u094D\u0925\u093F\u0924 \u0926\u0943\u0937\u094D\u091F\u093F\u0915\u094B\u0923 \u0915\u0947 \u092E\u093E\u0927\u094D\u092F\u092E \u0938\u0947 \u092E\u093F\u0932 \u091C\u093E\u090F\u0917\u093E\u0964"
-      },
-      probability: 82
-    },
-    {
-      id: "libra",
-      name: { en: "Tula / Libra", hi: "\u0924\u0941\u0932\u093E / Libra" },
-      nameTop: { en: "Tula", hi: "\u0924\u0941\u0932\u093E" },
-      guidance: {
-        en: "Balance is key today, Tula. Harmonize your professional and personal life. A diplomatic approach resolves a long-standing conflict.",
-        hi: "\u0924\u0941\u0932\u093E \u0930\u093E\u0936\u093F, \u0906\u091C \u0938\u0902\u0924\u0941\u0932\u0928 \u0939\u0940 \u0915\u0941\u0902\u091C\u0940 \u0939\u0948\u0964 \u0905\u092A\u0928\u0947 \u092A\u0947\u0936\u0947\u0935\u0930 \u0914\u0930 \u0935\u094D\u092F\u0915\u094D\u0924\u093F\u0917\u0924 \u091C\u0940\u0935\u0928 \u092E\u0947\u0902 \u0938\u093E\u092E\u0902\u091C\u0938\u094D\u092F \u092C\u093F\u0920\u093E\u090F\u0902\u0964 \u090F\u0915 \u0915\u0942\u091F\u0928\u0940\u0924\u093F\u0915 \u0926\u0943\u0937\u094D\u091F\u093F\u0915\u094B\u0923 \u0932\u0902\u092C\u0947 \u0938\u092E\u092F \u0938\u0947 \u091A\u0932\u0947 \u0906 \u0930\u0939\u0947 \u0938\u0902\u0918\u0930\u094D\u0937 \u0915\u094B \u0938\u0941\u0932\u091D\u093E\u0924\u093E \u0939\u0948\u0964"
-      },
-      probability: 80
-    },
-    {
-      id: "scorpio",
-      name: { en: "Vrishchika / Scorpio", hi: "\u0935\u0943\u0936\u094D\u091A\u093F\u0915 / Scorpio" },
-      nameTop: { en: "Vrishchika", hi: "\u0935\u0943\u0936\u094D\u091A\u093F\u0915" },
-      guidance: {
-        en: "Intensity and focus define your day, Vrishchika. Deep research or investigation will yield valuable insights for your current venture.",
-        hi: "\u0935\u0943\u0936\u094D\u091A\u093F\u0915 \u0930\u093E\u0936\u093F, \u0924\u0940\u0935\u094D\u0930\u0924\u093E \u0914\u0930 \u092B\u094B\u0915\u0938 \u0906\u092A\u0915\u0947 \u0926\u093F\u0928 \u0915\u094B \u092A\u0930\u093F\u092D\u093E\u0937\u093F\u0924 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964 \u0917\u0939\u0928 \u0936\u094B\u0927 \u092F\u093E \u091C\u093E\u0902\u091A \u0906\u092A\u0915\u0947 \u0935\u0930\u094D\u0924\u092E\u093E\u0928 \u0909\u0926\u094D\u092F\u092E \u0915\u0947 \u0932\u093F\u090F \u092E\u0942\u0932\u094D\u092F\u0935\u093E\u0928 \u0905\u0902\u0924\u0930\u094D\u0926\u0943\u0937\u094D\u091F\u093F \u092A\u094D\u0930\u0926\u093E\u0928 \u0915\u0930\u0947\u0917\u0940\u0964"
-      },
-      probability: 90
-    },
-    {
-      id: "sagittarius",
-      name: { en: "Dhanu / Sagittarius", hi: "\u0927\u0928\u0941 / Sagittarius" },
-      nameTop: { en: "Dhanu", hi: "\u0927\u0928\u0941" },
-      guidance: {
-        en: "Adventure calls, Dhanu. Even a small change in routine will bring fresh perspective. Fortune favors the bold today.",
-        hi: "\u0927\u0928\u0941 \u0930\u093E\u0936\u093F, \u0930\u094B\u092E\u093E\u0902\u091A \u0906\u092A\u0915\u094B \u092A\u0941\u0915\u093E\u0930 \u0930\u0939\u093E \u0939\u0948\u0964 \u0926\u093F\u0928\u091A\u0930\u094D\u092F\u093E \u092E\u0947\u0902 \u090F\u0915 \u091B\u094B\u091F\u093E \u0938\u093E \u092C\u0926\u0932\u093E\u0935 \u092D\u0940 \u0928\u092F\u093E \u0926\u0943\u0937\u094D\u091F\u093F\u0915\u094B\u0923 \u0932\u093E\u090F\u0917\u093E\u0964 \u0906\u091C \u092D\u093E\u0917\u094D\u092F \u092C\u0939\u093E\u0926\u0941\u0930\u094B\u0902 \u0915\u093E \u0938\u093E\u0925 \u0926\u0947\u0924\u093E \u0939\u0948\u0964"
-      },
-      probability: 86
-    },
-    {
-      id: "capricorn",
-      name: { en: "Makara / Capricorn", hi: "\u092E\u0915\u0930 / Capricorn" },
-      nameTop: { en: "Makara", hi: "\u092E\u0915\u0930" },
-      guidance: {
-        en: "Disciplined efforts bring rewards, Makara. Your persistence in a challenging project is finally being noticed by the right people.",
-        hi: "\u092E\u0915\u0930 \u0930\u093E\u0936\u093F, \u0905\u0928\u0941\u0936\u093E\u0938\u093F\u0924 \u092A\u094D\u0930\u092F\u093E\u0938 \u092A\u0941\u0930\u0938\u094D\u0915\u093E\u0930 \u0932\u093E\u0924\u0947 \u0939\u0948\u0902\u0964 \u090F\u0915 \u091A\u0941\u0928\u094C\u0924\u0940\u092A\u0942\u0930\u094D\u0923 \u092A\u094D\u0930\u094B\u091C\u0947\u0915\u094D\u091F \u092E\u0947\u0902 \u0906\u092A\u0915\u0940 \u0926\u0943\u0922\u093C\u0924\u093E \u0915\u094B \u0905\u0902\u0924\u0924\u0903 \u0938\u0939\u0940 \u0932\u094B\u0917\u094B\u0902 \u0926\u094D\u0935\u093E\u0930\u093E \u0926\u0947\u0916\u093E \u091C\u093E \u0930\u0939\u093E \u0939\u0948\u0964"
-      },
-      probability: 84
-    },
-    {
-      id: "aquarius",
-      name: { en: "Kumbha / Aquarius", hi: "\u0915\u0941\u0902\u092D / Aquarius" },
-      nameTop: { en: "Kumbha", hi: "\u0915\u0941\u0902\u092D" },
-      guidance: {
-        en: "Innovation is your theme, Kumbha. Think outside the box to solve a recurring bottleneck. Your unique vision is your greatest asset.",
-        hi: "\u0915\u0941\u0902\u092D \u0930\u093E\u0936\u093F, \u0928\u0935\u093E\u091A\u093E\u0930 \u0906\u092A\u0915\u093E \u0935\u093F\u0937\u092F \u0939\u0948\u0964 \u092C\u093E\u0930-\u092C\u093E\u0930 \u0906\u0928\u0947 \u0935\u093E\u0932\u0940 \u092C\u093E\u0927\u093E \u0915\u094B \u0926\u0942\u0930 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093F\u090F \u0932\u0940\u0915 \u0938\u0947 \u0939\u091F\u0915\u0930 \u0938\u094B\u091A\u0947\u0902\u0964 \u0906\u092A\u0915\u0940 \u0905\u0928\u0942\u0920\u0940 \u0926\u0943\u0937\u094D\u091F\u093F \u0906\u092A\u0915\u0940 \u0938\u092C\u0938\u0947 \u092C\u0921\u093C\u0940 \u0938\u0902\u092A\u0924\u094D\u0924\u093F \u0939\u0948\u0964"
-      },
-      probability: 79
-    },
-    {
-      id: "pisces",
-      name: { en: "Meena / Pisces", hi: "\u092E\u0940\u0928 / Pisces" },
-      nameTop: { en: "Meena", hi: "\u092E\u0940\u0928" },
-      guidance: {
-        en: "Creativity flows effortlessly, Meena. Use this energy for artistic pursuits or creative problem-solving. A dream might hold a key message.",
-        hi: "\u092E\u0940\u0928 \u0930\u093E\u0936\u093F, \u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915\u0924\u093E \u0938\u0939\u091C\u0924\u093E \u0938\u0947 \u092C\u0939\u0924\u0940 \u0939\u0948\u0964 \u0907\u0938 \u090A\u0930\u094D\u091C\u093E \u0915\u093E \u0909\u092A\u092F\u094B\u0917 \u0915\u0932\u093E\u0924\u094D\u092E\u0915 \u092A\u094D\u0930\u092F\u093E\u0938\u094B\u0902 \u092F\u093E \u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915 \u0938\u092E\u0938\u094D\u092F\u093E-\u0938\u092E\u093E\u0927\u093E\u0928 \u0915\u0947 \u0932\u093F\u090F \u0915\u0930\u0947\u0902\u0964 \u090F\u0915 \u0938\u092A\u0928\u093E \u090F\u0915 \u092E\u0939\u0924\u094D\u0935\u092A\u0942\u0930\u094D\u0923 \u0938\u0902\u0926\u0947\u0936 \u0926\u0947 \u0938\u0915\u0924\u093E \u0939\u0948\u0964"
-      },
-      probability: 76
-    }
+    { id:"aries",name:{en:"Mesha / Aries",hi:"\u092E\u0947\u0937 / Aries"},nameTop:{en:"Mesha",hi:"\u092E\u0947\u0937"},guidance:{en:"",hi:""},probability:80 },
+    { id:"taurus",name:{en:"Vrishabha / Taurus",hi:"\u0935\u0943\u0937\u092D / Taurus"},nameTop:{en:"Vrishabha",hi:"\u0935\u0943\u0937\u092D"},guidance:{en:"",hi:""},probability:80 },
+    { id:"gemini",name:{en:"Mithuna / Gemini",hi:"\u092E\u093F\u0925\u0941\u0928 / Gemini"},nameTop:{en:"Mithuna",hi:"\u092E\u093F\u0925\u0941\u0928"},guidance:{en:"",hi:""},probability:80 },
+    { id:"cancer",name:{en:"Karka / Cancer",hi:"\u0915\u0930\u094D\u0915 / Cancer"},nameTop:{en:"Karka",hi:"\u0915\u0930\u094D\u0915"},guidance:{en:"",hi:""},probability:80 },
+    { id:"leo",name:{en:"Simha / Leo",hi:"\u0938\u093F\u0902\u0939 / Leo"},nameTop:{en:"Simha",hi:"\u0938\u093F\u0902\u0939"},guidance:{en:"",hi:""},probability:80 },
+    { id:"virgo",name:{en:"Kanya / Virgo",hi:"\u0915\u0928\u094D\u092F\u093E / Virgo"},nameTop:{en:"Kanya",hi:"\u0915\u0928\u094D\u092F\u093E"},guidance:{en:"",hi:""},probability:80 },
+    { id:"libra",name:{en:"Tula / Libra",hi:"\u0924\u0941\u0932\u093E / Libra"},nameTop:{en:"Tula",hi:"\u0924\u0941\u0932\u093E"},guidance:{en:"",hi:""},probability:80 },
+    { id:"scorpio",name:{en:"Vrishchika / Scorpio",hi:"\u0935\u0943\u0936\u094D\u091A\u093F\u0915 / Scorpio"},nameTop:{en:"Vrishchika",hi:"\u0935\u0943\u0936\u094D\u091A\u093F\u0915"},guidance:{en:"",hi:""},probability:80 },
+    { id:"sagittarius",name:{en:"Dhanu / Sagittarius",hi:"\u0927\u0928\u0941 / Sagittarius"},nameTop:{en:"Dhanu",hi:"\u0927\u0928\u0941"},guidance:{en:"",hi:""},probability:80 },
+    { id:"capricorn",name:{en:"Makara / Capricorn",hi:"\u092E\u0915\u0930 / Capricorn"},nameTop:{en:"Makara",hi:"\u092E\u0915\u0930"},guidance:{en:"",hi:""},probability:80 },
+    { id:"aquarius",name:{en:"Kumbha / Aquarius",hi:"\u0915\u0941\u0902\u092D / Aquarius"},nameTop:{en:"Kumbha",hi:"\u0915\u0941\u0902\u092D"},guidance:{en:"",hi:""},probability:80 },
+    { id:"pisces",name:{en:"Meena / Pisces",hi:"\u092E\u0940\u0928 / Pisces"},nameTop:{en:"Meena",hi:"\u092E\u0940\u0928"},guidance:{en:"",hi:""},probability:80 },
   ];
-
-  // Override guidance with daily-generated data from build pipeline
-  const _daily = (window as any).__dailyData;
-  if (_daily?.signs) {
-    for (const sign of signsData) {
-      const d = _daily.signs.find((s: any) => s.id === sign.id);
-      if (d) {
-        sign.guidance = d.guidance;
-        sign.probability = d.probability;
-      }
-    }
-  }
-
-  const uiText: Record<string, Record<string, string>> = {
-    en: {
-      heroTitle: "Your Vedic Edge for",
-      heroTitleItalic: "Life's Big Moves.",
-      heroSub: "Rooted in ancient wisdom. Designed for your modern journey. Get precise, personalized guidance from your AI Vedic astrologer \u2014 right on WhatsApp.",
-      todaysLight: "Today\u2019s Light",
-      successProb: "Success Probability",
-      deeperClarity: "Need Deeper Clarity? Get Tactical.",
-      whatsappSub: "Your generic sign is only 10% of the story. For the full 100% \u2014 including personal chart analysis, Dasha predictions, and your definitive guidance \u2014 chat with HoroTalk on WhatsApp.",
-      getAnalysis: "Get Personalized Analysis",
-      chatNow: "Chat Now"
-    },
-    hi: {
-      heroTitle: "\u0906\u092A\u0915\u0947 \u091C\u0940\u0935\u0928 \u0915\u0947 \u092C\u0921\u093C\u0947 \u092B\u0948\u0938\u0932\u094B\u0902 \u0915\u0947 \u0932\u093F\u090F",
-      heroTitleItalic: "\u0935\u0948\u0926\u093F\u0915 \u092C\u0922\u093C\u0924\u0964",
-      heroSub: "\u092A\u094D\u0930\u093E\u091A\u0940\u0928 \u091C\u094D\u091E\u093E\u0928 \u092E\u0947\u0902 \u0928\u093F\u0939\u093F\u0924\u0964 \u0906\u092A\u0915\u0940 \u0906\u0927\u0941\u0928\u093F\u0915 \u092F\u093E\u0924\u094D\u0930\u093E \u0915\u0947 \u0932\u093F\u090F \u0921\u093F\u095B\u093E\u0907\u0928 \u0915\u093F\u092F\u093E \u0917\u092F\u093E\u0964 \u0905\u092A\u0928\u0947 \u0935\u094D\u092F\u0915\u094D\u0924\u093F\u0917\u0924 AI \u091C\u094D\u092F\u094B\u0924\u093F\u0937\u0940 \u0938\u0947 \u0938\u091F\u0940\u0915 \u092E\u093E\u0930\u094D\u0917\u0926\u0930\u094D\u0936\u0928 \u092A\u094D\u0930\u093E\u092A\u094D\u0924 \u0915\u0930\u0947\u0902\u0964",
-      todaysLight: "\u0906\u091C \u0915\u093E \u092A\u094D\u0930\u0915\u093E\u0936",
-      successProb: "\u0938\u092B\u0932\u0924\u093E \u0915\u0940 \u0938\u0902\u092D\u093E\u0935\u0928\u093E",
-      deeperClarity: "\u0917\u0939\u0930\u0940 \u0938\u094D\u092A\u0937\u094D\u091F\u0924\u093E \u091A\u093E\u0939\u093F\u090F? \u0930\u0923\u0928\u0940\u0924\u093F\u0915 \u092C\u0928\u0947\u0902\u0964",
-      whatsappSub: "\u0906\u092A\u0915\u0940 \u0938\u093E\u092E\u093E\u0928\u094D\u092F \u0930\u093E\u0936\u093F \u0915\u0947\u0935\u0932 10% \u0915\u0939\u093E\u0928\u0940 \u0939\u0948\u0964 \u092A\u0942\u0930\u0947 100% \u0915\u0947 \u0932\u093F\u090F \u2014 \u0935\u094D\u092F\u0915\u094D\u0924\u093F\u0917\u0924 \u0915\u0941\u0902\u0921\u0932\u0940 \u0935\u093F\u0936\u094D\u0932\u0947\u0937\u0923, \u0926\u0936\u093E \u092D\u0935\u093F\u0937\u094D\u092F\u0935\u093E\u0923\u0940, \u0914\u0930 \u0906\u092A\u0915\u0947 \u0935\u093F\u0936\u093F\u0937\u094D\u091F \u092E\u093E\u0930\u094D\u0917\u0926\u0930\u094D\u0936\u0928 \u0938\u0939\u093F\u0924 \u2014 WhatsApp \u092A\u0930 HoroTalk \u0938\u0947 \u091A\u0948\u091F \u0915\u0930\u0947\u0902\u0964",
-      getAnalysis: "\u0935\u094D\u092F\u0915\u094D\u0924\u093F\u0917\u0924 \u0935\u093F\u0936\u094D\u0932\u0947\u0937\u0923 \u092A\u094D\u0930\u093E\u092A\u094D\u0924 \u0915\u0930\u0947\u0902",
-      chatNow: "\u0905\u092D\u0940 \u091A\u0948\u091F \u0915\u0930\u0947\u0902"
-    }
-  };
-
-  let currentLang = 'en';
-  let selectedIndex = 0;
-
-  function updateDate() {
-    const el = document.getElementById('date-display');
-    if (!el) return;
-    const locale = currentLang === 'hi' ? 'hi-IN' : 'en-US';
-    el.textContent = new Date().toLocaleDateString(locale, { month: 'long', day: 'numeric', year: 'numeric' });
-  }
-
-  function selectSign(index: number) {
-    selectedIndex = index;
-
-    document.querySelectorAll('.zodiac-sign').forEach((el, i) => {
-      el.classList.toggle('active', i === index);
-    });
-
-    const card = document.getElementById('guidance-card');
-    if (!card) return;
-
-    card.style.opacity = '0';
-    card.style.transform = 'translateX(20px)';
-
-    setTimeout(() => {
-      const sign = signsData[index];
-      const t = uiText[currentLang];
-      const nameEl = document.getElementById('guidance-sign-name');
-      const textEl = document.getElementById('guidance-text');
-      const probEl = document.getElementById('guidance-prob');
-
-      if (nameEl) nameEl.textContent = sign.name[currentLang] + ' \u2014 ' + t.todaysLight;
-      if (textEl) textEl.textContent = '\u201C' + sign.guidance[currentLang] + '\u201D';
-      if (probEl) probEl.textContent = sign.probability + '%';
-
-      card.style.transform = 'translateX(-20px)';
-      requestAnimationFrame(() => {
-        card.style.opacity = '1';
-        card.style.transform = 'translateX(0)';
-      });
-    }, 200);
-  }
-
-  function updateLanguage(lang: string) {
-    currentLang = lang;
-    const t = uiText[lang];
-
-    const updates: Record<string, string> = {
-      'hero-title': t.heroTitle,
-      'hero-title-italic': t.heroTitleItalic,
-      'hero-sub': t.heroSub,
-      'todays-light-title': t.todaysLight,
-      'success-prob-label': t.successProb,
-      'deeper-clarity': t.deeperClarity,
-      'whatsapp-sub': t.whatsappSub,
-      'get-analysis-text': t.getAnalysis,
-      'header-chat-text': t.chatNow
-    };
-
-    for (const [id, text] of Object.entries(updates)) {
-      const el = document.getElementById(id);
-      if (el) el.textContent = text;
-    }
-
-    document.querySelectorAll('.zodiac-sign').forEach((el, i) => {
-      const sign = signsData[i];
-      const topEl = el.querySelector('.sign-name-top');
-      const bottomEl = el.querySelector('.sign-name-bottom');
-      if (topEl) topEl.textContent = sign.nameTop[lang];
-      if (bottomEl) bottomEl.textContent = sign.name[lang].split(' / ')[1];
-    });
-
-    const sign = signsData[selectedIndex];
-    const nameEl = document.getElementById('guidance-sign-name');
-    const textEl = document.getElementById('guidance-text');
-    if (nameEl) nameEl.textContent = sign.name[lang] + ' \u2014 ' + t.todaysLight;
-    if (textEl) textEl.textContent = '\u201C' + sign.guidance[lang] + '\u201D';
-
-    updateDate();
-  }
-
-  // Initialize
-  updateDate();
-  selectSign(0);
-
-  document.querySelectorAll('.zodiac-sign').forEach(el => {
-    el.addEventListener('click', () => {
-      const idx = parseInt((el as HTMLElement).dataset.index || '0');
-      selectSign(idx);
-    });
-  });
-
-  window.addEventListener('lang-change', ((e: CustomEvent) => {
-    updateLanguage(e.detail.lang);
-  }) as EventListener);
-
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+  const _d=(window as any).__dailyData;if(_d?.signs){for(const s of signsData){const d=_d.signs.find((x:any)=>x.id===s.id);if(d){s.guidance=d.guidance;s.probability=d.probability;}}}
+  const ui:Record<string,Record<string,string>>={en:{tl:"Today's Rashifal",sp:"Success Probability",cn:"Chat Now"},hi:{tl:"\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932",sp:"\u0938\u092B\u0932\u0924\u093E \u0915\u0940 \u0938\u0902\u092D\u093E\u0935\u0928\u093E",cn:"\u0905\u092D\u0940 \u091A\u0948\u091F \u0915\u0930\u0947\u0902"}};
+  let lang='en',sel=0;
+  function upDate(){const e=document.getElementById('date-display');if(e)e.textContent=new Date().toLocaleDateString(lang==='hi'?'hi-IN':'en-US',{month:'long',day:'numeric',year:'numeric'});}
+  const signSymbols=['\u2648','\u2649','\u264A','\u264B','\u264C','\u264D','\u264E','\u264F','\u2650','\u2651','\u2652','\u2653'];
+  function pick(i:number){sel=i;document.querySelectorAll('.zodiac-sign').forEach((e,j)=>e.classList.toggle('active',j===i));const c=document.getElementById('guidance-card');if(!c)return;c.style.opacity='0';c.style.transform='translateX(10px)';setTimeout(()=>{const s=signsData[i],t=ui[lang];const sym=document.getElementById('guidance-symbol'),n=document.getElementById('guidance-sign-name'),tx=document.getElementById('guidance-text'),p=document.getElementById('guidance-prob');if(sym)sym.textContent=signSymbols[i];if(n)n.textContent=s.name[lang];if(tx)tx.textContent=s.guidance[lang];if(p)p.textContent=s.probability+'%';c.style.transform='translateX(-10px)';requestAnimationFrame(()=>{c.style.opacity='1';c.style.transform='translateX(0)';});},130);}
+  function i18n(l:string){document.querySelectorAll('.i18n').forEach(e=>{const h=e as HTMLElement;if(h.dataset[l])h.textContent=h.dataset[l];});const it=document.getElementById('hero-title-italic');if(it?.dataset[l])it.textContent=it.dataset[l];document.querySelectorAll('.chat-en').forEach(e=>(e as HTMLElement).classList.toggle('hidden',l==='hi'));document.querySelectorAll('.chat-hi').forEach(e=>(e as HTMLElement).classList.toggle('hidden',l==='en'));}
+  function upLang(l:string){lang=l;const t=ui[l];i18n(l);document.getElementById('todays-light-title')!.textContent=t.tl;document.getElementById('success-prob-label')!.textContent=t.sp;const cb=document.getElementById('header-chat-text');if(cb)cb.textContent=t.cn;document.querySelectorAll('.zodiac-sign').forEach((e,i)=>{const s=signsData[i];const top=e.querySelector('.sign-name-top');if(top)top.textContent=s.nameTop[l];const bot=e.querySelector('.sign-name-bottom');if(bot)bot.textContent=s.name[l].split(' / ')[1];});const s=signsData[sel];const n=document.getElementById('guidance-sign-name'),tx=document.getElementById('guidance-text');if(n)n.textContent=s.name[l];if(tx)tx.textContent=s.guidance[l];upDate();}
+  upDate();pick(0);
+  document.querySelectorAll('.zodiac-sign').forEach(e=>{e.addEventListener('click',()=>pick(parseInt((e as HTMLElement).dataset.index||'0')));});
+  window.addEventListener('lang-change',((e:CustomEvent)=>upLang(e.detail.lang)) as EventListener);
 </script>

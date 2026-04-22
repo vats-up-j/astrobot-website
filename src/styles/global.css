@@ -1,21 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --color-cream: #FCF9F2;
-  --color-charcoal: #2D2D2D;
-  --color-saffron: #FF9933;
-  --color-primary: #FF9933;
-  --color-primary-dark: #E68A2E;
-  --color-primary-light: #FFF5E6;
-  --color-primary-100: #FFEDD5;
-  --color-primary-200: #FFD699;
-  --color-text: #2D2D2D;
-  --color-text-light: #7A7570;
-  --color-bg: #FCF9F2;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-maroon: #7B2D26;
+  --color-maroon-dark: #5E211B;
+  --color-maroon-light: #F5EBE9;
+  --color-gold: #C9A84C;
+  --color-gold-light: #F7F0DD;
+  --color-ivory: #FBF7F0;
+  --color-charcoal: #2D1810;
+  --color-navy: #0F0A1A;
+  --color-primary: #7B2D26;
+  --color-primary-dark: #5E211B;
+  --color-primary-light: #F5EBE9;
+  --color-primary-100: #F5EBE9;
+  --color-primary-200: #E8D5D2;
+  --color-text: #2D1810;
+  --color-text-light: #7A6B63;
+  --color-bg: #FBF7F0;
   --color-bg-light: #F5F0E8;
-  --color-border: #E5E0D8;
+  --color-border: #E5DDD5;
 }
 
 @layer base {
@@ -23,6 +29,9 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-cream text-charcoal font-sans antialiased selection:bg-saffron/30;
+    @apply bg-ivory text-charcoal font-sans antialiased selection:bg-gold/30;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-heading);
   }
 }
