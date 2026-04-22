@@ -15,7 +15,8 @@ const { title, description = "HoroTalk - Your Personal AI Astrologer on WhatsApp
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
@@ -38,5 +39,15 @@ const { title, description = "HoroTalk - Your Personal AI Astrologer on WhatsApp
       <slot />
     </main>
     <Footer />
+    <script>
+      // Global i18n listener for all pages
+      window.addEventListener('lang-change', ((e: CustomEvent) => {
+        const lang = e.detail.lang as string;
+        document.querySelectorAll('.i18n').forEach(el => {
+          const h = el as HTMLElement;
+          if (h.dataset[lang]) h.textContent = h.dataset[lang];
+        });
+      }) as EventListener);
+    </script>
   </body>
 </html>

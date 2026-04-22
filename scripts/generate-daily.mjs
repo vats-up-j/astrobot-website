@@ -25,7 +25,7 @@ const { Planet } = pp;
 
 // Template imports
 import {
-  signMeta, houseThemes, planetNames, planetNature,
+  signMeta, planetNames, planetNature,
   beneficHouses, maleficHouses,
   tithiNames, pakshaNames, nakshatraNames, yogaNames, karanaNames, varNames,
   buildGuidance,
@@ -230,10 +230,76 @@ const signsOutput = signMeta.map((sign, signIdx) => {
   const guidanceEn = buildGuidance('en', sign.en, moonHouse, dominant, tone, daySeed + signIdx);
   const guidanceHi = buildGuidance('hi', sign.hi, moonHouse, dominant, tone, daySeed + signIdx);
 
+  // ── Category ratings (1-5) based on house placements ──
+  // Career: 10th house strength
+  // Love: 7th house strength
+  // Health: 6th house strength (inverted - malefics here are good)
+  // Finance: 2nd house strength
+  function houseScore(targetHouse) {
+    let score = 3; // baseline
+    for (const [p, h] of Object.entries(planetHouses)) {
+      if (h === targetHouse) {
+        const n = planetNature[p];
+        if (n === 'benefic') score += 1;
+        else if (n === 'malefic') score -= 0.5;
+      }
+      // Aspect: planets in 7th from target house aspect it
+      const aspectHouse = ((targetHouse + 6 - 1) % 12) + 1;
+      if (h === aspectHouse) {
+        const n = planetNature[p];
+        if (n === 'benefic') score += 0.5;
+        else if (n === 'malefic') score -= 0.3;
+      }
+    }
+    // Moon in the target house boosts it
+    if (moonHouse === targetHouse) score += 0.5;
+    return Math.max(1, Math.min(5, Math.round(score)));
+  }
+
+  // Health: for 6th house, malefics are GOOD (they fight disease)
+  function healthScore() {
+    let score = 3;
+    const h6 = 6;
+    for (const [p, h] of Object.entries(planetHouses)) {
+      if (h === h6) {
+        const n = planetNature[p];
+        if (n === 'malefic') score += 0.5; // malefics in 6th fight enemies/disease
+        else if (n === 'benefic') score -= 0.3;
+      }
+      if (h === 1) { // planets in 1st house affect health directly
+        const n = planetNature[p];
+        if (n === 'benefic') score += 0.5;
+        else if (n === 'malefic') score -= 0.5;
+      }
+    }
+    if (moonHouse === 1 || moonHouse === 4) score += 0.5; // Moon in 1st or 4th good for wellbeing
+    return Math.max(1, Math.min(5, Math.round(score)));
+  }
+
+  const ratings = {
+    career: houseScore(10),
+    love: houseScore(7),
+    health: healthScore(),
+    finance: houseScore(2),
+  };
+
+  // ── Lucky color: legitimately derived from sign's ruling planet ──
+  const signRulers = ['Mars','Venus','Mercury','Moon','Sun','Mercury','Venus','Mars','Jupiter','Saturn','Saturn','Jupiter'];
+  const colorMap = {
+    Sun: { en: 'Gold', hi: 'सुनहरा' }, Moon: { en: 'White', hi: 'सफेद' },
+    Mars: { en: 'Red', hi: 'लाल' }, Mercury: { en: 'Green', hi: 'हरा' },
+    Jupiter: { en: 'Yellow', hi: 'पीला' }, Venus: { en: 'Pink', hi: 'गुलाबी' },
+    Saturn: { en: 'Blue', hi: 'नीला' },
+  };
+  const ruler = signRulers[signIdx];
+  const luckyColor = colorMap[ruler] || { en: 'White', hi: 'सफेद' };
+
   return {
     id: sign.id,
     guidance: { en: guidanceEn, hi: guidanceHi },
     probability,
+    ratings,
+    luckyColor,
   };
 });
 

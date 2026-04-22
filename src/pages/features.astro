@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { waLink } from '../config';
 ---
 
 <Layout title="Features - HoroTalk">
@@ -155,7 +156,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="text-3xl font-bold mb-4">Ready to Explore Your Stars?</h2>
       <p class="text-text-light mb-8">Start chatting with HoroTalk on WhatsApp — no downloads, no sign-ups.</p>
       <a
-        href="https://wa.me/919999999999?text=Hi%20HoroTalk"
+        href={waLink('Hi HoroTalk')}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"

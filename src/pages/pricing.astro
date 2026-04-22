@@ -1,178 +1,157 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { waLink } from '../config';
 ---
 
 <Layout title="Pricing - HoroTalk">
 
   <!-- Page Header -->
-  <section class="bg-gradient-to-br from-white via-primary-light to-white py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-sm text-text-light mb-2">
-        <a href="/" class="hover:text-primary">Home</a> &rsaquo; Pricing
+  <section class="bg-gradient-to-br from-ivory via-primary-light to-ivory py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8">
+      <p class="text-sm text-charcoal/40 mb-2">
+        <a href="/" class="hover:text-maroon">Home</a> &rsaquo; <span class="i18n" data-en="Pricing" data-hi="&#x092E;&#x0942;&#x0932;&#x094D;&#x092F;">Pricing</span>
       </p>
-      <h1 class="text-3xl md:text-5xl font-bold">Simple, Transparent Pricing</h1>
-      <p class="mt-4 text-text-light text-lg max-w-2xl">
-        Start free. Upgrade when you need more. No hidden charges.
+      <h1 class="text-3xl md:text-4xl font-bold text-charcoal i18n" data-en="Simple, Pay-As-You-Go Pricing" data-hi="&#x0938;&#x0930;&#x0932;, &#x0909;&#x092A;&#x092F;&#x094B;&#x0917; &#x0915;&#x0947; &#x0905;&#x0928;&#x0941;&#x0938;&#x093E;&#x0930; &#x092D;&#x0941;&#x0917;&#x0924;&#x093E;&#x0928;">Simple, Pay-As-You-Go Pricing</h1>
+      <p class="mt-3 text-charcoal/55 max-w-xl i18n" data-en="Start free with &#8377;50 credits. No subscription. No lock-in. Just load your wallet and use what you need." data-hi="&#8377;50 &#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F; &#x0938;&#x0947; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0947;&#x0902;&#x0964; &#x0915;&#x094B;&#x0908; &#x0938;&#x092C;&#x094D;&#x0938;&#x0915;&#x094D;&#x0930;&#x093F;&#x092A;&#x094D;&#x0936;&#x0928; &#x0928;&#x0939;&#x0940;&#x0902;&#x0964; &#x0935;&#x0949;&#x0932;&#x0947;&#x091F; &#x0932;&#x094B;&#x0921; &#x0915;&#x0930;&#x0947;&#x0902; &#x0914;&#x0930; &#x091C;&#x0930;&#x0942;&#x0930;&#x0924; &#x0915;&#x0947; &#x0905;&#x0928;&#x0941;&#x0938;&#x093E;&#x0930; &#x0909;&#x092A;&#x092F;&#x094B;&#x0917; &#x0915;&#x0930;&#x0947;&#x0902;&#x0964;">
+        Start free with &#8377;50 credits. No subscription. No lock-in. Just load your wallet and use what you need.
       </p>
     </div>
   </section>
 
-  <!-- Pricing Cards -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <section class="py-10 sm:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
 
-        <!-- Free Tier -->
-        <div class="border border-border rounded-xl p-8 hover:shadow-lg transition-shadow">
-          <h3 class="text-lg font-semibold text-text-light mb-1">Free</h3>
-          <div class="flex items-baseline gap-1 mb-4">
-            <span class="text-4xl font-bold">&#8377;0</span>
-            <span class="text-text-light text-sm">/ forever</span>
+      <!-- Free tier -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-charcoal/5 mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="bg-[#25D366]/10 text-[#25D366] text-xs font-bold px-2.5 py-1 rounded-full i18n" data-en="FREE TO START" data-hi="&#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0936;&#x0941;&#x0930;&#x0942;&#x0906;&#x0924;">FREE TO START</span>
+            </div>
+            <h2 class="text-xl font-bold text-charcoal mb-1 i18n" data-en="Every new user gets &#8377;50 free credits" data-hi="&#x0939;&#x0930; &#x0928;&#x090F; &#x0909;&#x092A;&#x092F;&#x094B;&#x0917;&#x0915;&#x0930;&#x094D;&#x0924;&#x093E; &#x0915;&#x094B; &#8377;50 &#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F;">Every new user gets &#8377;50 free credits</h2>
+            <p class="text-sm text-charcoal/55 i18n" data-en="Enough for 3 questions and a basic Kundli. No payment needed to begin." data-hi="3 &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928; &#x0914;&#x0930; &#x090F;&#x0915; &#x092C;&#x0947;&#x0938;&#x093F;&#x0915; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940; &#x0915;&#x0947; &#x0932;&#x093F;&#x090F; &#x092A;&#x0930;&#x094D;&#x092F;&#x093E;&#x092A;&#x094D;&#x0924;&#x0964; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0928;&#x0947; &#x0915;&#x0947; &#x0932;&#x093F;&#x090F; &#x092D;&#x0941;&#x0917;&#x0924;&#x093E;&#x0928; &#x0928;&#x0939;&#x0940;&#x0902;&#x0964;">Enough for 3 questions and a basic Kundli. No payment needed to begin.</p>
           </div>
-          <p class="text-text-light text-sm mb-6">Perfect to explore and try HoroTalk</p>
-          <a
-            href="https://wa.me/919999999999?text=Hi%20HoroTalk"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full text-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg transition-colors text-sm"
-          >
-            Get Started Free
+          <a href={waLink('Hi HoroTalk')} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all shadow-lg shadow-[#25D366]/20 active:scale-[0.97] flex-shrink-0">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="i18n" data-en="Start Free" data-hi="&#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0947;&#x0902;">Start Free</span>
           </a>
-          <ul class="mt-6 space-y-3">
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              5 questions per day
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Basic Kundli generation
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Daily Panchang
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Hindi & English
-            </li>
-          </ul>
         </div>
+      </div>
 
-        <!-- Pro Tier -->
-        <div class="border-2 border-primary rounded-xl p-8 relative shadow-lg">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</div>
-          <h3 class="text-lg font-semibold text-primary mb-1">Pro</h3>
-          <div class="flex items-baseline gap-1 mb-4">
-            <span class="text-4xl font-bold">&#8377;99</span>
-            <span class="text-text-light text-sm">/ month</span>
-          </div>
-          <p class="text-text-light text-sm mb-6">For regular users who want deeper insights</p>
-          <a
-            href="https://wa.me/919999999999?text=I%20want%20to%20upgrade%20to%20Pro"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full text-center bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-lg transition-colors text-sm"
-          >
-            Upgrade to Pro
-          </a>
-          <ul class="mt-6 space-y-3">
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Unlimited questions
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Detailed Kundli with divisional charts
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Dasha predictions & timeline
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Kundli matching
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Personalized remedies
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Priority responses
-            </li>
-          </ul>
+      <!-- Reports -->
+      <h2 class="text-xl sm:text-2xl font-bold text-charcoal mb-2 i18n" data-en="Detailed Reports" data-hi="&#x0935;&#x093F;&#x0938;&#x094D;&#x0924;&#x0943;&#x0924; &#x0930;&#x093F;&#x092A;&#x094B;&#x0930;&#x094D;&#x091F;">Detailed Reports</h2>
+      <p class="text-sm text-charcoal/50 mb-6 i18n" data-en="12-15 page PDF reports with real Vedic calculations and AI interpretation. Delivered on WhatsApp in seconds." data-hi="12-15 &#x092A;&#x0947;&#x091C; PDF &#x0930;&#x093F;&#x092A;&#x094B;&#x0930;&#x094D;&#x091F;&#x0964; &#x0935;&#x093E;&#x0938;&#x094D;&#x0924;&#x0935;&#x093F;&#x0915; &#x0935;&#x0948;&#x0926;&#x093F;&#x0915; &#x0917;&#x0923;&#x0928;&#x093E; &#x0914;&#x0930; AI &#x0935;&#x094D;&#x092F;&#x093E;&#x0916;&#x094D;&#x092F;&#x093E;&#x0964; WhatsApp &#x092A;&#x0930; &#x0938;&#x0947;&#x0915;&#x0902;&#x0921;&#x094B;&#x0902; &#x092E;&#x0947;&#x0902;&#x0964;">12-15 page PDF reports with real Vedic calculations and AI interpretation. Delivered on WhatsApp in seconds.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all relative">
+          <span class="absolute -top-2 right-4 bg-maroon text-white text-[9px] font-bold px-2 py-0.5 rounded-full i18n" data-en="Most Popular" data-hi="&#x0938;&#x092C;&#x0938;&#x0947; &#x0932;&#x094B;&#x0915;&#x092A;&#x094D;&#x0930;&#x093F;&#x092F;">Most Popular</span>
+          <div class="text-2xl mb-2">&#x2728;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Janam Kundli" data-hi="&#x091C;&#x0928;&#x094D;&#x092E; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940;">Janam Kundli</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Complete birth chart with personality analysis, Lagna and Navamsa charts, Dasha timeline, and life guidance." data-hi="&#x0935;&#x094D;&#x092F;&#x0915;&#x094D;&#x0924;&#x093F;&#x0924;&#x094D;&#x0935; &#x0935;&#x093F;&#x0936;&#x094D;&#x0932;&#x0947;&#x0937;&#x0923;, &#x0932;&#x0917;&#x094D;&#x0928; &#x0914;&#x0930; &#x0928;&#x0935;&#x093E;&#x0902;&#x0936; &#x091A;&#x093E;&#x0930;&#x094D;&#x091F;, &#x0926;&#x0936;&#x093E; &#x0938;&#x092E;&#x092F;&#x0930;&#x0947;&#x0916;&#x093E; &#x0914;&#x0930; &#x091C;&#x0940;&#x0935;&#x0928; &#x092E;&#x093E;&#x0930;&#x094D;&#x0917;&#x0926;&#x0930;&#x094D;&#x0936;&#x0928; &#x0915;&#x0947; &#x0938;&#x093E;&#x0925; &#x092A;&#x0942;&#x0930;&#x094D;&#x0923; &#x091C;&#x0928;&#x094D;&#x092E; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940;&#x0964;">Complete birth chart with personality analysis, Lagna and Navamsa charts, Dasha timeline, and life guidance.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;99</div>
         </div>
-
-        <!-- Premium Tier -->
-        <div class="border border-border rounded-xl p-8 hover:shadow-lg transition-shadow">
-          <h3 class="text-lg font-semibold text-text-light mb-1">Premium</h3>
-          <div class="flex items-baseline gap-1 mb-4">
-            <span class="text-4xl font-bold">&#8377;299</span>
-            <span class="text-text-light text-sm">/ month</span>
-          </div>
-          <p class="text-text-light text-sm mb-6">For serious seekers & professionals</p>
-          <a
-            href="https://wa.me/919999999999?text=I%20want%20to%20upgrade%20to%20Premium"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-full text-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg transition-colors text-sm"
-          >
-            Go Premium
-          </a>
-          <ul class="mt-6 space-y-3">
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Everything in Pro
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Detailed PDF reports
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Yearly predictions
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Transit analysis
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Family charts (up to 5 members)
-            </li>
-            <li class="flex items-start gap-2 text-sm text-text-light">
-              <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Muhurta consultation
-            </li>
-          </ul>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl mb-2">&#x1F4BC;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Career &amp; Finance" data-hi="&#x0915;&#x0930;&#x093F;&#x092F;&#x0930; &#x0914;&#x0930; &#x0935;&#x093F;&#x0924;&#x094D;&#x0924;">Career &amp; Finance</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Career path, strengths, financial blueprint, and 2-3 year outlook based on your 10th house and Dasha period." data-hi="&#x0915;&#x0930;&#x093F;&#x092F;&#x0930; &#x092A;&#x0925;, &#x0936;&#x0915;&#x094D;&#x0924;&#x093F;&#x092F;&#x093E;&#x0902;, &#x0935;&#x093F;&#x0924;&#x094D;&#x0924;&#x0940;&#x092F; &#x092F;&#x094B;&#x091C;&#x0928;&#x093E; &#x0914;&#x0930; 2-3 &#x0935;&#x0930;&#x094D;&#x0937; &#x0915;&#x093E; &#x0926;&#x0943;&#x0937;&#x094D;&#x091F;&#x093F;&#x0915;&#x094B;&#x0923;&#x0964;">Career path, strengths, financial blueprint, and 2-3 year outlook based on your 10th house and Dasha period.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;149</div>
         </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl mb-2">&#x2764;&#xFE0F;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Love &amp; Marriage" data-hi="&#x092A;&#x094D;&#x0930;&#x0947;&#x092E; &#x0914;&#x0930; &#x0935;&#x093F;&#x0935;&#x093E;&#x0939;">Love &amp; Marriage</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Love style, ideal partner profile, Manglik dosha check, and marriage timing based on Venus, Mars, and 7th house." data-hi="&#x092A;&#x094D;&#x0930;&#x0947;&#x092E; &#x0936;&#x0948;&#x0932;&#x0940;, &#x0906;&#x0926;&#x0930;&#x094D;&#x0936; &#x0938;&#x093E;&#x0925;&#x0940;, &#x092E;&#x093E;&#x0902;&#x0917;&#x0932;&#x093F;&#x0915; &#x0926;&#x094B;&#x0937; &#x091C;&#x093E;&#x0902;&#x091A; &#x0914;&#x0930; &#x0935;&#x093F;&#x0935;&#x093E;&#x0939; &#x0915;&#x093E; &#x0938;&#x092E;&#x092F;&#x0964;">Love style, ideal partner profile, Manglik dosha check, and marriage timing based on Venus, Mars, and 7th house.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;149</div>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl mb-2">&#x1F52E;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Life Phases (Dasha)" data-hi="&#x091C;&#x0940;&#x0935;&#x0928; &#x091A;&#x0930;&#x0923; (&#x0926;&#x0936;&#x093E;)">Life Phases (Dasha)</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Vimshottari Dasha deep-dive covering Mahadasha, Antardasha, and Pratyantardasha with your next 3 life transitions." data-hi="&#x092E;&#x0939;&#x093E;&#x0926;&#x0936;&#x093E;, &#x0905;&#x0902;&#x0924;&#x0930;&#x0926;&#x0936;&#x093E; &#x0914;&#x0930; &#x092A;&#x094D;&#x0930;&#x0924;&#x094D;&#x092F;&#x0902;&#x0924;&#x0930;&#x0926;&#x0936;&#x093E; &#x0915;&#x0947; &#x0938;&#x093E;&#x0925; &#x0935;&#x093F;&#x092E;&#x094D;&#x0936;&#x094B;&#x0924;&#x094D;&#x0924;&#x0930;&#x0940; &#x0926;&#x0936;&#x093E; &#x0917;&#x0939;&#x0928; &#x0935;&#x093F;&#x0936;&#x094D;&#x0932;&#x0947;&#x0937;&#x0923;&#x0964;">Vimshottari Dasha deep-dive covering Mahadasha, Antardasha, and Pratyantardasha with your next 3 life transitions.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;199</div>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl mb-2">&#x1F491;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Kundli Matching" data-hi="&#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940; &#x092E;&#x093F;&#x0932;&#x093E;&#x0928;">Kundli Matching</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Two-person compatibility with Guna Milan (36 points), dosha checks, synastry, and relationship guidance." data-hi="&#x0917;&#x0941;&#x0923; &#x092E;&#x093F;&#x0932;&#x093E;&#x0928; (36 &#x0905;&#x0902;&#x0915;), &#x0926;&#x094B;&#x0937; &#x091C;&#x093E;&#x0902;&#x091A;, &#x0938;&#x093F;&#x0928;&#x0947;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0940; &#x0914;&#x0930; &#x0930;&#x093F;&#x0936;&#x094D;&#x0924;&#x093E; &#x092E;&#x093E;&#x0930;&#x094D;&#x0917;&#x0926;&#x0930;&#x094D;&#x0936;&#x0928;&#x0964;">Two-person compatibility with Guna Milan (36 points), dosha checks, synastry, and relationship guidance.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;249</div>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl mb-2">&#x1F4AC;</div>
+          <h3 class="text-base font-bold text-charcoal mb-1 i18n" data-en="Ask Any Question" data-hi="&#x0915;&#x094B;&#x0908; &#x092D;&#x0940; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928; &#x092A;&#x0942;&#x091B;&#x0947;&#x0902;">Ask Any Question</h3>
+          <p class="text-xs text-charcoal/50 mb-3 leading-relaxed i18n" data-en="Ask Guruji anything about your career, relationships, health, or life decisions. Get personalized guidance instantly." data-hi="&#x0917;&#x0941;&#x0930;&#x0941;&#x091C;&#x0940; &#x0938;&#x0947; &#x0915;&#x0930;&#x093F;&#x092F;&#x0930;, &#x0930;&#x093F;&#x0936;&#x094D;&#x0924;&#x0947;, &#x0938;&#x094D;&#x0935;&#x093E;&#x0938;&#x094D;&#x0925;&#x094D;&#x092F; &#x092F;&#x093E; &#x091C;&#x0940;&#x0935;&#x0928; &#x0915;&#x0947; &#x092C;&#x093E;&#x0930;&#x0947; &#x092E;&#x0947;&#x0902; &#x0915;&#x0941;&#x091B; &#x092D;&#x0940; &#x092A;&#x0942;&#x091B;&#x0947;&#x0902;&#x0964; &#x0924;&#x0941;&#x0930;&#x0902;&#x0924; &#x0935;&#x094D;&#x092F;&#x0915;&#x094D;&#x0924;&#x093F;&#x0917;&#x0924; &#x092E;&#x093E;&#x0930;&#x094D;&#x0917;&#x0926;&#x0930;&#x094D;&#x0936;&#x0928;&#x0964;">Ask Guruji anything about your career, relationships, health, or life decisions. Get personalized guidance instantly.</p>
+          <div class="text-xl font-bold text-maroon">&#8377;15 <span class="text-xs font-normal text-charcoal/40 i18n" data-en="per question" data-hi="&#x092A;&#x094D;&#x0930;&#x0924;&#x093F; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928;">per question</span></div>
+        </div>
+      </div>
 
+      <!-- Wallet reloads -->
+      <h2 class="text-xl sm:text-2xl font-bold text-charcoal mb-2 i18n" data-en="Wallet Reloads" data-hi="&#x0935;&#x0949;&#x0932;&#x0947;&#x091F; &#x0930;&#x0940;&#x091A;&#x093E;&#x0930;&#x094D;&#x091C;">Wallet Reloads</h2>
+      <p class="text-sm text-charcoal/50 mb-6 i18n" data-en="Add credits to your HoroTalk wallet. Use them for reports or questions. No expiry." data-hi="&#x0905;&#x092A;&#x0928;&#x0947; HoroTalk &#x0935;&#x0949;&#x0932;&#x0947;&#x091F; &#x092E;&#x0947;&#x0902; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F; &#x091C;&#x094B;&#x0921;&#x093C;&#x0947;&#x0902;&#x0964; &#x0930;&#x093F;&#x092A;&#x094B;&#x0930;&#x094D;&#x091F; &#x092F;&#x093E; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928;&#x094B;&#x0902; &#x0915;&#x0947; &#x0932;&#x093F;&#x090F; &#x0909;&#x092A;&#x092F;&#x094B;&#x0917; &#x0915;&#x0930;&#x0947;&#x0902;&#x0964; &#x0915;&#x094B;&#x0908; &#x0938;&#x092E;&#x093E;&#x092A;&#x094D;&#x0924;&#x093F; &#x0928;&#x0939;&#x0940;&#x0902;&#x0964;">Add credits to your HoroTalk wallet. Use them for reports or questions. No expiry.</p>
+
+      <div class="grid grid-cols-3 gap-3 mb-10">
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 text-center hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl font-bold text-charcoal font-heading">&#8377;99</div>
+          <div class="text-xs text-charcoal/40 mt-1 i18n" data-en="Starter" data-hi="&#x0938;&#x094D;&#x091F;&#x093E;&#x0930;&#x094D;&#x091F;&#x0930;">Starter</div>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border-2 border-maroon text-center shadow-md relative">
+          <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-maroon text-white text-[9px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap i18n" data-en="Best Value" data-hi="&#x0938;&#x0930;&#x094D;&#x0935;&#x0936;&#x094D;&#x0930;&#x0947;&#x0937;&#x094D;&#x0920;">Best Value</span>
+          <div class="text-2xl font-bold text-maroon font-heading">&#8377;249</div>
+          <div class="text-xs text-charcoal/40 mt-1 i18n" data-en="1 report + questions" data-hi="1 &#x0930;&#x093F;&#x092A;&#x094B;&#x0930;&#x094D;&#x091F; + &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928;">1 report + questions</div>
+        </div>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-charcoal/5 text-center hover:border-gold/30 hover:shadow-md transition-all">
+          <div class="text-2xl font-bold text-charcoal font-heading">&#8377;499</div>
+          <div class="text-xs text-charcoal/40 mt-1 i18n" data-en="Power Pack" data-hi="&#x092A;&#x093E;&#x0935;&#x0930; &#x092A;&#x0948;&#x0915;">Power Pack</div>
+        </div>
       </div>
 
       <!-- FAQ -->
-      <div class="mt-16">
-        <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-        <div class="max-w-2xl mx-auto space-y-6">
-          <div>
-            <h3 class="font-semibold mb-1">How do I pay?</h3>
-            <p class="text-text-light text-sm">Simply message HoroTalk on WhatsApp that you'd like to upgrade. We'll send you a UPI payment link — quick and easy.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Can I cancel anytime?</h3>
-            <p class="text-text-light text-sm">Yes, absolutely. No lock-in period. Just message us and we'll cancel your subscription.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Is my data safe?</h3>
-            <p class="text-text-light text-sm">We only store your birth details to generate readings. We never share your data with third parties.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">What if I'm not satisfied?</h3>
-            <p class="text-text-light text-sm">We offer a 7-day money-back guarantee on all paid plans. No questions asked.</p>
-          </div>
-        </div>
+      <h2 class="text-xl sm:text-2xl font-bold text-charcoal mb-6 i18n" data-en="Common Questions" data-hi="&#x0906;&#x092E; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928;">Common Questions</h2>
+      <div class="space-y-3 mb-10">
+        <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm">
+          <summary class="px-4 py-3 cursor-pointer flex justify-between items-center text-sm font-semibold text-charcoal list-none">
+            <span class="i18n" data-en="How do I pay?" data-hi="&#x092D;&#x0941;&#x0917;&#x0924;&#x093E;&#x0928; &#x0915;&#x0948;&#x0938;&#x0947; &#x0915;&#x0930;&#x0947;&#x0902;?">How do I pay?</span>
+            <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-4 pb-3 text-xs text-charcoal/55 leading-relaxed i18n" data-en='Message HoroTalk on WhatsApp and say "reload wallet." You will receive a UPI payment link. Quick, easy, and secure.' data-hi='WhatsApp &#x092A;&#x0930; HoroTalk &#x0915;&#x094B; "reload wallet" &#x092D;&#x0947;&#x091C;&#x0947;&#x0902;&#x0964; &#x0906;&#x092A;&#x0915;&#x094B; UPI &#x092A;&#x0947;&#x092E;&#x0947;&#x0902;&#x091F; &#x0932;&#x093F;&#x0902;&#x0915; &#x092E;&#x093F;&#x0932;&#x0947;&#x0917;&#x093E;&#x0964; &#x0924;&#x0947;&#x091C;, &#x0906;&#x0938;&#x093E;&#x0928; &#x0914;&#x0930; &#x0938;&#x0941;&#x0930;&#x0915;&#x094D;&#x0937;&#x093F;&#x0924;&#x0964;'>Message HoroTalk on WhatsApp and say "reload wallet." You will receive a UPI payment link. Quick, easy, and secure.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm">
+          <summary class="px-4 py-3 cursor-pointer flex justify-between items-center text-sm font-semibold text-charcoal list-none">
+            <span class="i18n" data-en="Do credits expire?" data-hi="&#x0915;&#x094D;&#x092F;&#x093E; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F; &#x0938;&#x092E;&#x093E;&#x092A;&#x094D;&#x0924; &#x0939;&#x094B;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;?">Do credits expire?</span>
+            <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-4 pb-3 text-xs text-charcoal/55 leading-relaxed i18n" data-en="No. Your wallet credits never expire. Use them whenever you need a report or have a question." data-hi="&#x0928;&#x0939;&#x0940;&#x0902;&#x0964; &#x0906;&#x092A;&#x0915;&#x0947; &#x0935;&#x0949;&#x0932;&#x0947;&#x091F; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F; &#x0915;&#x092D;&#x0940; &#x0938;&#x092E;&#x093E;&#x092A;&#x094D;&#x0924; &#x0928;&#x0939;&#x0940;&#x0902; &#x0939;&#x094B;&#x0924;&#x0947;&#x0964; &#x091C;&#x092C; &#x091A;&#x093E;&#x0939;&#x0947;&#x0902; &#x0909;&#x092A;&#x092F;&#x094B;&#x0917; &#x0915;&#x0930;&#x0947;&#x0902;&#x0964;">No. Your wallet credits never expire. Use them whenever you need a report or have a question.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm">
+          <summary class="px-4 py-3 cursor-pointer flex justify-between items-center text-sm font-semibold text-charcoal list-none">
+            <span class="i18n" data-en="Is my birth data safe?" data-hi="&#x0915;&#x094D;&#x092F;&#x093E; &#x092E;&#x0947;&#x0930;&#x093E; &#x091C;&#x0928;&#x094D;&#x092E; &#x0921;&#x0947;&#x091F;&#x093E; &#x0938;&#x0941;&#x0930;&#x0915;&#x094D;&#x0937;&#x093F;&#x0924; &#x0939;&#x0948;?">Is my birth data safe?</span>
+            <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-4 pb-3 text-xs text-charcoal/55 leading-relaxed i18n" data-en="We only store your birth details to generate your readings. We never sell or share your data. You can request deletion at any time by messaging us on WhatsApp." data-hi="&#x0939;&#x092E; &#x0915;&#x0947;&#x0935;&#x0932; &#x0906;&#x092A;&#x0915;&#x0947; &#x091C;&#x0928;&#x094D;&#x092E; &#x0935;&#x093F;&#x0935;&#x0930;&#x0923; &#x0930;&#x0940;&#x0921;&#x093F;&#x0902;&#x0917; &#x0915;&#x0947; &#x0932;&#x093F;&#x090F; &#x0938;&#x0939;&#x0947;&#x091C;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964; &#x0939;&#x092E; &#x0915;&#x092D;&#x0940; &#x0906;&#x092A;&#x0915;&#x093E; &#x0921;&#x0947;&#x091F;&#x093E; &#x0928;&#x0939;&#x0940;&#x0902; &#x092C;&#x0947;&#x091A;&#x0924;&#x0947;&#x0964; WhatsApp &#x092A;&#x0930; &#x0915;&#x092D;&#x0940; &#x092D;&#x0940; &#x0921;&#x093F;&#x0932;&#x0940;&#x0936;&#x0928; &#x0915;&#x093E; &#x0905;&#x0928;&#x0941;&#x0930;&#x094B;&#x0927; &#x0915;&#x0930; &#x0938;&#x0915;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964;">We only store your birth details to generate your readings. We never sell or share your data. You can request deletion at any time by messaging us on WhatsApp.</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm">
+          <summary class="px-4 py-3 cursor-pointer flex justify-between items-center text-sm font-semibold text-charcoal list-none">
+            <span class="i18n" data-en="What if I am not satisfied?" data-hi="&#x0905;&#x0917;&#x0930; &#x0938;&#x0902;&#x0924;&#x0941;&#x0937;&#x094D;&#x091F; &#x0928;&#x0939;&#x0940;&#x0902; &#x0939;&#x0942;&#x0902; &#x0924;&#x094B;?">What if I am not satisfied?</span>
+            <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-4 pb-3 text-xs text-charcoal/55 leading-relaxed i18n" data-en="We offer a 7-day money-back guarantee on wallet reloads. If you are not satisfied, message us on WhatsApp and we will process a full refund." data-hi="&#x0939;&#x092E; &#x0935;&#x0949;&#x0932;&#x0947;&#x091F; &#x0930;&#x0940;&#x091A;&#x093E;&#x0930;&#x094D;&#x091C; &#x092A;&#x0930; 7 &#x0926;&#x093F;&#x0928; &#x0915;&#x0940; &#x092E;&#x0928;&#x0940;-&#x092C;&#x0948;&#x0915; &#x0917;&#x093E;&#x0930;&#x0902;&#x091F;&#x0940; &#x0926;&#x0947;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964; &#x0938;&#x0902;&#x0924;&#x0941;&#x0937;&#x094D;&#x091F; &#x0928;&#x0939;&#x0940;&#x0902; &#x0939;&#x0948;&#x0902; &#x0924;&#x094B; WhatsApp &#x092A;&#x0930; &#x0938;&#x0902;&#x092A;&#x0930;&#x094D;&#x0915; &#x0915;&#x0930;&#x0947;&#x0902; &#x0914;&#x0930; &#x092A;&#x0942;&#x0930;&#x093E; &#x0930;&#x093F;&#x092B;&#x0902;&#x0921; &#x092E;&#x093F;&#x0932;&#x0947;&#x0917;&#x093E;&#x0964;">We offer a 7-day money-back guarantee on wallet reloads. If you are not satisfied, message us on WhatsApp and we will process a full refund.</div>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-maroon rounded-2xl p-6 sm:p-8 text-center shadow-xl shadow-maroon/20">
+        <h3 class="text-lg font-bold text-white mb-2 i18n" data-en="Start with &#8377;50 free credits" data-hi="&#8377;50 &#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0915;&#x094D;&#x0930;&#x0947;&#x0921;&#x093F;&#x091F; &#x0938;&#x0947; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0947;&#x0902;">Start with &#8377;50 free credits</h3>
+        <p class="text-xs text-white/60 mb-5 i18n" data-en="3 questions + basic Kundli. No payment needed." data-hi="3 &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928; + &#x092C;&#x0947;&#x0938;&#x093F;&#x0915; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940;&#x0964; &#x092D;&#x0941;&#x0917;&#x0924;&#x093E;&#x0928; &#x0928;&#x0939;&#x0940;&#x0902;&#x0964;">3 questions + basic Kundli. No payment needed.</p>
+        <a href={waLink('Hi HoroTalk')} target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-7 py-3.5 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="i18n" data-en="Start Free on WhatsApp" data-hi="WhatsApp &#x092A;&#x0930; &#x092E;&#x0941;&#x092B;&#x094D;&#x0924; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0947;&#x0902;">Start Free on WhatsApp</span>
+        </a>
       </div>
 
     </div>
   </section>
+
+  <style>
+    details summary::-webkit-details-marker { display: none; }
+  </style>
 
 </Layout>

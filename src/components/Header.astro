@@ -1,4 +1,6 @@
 ---
+import { waLink } from '../config';
+
 const navLinks = [
   { name: "Panchang", href: "/panchang" },
   { name: "Rashi", href: "/rashi-calculator" },
@@ -7,6 +9,7 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+const waUrl = waLink();
 ---
 
 <header class="sticky top-0 left-0 right-0 z-50 bg-ivory/90 backdrop-blur-md border-b border-charcoal/10">
@@ -40,7 +43,7 @@ const currentPath = Astro.url.pathname;
       ))}
 
       <a
-        href="https://wa.me/919999999999?text=Hi%20HoroTalk"
+        href="{waUrl}"
         target="_blank"
         rel="noopener noreferrer"
         class="bg-[#25D366] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-sm font-bold hover:bg-[#25D366]/90 transition-all shadow-md shadow-[#25D366]/20 active:scale-95 flex items-center gap-1.5"

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { waLink } from '../config';
 import dailyData from '../data/daily-horoscope.json';
 
 const signs = [
@@ -57,7 +58,7 @@ const faqSchemaJson = JSON.stringify({
           Free Kundli. Career guidance. Life predictions. Powered by real Vedic calculations. Instant on WhatsApp.
         </p>
         <div class="mt-5">
-          <a href="https://wa.me/919999999999?text=Hi%20HoroTalk" target="_blank" rel="noopener noreferrer"
+          <a href={waLink('Hi HoroTalk')} target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-7 py-3.5 rounded-lg text-sm transition-all shadow-lg shadow-[#25D366]/20 active:scale-[0.97]">
             <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <span class="i18n" data-en="Start Free on WhatsApp" data-hi="WhatsApp \u092A\u0930 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902">Start Free on WhatsApp</span>
@@ -79,13 +80,13 @@ const faqSchemaJson = JSON.stringify({
           </div>
           <!-- Chat body (WhatsApp light theme) -->
           <div class="bg-[#ece5dd] px-2.5 py-3 h-[280px] overflow-hidden flex flex-col justify-end gap-1.5" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><rect fill=%22%23ece5dd%22 width=%2260%22 height=%2260%22/><path d=%22M30 5c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM10 25c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zM50 45c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z%22 fill=%22%23d4cdc5%22 opacity=%22.3%22/></svg>')">
-            <div class="chat-msg" style="animation-delay:0.3s"><div class="bg-white text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tl-sm max-w-[88%] shadow-sm leading-relaxed"><span class="chat-en">Welcome! &#x1F64F; What would you like to know?</span><span class="chat-hi hidden">\u0928\u092E\u0938\u094D\u0924\u0947! &#x1F64F; \u0906\u092A \u0915\u094D\u092F\u093E \u091C\u093E\u0928\u0928\u093E \u091A\u093E\u0939\u0947\u0902\u0917\u0947?</span></div></div>
+            <div class="chat-msg" style="animation-delay:0.3s"><div class="bg-white text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tl-sm max-w-[88%] shadow-sm leading-relaxed"><span class="chat-en">Welcome! &#x1F64F; What would you like to know?</span><span class="chat-hi hidden">&#x0928;&#x092E;&#x0938;&#x094D;&#x0924;&#x0947;! &#x1F64F; &#x0906;&#x092A; &#x0915;&#x094D;&#x092F;&#x093E; &#x091C;&#x093E;&#x0928;&#x0928;&#x093E; &#x091A;&#x093E;&#x0939;&#x0947;&#x0902;&#x0917;&#x0947;?</span></div></div>
             <div class="chat-msg" style="animation-delay:1s"><div class="flex flex-col gap-1 max-w-[88%]">
-              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4AC; Ask a question</span><span class="chat-hi hidden">&#x1F4AC; \u092A\u094D\u0930\u0936\u094D\u0928 \u092A\u0942\u091B\u0947\u0902;</span></div>
-              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4C4; All Reports</span><span class="chat-hi hidden">&#x1F4C4; \u0938\u092D\u0940 \u0930\u093F\u092A\u094B\u0930\u094D\u091F;</span></div>
-              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F491; Kundli Matching</span><span class="chat-hi hidden">&#x1F491; \u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928;</span></div>
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4AC; Ask a question</span><span class="chat-hi hidden">&#x1F4AC; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928; &#x092A;&#x0942;&#x091B;&#x0947;&#x0902;</span></div>
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F4C4; All Reports</span><span class="chat-hi hidden">&#x1F4C4; &#x0938;&#x092D;&#x0940; &#x0930;&#x093F;&#x092A;&#x094B;&#x0930;&#x094D;&#x091F;</span></div>
+              <div class="bg-white border border-charcoal/10 text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg text-center shadow-sm"><span class="chat-en">&#x1F491; Kundli Matching</span><span class="chat-hi hidden">&#x1F491; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940; &#x092E;&#x093F;&#x0932;&#x093E;&#x0928;</span></div>
             </div></div>
-            <div class="chat-msg" style="animation-delay:2.5s"><div class="bg-[#d9fdd3] text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tr-sm max-w-[78%] ml-auto shadow-sm"><span class="chat-en">Will I get promoted this year?</span><span class="chat-hi hidden">\u0915\u094D\u092F\u093E \u092E\u0941\u091D\u0947 \u092A\u094D\u0930\u092E\u094B\u0936\u0928 \u092E\u093F\u0932\u0947\u0917\u093E?</span></div></div>
+            <div class="chat-msg" style="animation-delay:2.5s"><div class="bg-[#d9fdd3] text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tr-sm max-w-[78%] ml-auto shadow-sm"><span class="chat-en">Will I get promoted this year?</span><span class="chat-hi hidden">&#x0915;&#x094D;&#x092F;&#x093E; &#x092E;&#x0941;&#x091D;&#x0947; &#x092A;&#x094D;&#x0930;&#x092E;&#x094B;&#x0936;&#x0928; &#x092E;&#x093F;&#x0932;&#x0947;&#x0917;&#x093E;?</span></div></div>
             <div class="chat-msg" style="animation-delay:4s"><div class="bg-white text-charcoal text-[10px] px-2.5 py-1.5 rounded-lg rounded-tl-sm max-w-[88%] shadow-sm leading-relaxed"><span class="chat-en">Jupiter in your 10th house shows strong career growth this year. The stars favor your ambition. &#x2728;</span><span class="chat-hi hidden">&#x092C;&#x0943;&#x0939;&#x0938;&#x094D;&#x092A;&#x0924;&#x093F; &#x0906;&#x092A;&#x0915;&#x0947; 10&#x0935;&#x0947;&#x0902; &#x092D;&#x093E;&#x0935; &#x092E;&#x0947;&#x0902; &#x0915;&#x0930;&#x093F;&#x092F;&#x0930; &#x0935;&#x0943;&#x0926;&#x094D;&#x0927;&#x093F; &#x0926;&#x093F;&#x0916;&#x093E;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964; &#x2728;</span></div></div>
           </div>
           <!-- Input bar -->
@@ -105,51 +106,92 @@ const faqSchemaJson = JSON.stringify({
         <a href="/panchang" class="tool-card"><span class="text-lg">&#x1F4C5;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Today's Panchang" data-hi="\u0906\u091C \u0915\u093E \u092A\u0902\u091A\u093E\u0902\u0917">Today's Panchang</span><span class="text-[8px] text-charcoal/40 i18n" data-en="Tithi, Nakshatra, Yoga" data-hi="\u0924\u093F\u0925\u093F, \u0928\u0915\u094D\u0937\u0924\u094D\u0930, \u092F\u094B\u0917">Tithi, Nakshatra, Yoga</span></a>
         <a href="/rashi-calculator" class="tool-card"><span class="text-lg">&#x2648;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Find Your Rashi" data-hi="\u0930\u093E\u0936\u093F \u091C\u093E\u0928\u0947\u0902">Find Your Rashi</span><span class="text-[8px] text-charcoal/40 i18n" data-en="By name or birth details" data-hi="\u0928\u093E\u092E \u0938\u0947 \u0930\u093E\u0936\u093F">By name or birth details</span></a>
         <a href="#horoscope" class="tool-card"><span class="text-lg">&#x1F52E;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Daily Horoscope" data-hi="\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932">Daily Horoscope</span><span class="text-[8px] text-charcoal/40 i18n" data-en="All 12 signs" data-hi="\u0938\u092D\u0940 12 \u0930\u093E\u0936\u093F\u092F\u093E\u0902">All 12 signs</span></a>
-        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20I%20want%20Kundli%20Matching" target="_blank" rel="noopener noreferrer" class="tool-card"><span class="text-lg">&#x1F491;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Kundli Matching" data-hi="\u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928">Kundli Matching</span><span class="text-[8px] text-charcoal/40 i18n" data-en="36 Guna Milan" data-hi="36 \u0917\u0941\u0923 \u092E\u093F\u0932\u093E\u0928">36 Guna Milan</span></a>
+        <a href={waLink('Hi HoroTalk, I want Kundli Matching')} target="_blank" rel="noopener noreferrer" class="tool-card"><span class="text-lg">&#x1F491;</span><span class="text-[11px] font-semibold text-charcoal i18n" data-en="Kundli Matching" data-hi="\u0915\u0941\u0902\u0921\u0932\u0940 \u092E\u093F\u0932\u093E\u0928">Kundli Matching</span><span class="text-[8px] text-charcoal/40 i18n" data-en="36 Guna Milan" data-hi="36 \u0917\u0941\u0923 \u092E\u093F\u0932\u093E\u0928">36 Guna Milan</span></a>
       </div>
     </div>
   </section>
 
   <!-- ═══ 3. TODAY'S HOROSCOPE ═══ -->
   <section id="horoscope" class="py-8 sm:py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      <div class="flex justify-between items-baseline mb-4">
-        <h2 id="todays-light-title" class="text-lg sm:text-xl font-bold text-charcoal">Today's Rashifal</h2>
-        <span id="date-display" class="text-[8px] sm:text-[10px] opacity-35 font-bold uppercase tracking-widest"></span>
-      </div>
-      <div class="grid lg:grid-cols-[200px_1fr] gap-4">
-        <!-- Left: sign list -->
-        <div id="zodiac-grid" class="flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-hide">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-md border border-charcoal/5">
+        <div class="flex justify-between items-baseline mb-4">
+          <h2 id="todays-light-title" class="text-lg sm:text-xl font-bold text-charcoal">Today's Rashifal</h2>
+          <span id="date-display" class="text-[8px] sm:text-[10px] opacity-35 font-bold uppercase tracking-widest"></span>
+        </div>
+
+        <!-- Sign grid: 6 cols on desktop, 4 on mobile -->
+        <div id="zodiac-grid" class="grid grid-cols-4 sm:grid-cols-6 gap-1.5 sm:gap-2 mb-4">
           {signs.map((sign, i) => (
-            <div class={`zodiac-sign flex items-center gap-2 cursor-pointer px-3 py-2 rounded-lg border border-transparent flex-shrink-0 transition-all${i === 0 ? ' active' : ''}`} data-index={i} style={`animation-delay:${i*20}ms`}>
-              <div class="zodiac-circle w-8 h-8 rounded-lg border-[1.5px] flex items-center justify-center flex-shrink-0"><span class="zodiac-symbol text-sm leading-none">{sign.symbol}</span></div>
-              <div class="flex flex-col">
-                <span class="zodiac-label text-[11px] font-semibold leading-tight"><span class="sign-name-top">{sign.nameEn}</span></span>
-                <span class="text-[9px] text-charcoal/40 leading-tight"><span class="sign-name-bottom">{sign.subEn}</span></span>
-              </div>
+            <div class={`zodiac-sign flex flex-col items-center gap-1 cursor-pointer py-2 px-1 rounded-lg transition-all${i === 0 ? ' active' : ''}`} data-index={i} style={`animation-delay:${i*20}ms`}>
+              <span class="zodiac-symbol text-lg leading-none">{sign.symbol}</span>
+              <span class="zodiac-label text-[9px] sm:text-[10px] font-semibold text-center leading-tight"><span class="sign-name-top">{sign.nameEn}</span></span>
             </div>
           ))}
         </div>
-        <!-- Right: reading detail -->
-        <div id="guidance-card" class="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-charcoal/5 flex flex-col justify-between min-h-[200px]">
-          <div>
-            <div class="flex items-center gap-3 mb-3">
-              <div id="guidance-symbol" class="w-12 h-12 rounded-xl bg-maroon/8 border border-maroon/15 flex items-center justify-center text-xl"></div>
+
+        <!-- Reading card -->
+        <div id="guidance-card" class="bg-ivory rounded-xl p-4 sm:p-5 border-l-3 border-maroon">
+          <!-- Header -->
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <span id="guidance-symbol" class="text-2xl"></span>
               <div>
-                <h3 id="guidance-sign-name" class="text-base font-bold text-charcoal"></h3>
-                <div id="guidance-date-label" class="text-[10px] text-charcoal/40 font-medium i18n" data-en="Today's Reading" data-hi="\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932">Today's Reading</div>
+                <h3 id="guidance-sign-name" class="text-sm sm:text-base font-bold text-charcoal"></h3>
+                <div class="text-[9px] text-charcoal/40 font-medium i18n" data-en="Today's Reading" data-hi="\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932">Today's Reading</div>
               </div>
             </div>
-            <p id="guidance-text" class="text-sm text-charcoal/70 leading-relaxed"></p>
-          </div>
-          <div class="mt-4 flex items-center justify-between pt-3 border-t border-charcoal/5">
-            <div>
-              <div id="success-prob-label" class="text-[8px] uppercase tracking-widest font-bold text-charcoal/30">Success Probability</div>
+            <div class="text-right">
               <div id="guidance-prob" class="text-lg font-bold text-maroon"></div>
+              <div class="text-[8px] text-charcoal/30 font-semibold uppercase tracking-wider i18n" data-en="Favorability" data-hi="\u0905\u0928\u0941\u0915\u0942\u0932\u0924\u093E">Favorability</div>
             </div>
-            <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20tell%20me%20more%20about%20my%20sign" target="_blank" rel="noopener noreferrer"
-              class="bg-maroon/8 hover:bg-maroon/15 text-maroon text-xs font-semibold px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-1">
-              <span class="i18n" data-en="Get full reading" data-hi="\u092A\u0942\u0930\u0940 \u0930\u0940\u0921\u093F\u0902\u0917 \u092A\u093E\u090F\u0902">Get full reading</span>
+          </div>
+
+          <!-- Lucky color -->
+          <div class="mb-3 text-[10px] sm:text-[11px]">
+            <span class="flex items-center gap-1 text-charcoal/50"><span class="text-gold">&#x25CF;</span> <span class="i18n" data-en="Lucky Color:" data-hi="\u0936\u0941\u092D \u0930\u0902\u0917:">Lucky Color:</span> <strong id="lucky-color" class="text-charcoal"></strong></span>
+          </div>
+
+          <!-- Main guidance text -->
+          <p id="guidance-text" class="text-[13px] sm:text-sm text-charcoal/65 leading-relaxed mb-4"></p>
+
+          <!-- Category ratings -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+            <div class="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-charcoal/5">
+              <span class="text-xs">&#x1F4BC;</span>
+              <div class="flex-1 min-w-0">
+                <div class="text-[9px] text-charcoal/40 font-medium i18n" data-en="Career" data-hi="\u0915\u0930\u093F\u092F\u0930">Career</div>
+                <div id="rating-career" class="text-xs font-bold text-maroon"></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-charcoal/5">
+              <span class="text-xs">&#x2764;&#xFE0F;</span>
+              <div class="flex-1 min-w-0">
+                <div class="text-[9px] text-charcoal/40 font-medium i18n" data-en="Love" data-hi="\u092A\u094D\u0930\u0947\u092E">Love</div>
+                <div id="rating-love" class="text-xs font-bold text-maroon"></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-charcoal/5">
+              <span class="text-xs">&#x1F3CB;</span>
+              <div class="flex-1 min-w-0">
+                <div class="text-[9px] text-charcoal/40 font-medium i18n" data-en="Health" data-hi="\u0938\u094D\u0935\u093E\u0938\u094D\u0925\u094D\u092F">Health</div>
+                <div id="rating-health" class="text-xs font-bold text-maroon"></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 bg-white rounded-lg px-2.5 py-2 border border-charcoal/5">
+              <span class="text-xs">&#x1F4B0;</span>
+              <div class="flex-1 min-w-0">
+                <div class="text-[9px] text-charcoal/40 font-medium i18n" data-en="Finance" data-hi="\u0935\u093F\u0924\u094D\u0924;">Finance</div>
+                <div id="rating-finance" class="text-xs font-bold text-maroon"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center">
+            <a href={waLink('Hi HoroTalk, tell me about my sign')} target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 bg-maroon/8 hover:bg-maroon/15 text-maroon text-xs font-semibold px-4 py-2 rounded-lg transition-colors">
+              <span class="i18n" data-en="Get your personalized reading on WhatsApp" data-hi="WhatsApp \u092A\u0930 \u0935\u094D\u092F\u0915\u094D\u0924\u093F\u0917\u0924 \u0930\u0940\u0921\u093F\u0902\u0917 \u092A\u093E\u090F\u0902">Get your personalized reading on WhatsApp</span>
               <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -181,7 +223,7 @@ const faqSchemaJson = JSON.stringify({
         </div>
       </div>
       <div class="text-center mt-8">
-        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk%2C%20free%20Kundli" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-6 py-3 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
+        <a href={waLink('Hi HoroTalk, free Kundli')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-6 py-3 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
           <span class="i18n" data-en="Get Your Free Kundli" data-hi="\u092E\u0941\u092B\u094D\u0924 \u0915\u0941\u0902\u0921\u0932\u0940 \u092A\u093E\u090F\u0902">Get Your Free Kundli</span><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -224,7 +266,7 @@ const faqSchemaJson = JSON.stringify({
       <div class="bg-maroon rounded-2xl p-6 sm:p-8 text-center shadow-xl shadow-maroon/20">
         <h3 class="text-lg sm:text-xl font-bold text-white mb-2 i18n" data-en="Your Stars Have a Message" data-hi="\u0906\u092A\u0915\u0947 \u0938\u093F\u0924\u093E\u0930\u094B\u0902 \u0915\u093E \u0938\u0902\u0926\u0947\u0936">Your Stars Have a Message</h3>
         <p class="text-xs text-white/60 mb-5 i18n" data-en="Free Kundli + 3 questions. No payment needed." data-hi="\u092E\u0941\u092B\u094D\u0924 \u0915\u0941\u0902\u0921\u0932\u0940 + 3 \u092A\u094D\u0930\u0936\u094D\u0928\u0964 \u092D\u0941\u0917\u0924\u093E\u0928 \u0928\u0939\u0940\u0902\u0964">Free Kundli + 3 questions. No payment needed.</p>
-        <a href="https://wa.me/919999999999?text=Hi%20HoroTalk" target="_blank" rel="noopener noreferrer"
+        <a href={waLink('Hi HoroTalk')} target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-7 py-3.5 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
           <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span class="i18n" data-en="Start Free on WhatsApp" data-hi="WhatsApp \u092A\u0930 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902">Start Free on WhatsApp</span>
@@ -256,16 +298,13 @@ const faqSchemaJson = JSON.stringify({
   /* Zodiac */
   .zodiac-sign { opacity: 0; animation: zIn 0.2s ease forwards; }
   @keyframes zIn { from { opacity:0; transform:scale(0.9); } to { opacity:1; transform:scale(1); } }
-  .zodiac-circle { border-color: rgba(45,24,16,0.12); transition: all 0.2s; }
-  .zodiac-symbol { color: rgba(45,24,16,0.45); transition: color 0.2s; font-variant-emoji: text; }
-  .zodiac-label { color: rgba(45,24,16,0.65); transition: color 0.2s; }
-  .zodiac-sign:hover { background: rgba(201,168,76,0.06); border-color: rgba(201,168,76,0.2); }
-  .zodiac-sign:hover .zodiac-circle { border-color: #C9A84C; }
+  .zodiac-symbol { color: rgba(45,24,16,0.5); transition: color 0.2s; font-variant-emoji: text; }
+  .zodiac-label { color: rgba(45,24,16,0.6); transition: color 0.2s; }
+  .zodiac-sign:hover { background: rgba(201,168,76,0.08); }
   .zodiac-sign:hover .zodiac-symbol { color: #C9A84C; }
-  .zodiac-sign.active { background: rgba(123,45,38,0.06); border-color: rgba(123,45,38,0.15); }
-  .zodiac-sign.active .zodiac-circle { border-color: #7B2D26; background: rgba(123,45,38,0.08); }
+  .zodiac-sign.active { background: rgba(123,45,38,0.08); }
   .zodiac-sign.active .zodiac-symbol { color: #7B2D26; }
-  .zodiac-sign.active .zodiac-label { color: #2D1810; font-weight: 700; }
+  .zodiac-sign.active .zodiac-label { color: #7B2D26; font-weight: 700; }
   #guidance-card { transition: opacity 0.25s, transform 0.25s; }
 
   /* FAQ details */
@@ -291,12 +330,24 @@ const faqSchemaJson = JSON.stringify({
     { id:"aquarius",name:{en:"Kumbha / Aquarius",hi:"\u0915\u0941\u0902\u092D / Aquarius"},nameTop:{en:"Kumbha",hi:"\u0915\u0941\u0902\u092D"},guidance:{en:"",hi:""},probability:80 },
     { id:"pisces",name:{en:"Meena / Pisces",hi:"\u092E\u0940\u0928 / Pisces"},nameTop:{en:"Meena",hi:"\u092E\u0940\u0928"},guidance:{en:"",hi:""},probability:80 },
   ];
-  const _d=(window as any).__dailyData;if(_d?.signs){for(const s of signsData){const d=_d.signs.find((x:any)=>x.id===s.id);if(d){s.guidance=d.guidance;s.probability=d.probability;}}}
+  const _d=(window as any).__dailyData;if(_d?.signs){for(const s of signsData){const d=_d.signs.find((x:any)=>x.id===s.id);if(d){s.guidance=d.guidance;s.probability=d.probability;(s as any).ratings=d.ratings;(s as any).luckyColor=d.luckyColor;}}}
   const ui:Record<string,Record<string,string>>={en:{tl:"Today's Rashifal",sp:"Success Probability",cn:"Chat Now"},hi:{tl:"\u0906\u091C \u0915\u093E \u0930\u093E\u0936\u093F\u092B\u0932",sp:"\u0938\u092B\u0932\u0924\u093E \u0915\u0940 \u0938\u0902\u092D\u093E\u0935\u0928\u093E",cn:"\u0905\u092D\u0940 \u091A\u0948\u091F \u0915\u0930\u0947\u0902"}};
   let lang='en',sel=0;
   function upDate(){const e=document.getElementById('date-display');if(e)e.textContent=new Date().toLocaleDateString(lang==='hi'?'hi-IN':'en-US',{month:'long',day:'numeric',year:'numeric'});}
   const signSymbols=['\u2648','\u2649','\u264A','\u264B','\u264C','\u264D','\u264E','\u264F','\u2650','\u2651','\u2652','\u2653'];
-  function pick(i:number){sel=i;document.querySelectorAll('.zodiac-sign').forEach((e,j)=>e.classList.toggle('active',j===i));const c=document.getElementById('guidance-card');if(!c)return;c.style.opacity='0';c.style.transform='translateX(10px)';setTimeout(()=>{const s=signsData[i],t=ui[lang];const sym=document.getElementById('guidance-symbol'),n=document.getElementById('guidance-sign-name'),tx=document.getElementById('guidance-text'),p=document.getElementById('guidance-prob');if(sym)sym.textContent=signSymbols[i];if(n)n.textContent=s.name[lang];if(tx)tx.textContent=s.guidance[lang];if(p)p.textContent=s.probability+'%';c.style.transform='translateX(-10px)';requestAnimationFrame(()=>{c.style.opacity='1';c.style.transform='translateX(0)';});},130);}
+  function stars(n:number){return '\u2605'.repeat(n)+'\u2606'.repeat(5-n);}
+  function pick(i:number){sel=i;document.querySelectorAll('.zodiac-sign').forEach((e,j)=>e.classList.toggle('active',j===i));const c=document.getElementById('guidance-card');if(!c)return;c.style.opacity='0';c.style.transform='translateX(10px)';setTimeout(()=>{const s=signsData[i],t=ui[lang];
+    const sym=document.getElementById('guidance-symbol'),n=document.getElementById('guidance-sign-name'),tx=document.getElementById('guidance-text'),p=document.getElementById('guidance-prob');
+    if(sym)sym.textContent=signSymbols[i];if(n)n.textContent=s.name[lang];if(tx)tx.textContent=s.guidance[lang];if(p)p.textContent=s.probability+'%';
+    // Lucky color
+    const lc=document.getElementById('lucky-color');
+    if(lc&&s.luckyColor)lc.textContent=s.luckyColor[lang];
+    // Ratings
+    if(s.ratings){
+      const rc=document.getElementById('rating-career'),rl=document.getElementById('rating-love'),rh=document.getElementById('rating-health'),rf=document.getElementById('rating-finance');
+      if(rc)rc.textContent=stars(s.ratings.career);if(rl)rl.textContent=stars(s.ratings.love);if(rh)rh.textContent=stars(s.ratings.health);if(rf)rf.textContent=stars(s.ratings.finance);
+    }
+    c.style.transform='translateX(-10px)';requestAnimationFrame(()=>{c.style.opacity='1';c.style.transform='translateX(0)';});},130);}
   function i18n(l:string){document.querySelectorAll('.i18n').forEach(e=>{const h=e as HTMLElement;if(h.dataset[l])h.textContent=h.dataset[l];});const it=document.getElementById('hero-title-italic');if(it?.dataset[l])it.textContent=it.dataset[l];document.querySelectorAll('.chat-en').forEach(e=>(e as HTMLElement).classList.toggle('hidden',l==='hi'));document.querySelectorAll('.chat-hi').forEach(e=>(e as HTMLElement).classList.toggle('hidden',l==='en'));}
   function upLang(l:string){lang=l;const t=ui[l];i18n(l);document.getElementById('todays-light-title')!.textContent=t.tl;document.getElementById('success-prob-label')!.textContent=t.sp;const cb=document.getElementById('header-chat-text');if(cb)cb.textContent=t.cn;document.querySelectorAll('.zodiac-sign').forEach((e,i)=>{const s=signsData[i];const top=e.querySelector('.sign-name-top');if(top)top.textContent=s.nameTop[l];const bot=e.querySelector('.sign-name-bottom');if(bot)bot.textContent=s.name[l].split(' / ')[1];});const s=signsData[sel];const n=document.getElementById('guidance-sign-name'),tx=document.getElementById('guidance-text');if(n)n.textContent=s.name[l];if(tx)tx.textContent=s.guidance[l];upDate();}
   upDate();pick(0);
