@@ -20,7 +20,24 @@
     "var": {
       "en": "Wednesday",
       "hi": "बुधवार"
-    }
+    },
+    "rahuKaal": {
+      "start": "12:00 PM",
+      "end": "1:30 PM"
+    },
+    "verdict": {
+      "en": "Auspicious",
+      "hi": "शुभ"
+    },
+    "goodFor": {
+      "en": "Routine work, planning, and preparation",
+      "hi": "नियमित कार्य, योजना और तैयारी"
+    },
+    "avoidToday": {
+      "en": "No major restrictions today. Proceed with awareness.",
+      "hi": "आज कोई बड़ा प्रतिबंध नहीं। जागरूकता के साथ आगे बढ़ें।"
+    },
+    "specialDay": null
   },
   "signs": [
     {

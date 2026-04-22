@@ -149,6 +149,95 @@ const karanaName = karanaNames[karanaIndex];
 const varIndex = now.getUTCDay();
 const varName = varNames[varIndex];
 
+// ── Rahu Kaal calculation ──
+// Rahu Kaal is a 1.5 hour window each day, different for each weekday
+// Standard Rahu Kaal timings (based on sunrise ~6:00 AM):
+const rahuKaalSlots = [
+  { start: '4:30 PM', end: '6:00 PM' },   // Sunday
+  { start: '7:30 AM', end: '9:00 AM' },   // Monday
+  { start: '3:00 PM', end: '4:30 PM' },   // Tuesday
+  { start: '12:00 PM', end: '1:30 PM' },  // Wednesday
+  { start: '1:30 PM', end: '3:00 PM' },   // Thursday
+  { start: '10:30 AM', end: '12:00 PM' }, // Friday
+  { start: '9:00 AM', end: '10:30 AM' },  // Saturday
+];
+const rahuKaal = rahuKaalSlots[varIndex];
+
+// ── Auspiciousness assessment ──
+// Based on tithi, nakshatra, yoga, and karana combinations
+const auspiciousTithis = [2, 3, 5, 7, 10, 11, 13]; // Dwitiya, Tritiya, Panchami, Saptami, Dashami, Ekadashi, Trayodashi
+const inauspiciousTithis = [4, 8, 9, 14, 29]; // Chaturthi, Ashtami, Navami, Chaturdashi, Amavasya
+const auspiciousNakshatras = [0, 3, 6, 7, 10, 11, 12, 13, 15, 16, 21, 26]; // Ashwini, Rohini, Punarvasu, Pushya, Purva/Uttara Phalguni, Hasta, Chitra, Vishakha, Anuradha, Shravana, Revati
+const inauspiciousYogas = [0, 5, 9, 12, 16]; // Vishkumbha, Atiganda, Ganda, Vyaghata, Vyatipata
+const inauspiciousKaranas = [6]; // Vishti (Bhadra)
+
+let auspScore = 0;
+if (auspiciousTithis.includes(tithiInPaksha)) auspScore += 2;
+if (inauspiciousTithis.includes(tithiIndex)) auspScore -= 2;
+if (auspiciousNakshatras.includes(nakshatraIndex)) auspScore += 2;
+if (inauspiciousYogas.includes(yogaIndex)) auspScore -= 1;
+if (inauspiciousKaranas.includes(karanaIndex)) auspScore -= 1;
+// Purnima and good nakshatras are very auspicious
+if (tithiIndex === 14) auspScore += 1; // Purnima
+
+let todayVerdict, verdictHi;
+if (auspScore >= 3) { todayVerdict = 'Highly Auspicious'; verdictHi = 'अत्यंत शुभ'; }
+else if (auspScore >= 1) { todayVerdict = 'Auspicious'; verdictHi = 'शुभ'; }
+else if (auspScore >= -1) { todayVerdict = 'Moderate'; verdictHi = 'सामान्य'; }
+else { todayVerdict = 'Exercise Caution'; verdictHi = 'सावधानी बरतें'; }
+
+// ── Good and avoid activities ──
+// Based on tithi and nakshatra characteristics
+const tithiActivities = {
+  good: {
+    0: 'Starting new ventures, travel',          // Pratipada
+    1: 'Marriage preparations, celebrations',     // Dwitiya
+    2: 'Religious ceremonies, purchasing jewelry', // Tritiya
+    4: 'Education, creative work, artistic pursuits', // Panchami
+    6: 'Starting journeys, medical treatments',   // Saptami
+    9: 'Business deals, property matters',        // Dashami
+    10: 'Spiritual practices, fasting, charity',  // Ekadashi
+    14: 'Celebrations, community gatherings',     // Purnima
+  },
+  avoid: {
+    3: 'Avoid starting new ventures on Chaturthi', // Chaturthi
+    7: 'Avoid long journeys and major purchases on Ashtami', // Ashtami
+    8: 'Avoid celebrations and new beginnings on Navami', // Navami
+    13: 'Avoid risky financial decisions on Chaturdashi', // Chaturdashi
+    29: 'Avoid starting anything new on Amavasya', // Amavasya
+  }
+};
+const tithiActivitiesHi = {
+  good: {
+    0: 'नए कार्य शुरू करना, यात्रा',
+    1: 'विवाह की तैयारी, उत्सव',
+    2: 'धार्मिक अनुष्ठान, आभूषण खरीदना',
+    4: 'शिक्षा, रचनात्मक कार्य',
+    6: 'यात्रा शुरू करना, चिकित्सा',
+    9: 'व्यापारिक सौदे, संपत्ति',
+    10: 'आध्यात्मिक अभ्यास, उपवास, दान',
+    14: 'उत्सव, सामुदायिक कार्यक्रम',
+  },
+  avoid: {
+    3: 'चतुर्थी पर नए कार्य शुरू करने से बचें',
+    7: 'अष्टमी पर लंबी यात्रा और बड़ी खरीदारी से बचें',
+    8: 'नवमी पर उत्सव और नई शुरुआत से बचें',
+    13: 'चतुर्दशी पर जोखिम भरे वित्तीय निर्णयों से बचें',
+    29: 'अमावस्या पर कुछ भी नया शुरू करने से बचें',
+  }
+};
+
+const goodActivity = tithiActivities.good[tithiInPaksha] || 'Routine work, planning, and preparation';
+const goodActivityHi = tithiActivitiesHi.good[tithiInPaksha] || 'नियमित कार्य, योजना और तैयारी';
+const avoidActivity = tithiActivities.avoid[tithiIndex] || 'No major restrictions today. Proceed with awareness.';
+const avoidActivityHi = tithiActivitiesHi.avoid[tithiIndex] || 'आज कोई बड़ा प्रतिबंध नहीं। जागरूकता के साथ आगे बढ़ें।';
+
+// ── Special day detection ──
+let specialDay = null;
+if (tithiIndex === 14) specialDay = { en: 'Purnima (Full Moon)', hi: 'पूर्णिमा' };
+else if (tithiIndex === 29) specialDay = { en: 'Amavasya (New Moon)', hi: 'अमावस्या' };
+else if (tithiInPaksha === 10) specialDay = { en: 'Ekadashi (Fasting Day)', hi: 'एकादशी (व्रत का दिन)' };
+
 const panchang = {
   tithi: {
     en: `${pakshaNames[paksha].en} ${tithiName.en}`,
@@ -158,9 +247,14 @@ const panchang = {
   yoga: { en: yogaName.en, hi: yogaName.hi },
   karana: { en: karanaName.en, hi: karanaName.hi },
   var: { en: varName.en, hi: varName.hi },
+  rahuKaal,
+  verdict: { en: todayVerdict, hi: verdictHi },
+  goodFor: { en: goodActivity, hi: goodActivityHi },
+  avoidToday: { en: avoidActivity, hi: avoidActivityHi },
+  specialDay,
 };
 
-console.log(`Panchang: ${panchang.tithi.en}, ${panchang.nakshatra.en}, ${panchang.yoga.en}`);
+console.log(`Panchang: ${panchang.tithi.en}, ${panchang.nakshatra.en} | ${todayVerdict}`);
 
 // ── 5. Generate guidance for each sign ─────────────────────────
 // Day-based seed for template variant selection (changes daily)

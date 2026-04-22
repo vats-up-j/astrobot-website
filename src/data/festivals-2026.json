@@ -1,0 +1,574 @@
+{
+  "year": 2026,
+  "vikramSamvat": "2082-2083",
+  "festivals": [
+    {
+      "date": "2026-01-03",
+      "nameEn": "Pausha Purnima",
+      "nameHi": "पौष पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Pausha month",
+      "descHi": "पौष मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-01-14",
+      "nameEn": "Makar Sankranti",
+      "nameHi": "मकर संक्रांति",
+      "type": "festival",
+      "descEn": "Sun enters Capricorn, harvest festival",
+      "descHi": "सूर्य का मकर राशि में प्रवेश"
+    },
+    {
+      "date": "2026-01-14",
+      "nameEn": "Shattila Ekadashi",
+      "nameHi": "षटतिला एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Pausha month, Krishna Paksha",
+      "descHi": "पौष मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-01-18",
+      "nameEn": "Mauni Amavasya",
+      "nameHi": "मौनी अमावस्या",
+      "type": "amavasya",
+      "descEn": "New moon, sacred bathing day",
+      "descHi": "मौनी अमावस्या"
+    },
+    {
+      "date": "2026-01-23",
+      "nameEn": "Vasant Panchami",
+      "nameHi": "वसंत पंचमी",
+      "type": "festival",
+      "descEn": "Saraswati Puja, spring festival",
+      "descHi": "सरस्वती पूजा, वसंत उत्सव"
+    },
+    {
+      "date": "2026-01-29",
+      "nameEn": "Jaya Ekadashi",
+      "nameHi": "जया एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Magha month, Shukla Paksha",
+      "descHi": "माघ मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-02-01",
+      "nameEn": "Magha Purnima",
+      "nameHi": "माघ पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Magha month",
+      "descHi": "माघ मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-02-13",
+      "nameEn": "Vijaya Ekadashi",
+      "nameHi": "विजया एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Phalguna month, Krishna Paksha",
+      "descHi": "फाल्गुन मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-02-15",
+      "nameEn": "Maha Shivaratri",
+      "nameHi": "महा शिवरात्रि",
+      "type": "festival",
+      "descEn": "Night of Lord Shiva",
+      "descHi": "भगवान शिव की रात्रि"
+    },
+    {
+      "date": "2026-02-27",
+      "nameEn": "Amalaki Ekadashi",
+      "nameHi": "आमलकी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Phalguna month, Shukla Paksha",
+      "descHi": "फाल्गुन मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-03-03",
+      "nameEn": "Holika Dahan",
+      "nameHi": "होलिका दहन",
+      "type": "festival",
+      "descEn": "Burning of Holika",
+      "descHi": "होलिका दहन"
+    },
+    {
+      "date": "2026-03-03",
+      "nameEn": "Phalguna Purnima",
+      "nameHi": "फाल्गुन पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Phalguna month",
+      "descHi": "फाल्गुन मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-03-04",
+      "nameEn": "Holi",
+      "nameHi": "होली",
+      "type": "festival",
+      "descEn": "Festival of colors",
+      "descHi": "रंगों का त्योहार"
+    },
+    {
+      "date": "2026-03-15",
+      "nameEn": "Papamochani Ekadashi",
+      "nameHi": "पापमोचनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Chaitra month, Krishna Paksha",
+      "descHi": "चैत्र मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-03-19",
+      "nameEn": "Gudi Padwa / Ugadi",
+      "nameHi": "गुड़ी पड़वा / उगादी",
+      "type": "festival",
+      "descEn": "Hindu New Year",
+      "descHi": "हिंदू नव वर्ष"
+    },
+    {
+      "date": "2026-03-19",
+      "nameEn": "Chaitra Navratri begins",
+      "nameHi": "चैत्र नवरात्रि आरंभ",
+      "type": "festival",
+      "descEn": "Nine nights of Goddess Durga",
+      "descHi": "नवरात्रि आरंभ"
+    },
+    {
+      "date": "2026-03-27",
+      "nameEn": "Ram Navami",
+      "nameHi": "राम नवमी",
+      "type": "festival",
+      "descEn": "Birthday of Lord Rama",
+      "descHi": "भगवान राम का जन्मोत्सव"
+    },
+    {
+      "date": "2026-03-29",
+      "nameEn": "Kamada Ekadashi",
+      "nameHi": "कामदा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Chaitra month, Shukla Paksha",
+      "descHi": "चैत्र मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-04-02",
+      "nameEn": "Hanuman Jayanti",
+      "nameHi": "हनुमान जयंती",
+      "type": "festival",
+      "descEn": "Birthday of Lord Hanuman",
+      "descHi": "हनुमान जयंती"
+    },
+    {
+      "date": "2026-04-02",
+      "nameEn": "Chaitra Purnima",
+      "nameHi": "चैत्र पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Chaitra month",
+      "descHi": "चैत्र मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-04-13",
+      "nameEn": "Varuthini Ekadashi",
+      "nameHi": "वरूथिनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Vaishakha month, Krishna Paksha",
+      "descHi": "वैशाख मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-04-19",
+      "nameEn": "Akshaya Tritiya",
+      "nameHi": "अक्षय तृतीया",
+      "type": "festival",
+      "descEn": "Auspicious day for new beginnings",
+      "descHi": "नई शुरुआत का शुभ दिन"
+    },
+    {
+      "date": "2026-04-27",
+      "nameEn": "Mohini Ekadashi",
+      "nameHi": "मोहिनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Vaishakha month, Shukla Paksha",
+      "descHi": "वैशाख मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-05-01",
+      "nameEn": "Buddha Purnima",
+      "nameHi": "बुद्ध पूर्णिमा",
+      "type": "festival",
+      "descEn": "Birth of Lord Buddha",
+      "descHi": "बुद्ध पूर्णिमा"
+    },
+    {
+      "date": "2026-05-01",
+      "nameEn": "Vaishakha Purnima",
+      "nameHi": "वैशाख पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Vaishakha month",
+      "descHi": "वैशाख मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-05-13",
+      "nameEn": "Apara Ekadashi",
+      "nameHi": "अपरा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Jyeshtha month, Krishna Paksha",
+      "descHi": "ज्येष्ठ मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-05-16",
+      "nameEn": "Vat Savitri Vrat",
+      "nameHi": "वट सावित्री व्रत",
+      "type": "vrat",
+      "descEn": "Married women fast for husband",
+      "descHi": "सुहागन व्रत"
+    },
+    {
+      "date": "2026-05-25",
+      "nameEn": "Ganga Dussehra",
+      "nameHi": "गंगा दशहरा",
+      "type": "festival",
+      "descEn": "Descent of Ganga",
+      "descHi": "गंगा दशहरा"
+    },
+    {
+      "date": "2026-05-27",
+      "nameEn": "Padmini Ekadashi",
+      "nameHi": "पद्मिनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Adhika month, Shukla Paksha",
+      "descHi": "अधिक मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-05-31",
+      "nameEn": "Adhika Purnima",
+      "nameHi": "अधिक पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Adhika month",
+      "descHi": "अधिक मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-06-11",
+      "nameEn": "Parama Ekadashi",
+      "nameHi": "परमा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Jyeshtha month, Krishna Paksha",
+      "descHi": "ज्येष्ठ मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-06-25",
+      "nameEn": "Nirjala Ekadashi",
+      "nameHi": "निर्जला एकादशी",
+      "type": "ekadashi",
+      "descEn": "Strictest fast, no water",
+      "descHi": "निर्जला एकादशी"
+    },
+    {
+      "date": "2026-06-29",
+      "nameEn": "Jyeshtha Purnima",
+      "nameHi": "ज्येष्ठ पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Jyeshtha month",
+      "descHi": "ज्येष्ठ मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-07-11",
+      "nameEn": "Yogini Ekadashi",
+      "nameHi": "योगिनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Ashadha month, Krishna Paksha",
+      "descHi": "आषाढ़ मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-07-16",
+      "nameEn": "Jagannath Rath Yatra",
+      "nameHi": "जगन्नाथ रथ यात्रा",
+      "type": "festival",
+      "descEn": "Lord Jagannath's chariot procession",
+      "descHi": "जगन्नाथ रथ यात्रा"
+    },
+    {
+      "date": "2026-07-25",
+      "nameEn": "Devshayani Ekadashi",
+      "nameHi": "देवशयनी एकादशी",
+      "type": "ekadashi",
+      "descEn": "Lord Vishnu's cosmic sleep begins",
+      "descHi": "देवशयनी एकादशी"
+    },
+    {
+      "date": "2026-07-29",
+      "nameEn": "Guru Purnima",
+      "nameHi": "गुरु पूर्णिमा",
+      "type": "festival",
+      "descEn": "Honoring teachers and gurus",
+      "descHi": "गुरु पूर्णिमा"
+    },
+    {
+      "date": "2026-08-09",
+      "nameEn": "Kamika Ekadashi",
+      "nameHi": "कामिका एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Shravana month, Krishna Paksha",
+      "descHi": "श्रावण मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-08-15",
+      "nameEn": "Hariyali Teej",
+      "nameHi": "हरियाली तीज",
+      "type": "festival",
+      "descEn": "Women's festival for marital bliss",
+      "descHi": "हरियाली तीज"
+    },
+    {
+      "date": "2026-08-17",
+      "nameEn": "Nag Panchami",
+      "nameHi": "नाग पंचमी",
+      "type": "festival",
+      "descEn": "Worship of serpent deity",
+      "descHi": "नाग पंचमी"
+    },
+    {
+      "date": "2026-08-23",
+      "nameEn": "Shravana Putrada Ekadashi",
+      "nameHi": "श्रावण पुत्रदा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Shravana month, Shukla Paksha",
+      "descHi": "श्रावण मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-08-28",
+      "nameEn": "Raksha Bandhan",
+      "nameHi": "रक्षा बंधन",
+      "type": "festival",
+      "descEn": "Bond of brother-sister love",
+      "descHi": "रक्षा बंधन"
+    },
+    {
+      "date": "2026-08-28",
+      "nameEn": "Shravana Purnima",
+      "nameHi": "श्रावण पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Shravana month",
+      "descHi": "श्रावण मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-09-04",
+      "nameEn": "Krishna Janmashtami",
+      "nameHi": "कृष्ण जन्माष्टमी",
+      "type": "festival",
+      "descEn": "Birthday of Lord Krishna",
+      "descHi": "कृष्ण जन्माष्टमी"
+    },
+    {
+      "date": "2026-09-07",
+      "nameEn": "Aja Ekadashi",
+      "nameHi": "अजा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Bhadrapada month, Krishna Paksha",
+      "descHi": "भाद्रपद मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-09-14",
+      "nameEn": "Ganesh Chaturthi",
+      "nameHi": "गणेश चतुर्थी",
+      "type": "festival",
+      "descEn": "Birthday of Lord Ganesha",
+      "descHi": "गणेश चतुर्थी"
+    },
+    {
+      "date": "2026-09-14",
+      "nameEn": "Hartalika Teej",
+      "nameHi": "हरतालिका तीज",
+      "type": "vrat",
+      "descEn": "Women's fast for Shiva-Parvati",
+      "descHi": "हरतालिका तीज"
+    },
+    {
+      "date": "2026-09-22",
+      "nameEn": "Parsva Ekadashi",
+      "nameHi": "पार्श्व एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Bhadrapada month, Shukla Paksha",
+      "descHi": "भाद्रपद मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-09-25",
+      "nameEn": "Anant Chaturdashi",
+      "nameHi": "अनंत चतुर्दशी",
+      "type": "festival",
+      "descEn": "Ganesh Visarjan",
+      "descHi": "अनंत चतुर्दशी"
+    },
+    {
+      "date": "2026-09-26",
+      "nameEn": "Bhadrapada Purnima",
+      "nameHi": "भाद्रपद पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Bhadrapada month",
+      "descHi": "भाद्रपद मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-09-27",
+      "nameEn": "Pitru Paksha begins",
+      "nameHi": "पितृ पक्ष आरंभ",
+      "type": "vrat",
+      "descEn": "Fortnight of ancestral rites",
+      "descHi": "पितृ पक्ष आरंभ"
+    },
+    {
+      "date": "2026-10-06",
+      "nameEn": "Indira Ekadashi",
+      "nameHi": "इंदिरा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Ashwin month, Krishna Paksha",
+      "descHi": "आश्विन मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-10-10",
+      "nameEn": "Sarva Pitru Amavasya",
+      "nameHi": "सर्व पितृ अमावस्या",
+      "type": "amavasya",
+      "descEn": "Last day of Pitru Paksha",
+      "descHi": "सर्व पितृ अमावस्या"
+    },
+    {
+      "date": "2026-10-11",
+      "nameEn": "Sharad Navratri begins",
+      "nameHi": "शरद नवरात्रि आरंभ",
+      "type": "festival",
+      "descEn": "Nine nights of Goddess Durga",
+      "descHi": "शरद नवरात्रि आरंभ"
+    },
+    {
+      "date": "2026-10-19",
+      "nameEn": "Durga Ashtami",
+      "nameHi": "दुर्गा अष्टमी",
+      "type": "festival",
+      "descEn": "Eighth day of Navratri",
+      "descHi": "दुर्गा अष्टमी"
+    },
+    {
+      "date": "2026-10-20",
+      "nameEn": "Dussehra / Vijayadashami",
+      "nameHi": "दशहरा / विजयादशमी",
+      "type": "festival",
+      "descEn": "Victory of good over evil",
+      "descHi": "विजयादशमी"
+    },
+    {
+      "date": "2026-10-22",
+      "nameEn": "Papankusha Ekadashi",
+      "nameHi": "पापांकुशा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Ashwin month, Shukla Paksha",
+      "descHi": "आश्विन मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-10-25",
+      "nameEn": "Sharad Purnima",
+      "nameHi": "शरद पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Ashwin month",
+      "descHi": "आश्विन मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-10-29",
+      "nameEn": "Karwa Chauth",
+      "nameHi": "करवा चौथ",
+      "type": "vrat",
+      "descEn": "Married women fast for husband",
+      "descHi": "करवा चौथ"
+    },
+    {
+      "date": "2026-11-05",
+      "nameEn": "Rama Ekadashi",
+      "nameHi": "रमा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Kartika month, Krishna Paksha",
+      "descHi": "कार्तिक मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-11-06",
+      "nameEn": "Dhanteras",
+      "nameHi": "धनतेरस",
+      "type": "festival",
+      "descEn": "Auspicious day for buying gold",
+      "descHi": "धनतेरस"
+    },
+    {
+      "date": "2026-11-08",
+      "nameEn": "Diwali",
+      "nameHi": "दीपावली",
+      "type": "festival",
+      "descEn": "Festival of lights",
+      "descHi": "दीपावली"
+    },
+    {
+      "date": "2026-11-10",
+      "nameEn": "Govardhan Puja",
+      "nameHi": "गोवर्धन पूजा",
+      "type": "festival",
+      "descEn": "Worship of Govardhan hill",
+      "descHi": "गोवर्धन पूजा"
+    },
+    {
+      "date": "2026-11-11",
+      "nameEn": "Bhai Dooj",
+      "nameHi": "भाई दूज",
+      "type": "festival",
+      "descEn": "Celebration of brother-sister bond",
+      "descHi": "भाई दूज"
+    },
+    {
+      "date": "2026-11-15",
+      "nameEn": "Chhath Puja",
+      "nameHi": "छठ पूजा",
+      "type": "festival",
+      "descEn": "Sun worship festival",
+      "descHi": "छठ पूजा"
+    },
+    {
+      "date": "2026-11-20",
+      "nameEn": "Devutthana Ekadashi",
+      "nameHi": "देवउत्थान एकादशी",
+      "type": "ekadashi",
+      "descEn": "Lord Vishnu wakes from cosmic sleep",
+      "descHi": "देवउत्थान एकादशी"
+    },
+    {
+      "date": "2026-11-24",
+      "nameEn": "Kartika Purnima",
+      "nameHi": "कार्तिक पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Kartika month",
+      "descHi": "कार्तिक मास की पूर्णिमा"
+    },
+    {
+      "date": "2026-12-04",
+      "nameEn": "Utpanna Ekadashi",
+      "nameHi": "उत्पन्ना एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Margashirsha month, Krishna Paksha",
+      "descHi": "मार्गशीर्ष मास कृष्ण पक्ष एकादशी"
+    },
+    {
+      "date": "2026-12-20",
+      "nameEn": "Gita Jayanti",
+      "nameHi": "गीता जयंती",
+      "type": "festival",
+      "descEn": "Anniversary of Bhagavad Gita",
+      "descHi": "गीता जयंती"
+    },
+    {
+      "date": "2026-12-20",
+      "nameEn": "Mokshada Ekadashi",
+      "nameHi": "मोक्षदा एकादशी",
+      "type": "ekadashi",
+      "descEn": "Ekadashi of Margashirsha month, Shukla Paksha",
+      "descHi": "मार्गशीर्ष मास शुक्ल पक्ष एकादशी"
+    },
+    {
+      "date": "2026-12-23",
+      "nameEn": "Margashirsha Purnima",
+      "nameHi": "मार्गशीर्ष पूर्णिमा",
+      "type": "purnima",
+      "descEn": "Full moon day of Margashirsha month",
+      "descHi": "मार्गशीर्ष मास की पूर्णिमा"
+    }
+  ]
+}
