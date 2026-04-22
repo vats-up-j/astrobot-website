@@ -5,152 +5,140 @@ import dailyData from '../data/daily-horoscope.json';
 
 const { panchang, date } = dailyData;
 
-// Format display date
 const displayDate = new Date(date + 'T00:00:00Z');
 const dateEn = displayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const dateHi = displayDate.toLocaleDateString('hi-IN', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+const panchangFaqs = [
+  { q: { en: "What is Panchang?", hi: "&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0915;&#x094D;&#x092F;&#x093E; &#x0939;&#x0948;?" }, a: { en: "Panchang is the traditional Vedic Hindu calendar that tracks five key elements: Tithi (lunar day), Nakshatra (birth star), Yoga (planetary combination), Karana (half-tithi), and Var (day of the week). These five elements determine the auspiciousness of any given day for important activities like marriage, travel, business, and rituals.", hi: "&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x092A;&#x093E;&#x0930;&#x0902;&#x092A;&#x0930;&#x093F;&#x0915; &#x0935;&#x0948;&#x0926;&#x093F;&#x0915; &#x0939;&#x093F;&#x0902;&#x0926;&#x0942; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0939;&#x0948; &#x091C;&#x094B; &#x092A;&#x093E;&#x0902;&#x091A; &#x092E;&#x0941;&#x0916;&#x094D;&#x092F; &#x0924;&#x0924;&#x094D;&#x0935;&#x094B;&#x0902; &#x0915;&#x094B; &#x091F;&#x094D;&#x0930;&#x0948;&#x0915; &#x0915;&#x0930;&#x0924;&#x093E; &#x0939;&#x0948;: &#x0924;&#x093F;&#x0925;&#x093F;, &#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930;, &#x092F;&#x094B;&#x0917;, &#x0915;&#x0930;&#x0923; &#x0914;&#x0930; &#x0935;&#x093E;&#x0930;&#x0964; &#x092F;&#x0947; &#x092A;&#x093E;&#x0902;&#x091A; &#x0924;&#x0924;&#x094D;&#x0935; &#x0915;&#x093F;&#x0938;&#x0940; &#x092D;&#x0940; &#x0926;&#x093F;&#x0928; &#x0915;&#x0940; &#x0936;&#x0941;&#x092D;&#x0924;&#x093E; &#x0928;&#x093F;&#x0930;&#x094D;&#x0927;&#x093E;&#x0930;&#x093F;&#x0924; &#x0915;&#x0930;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964;" } },
+  { q: { en: "What is Tithi?", hi: "&#x0924;&#x093F;&#x0925;&#x093F; &#x0915;&#x094D;&#x092F;&#x093E; &#x0939;&#x0948;?" }, a: { en: "Tithi is the lunar day based on the angular distance between the Sun and Moon. There are 30 tithis in a lunar month, divided into Shukla Paksha (waxing moon, tithis 1-15) and Krishna Paksha (waning moon, tithis 16-30). Each tithi has specific qualities that make it suitable or unsuitable for different activities.", hi: "&#x0924;&#x093F;&#x0925;&#x093F; &#x0938;&#x0942;&#x0930;&#x094D;&#x092F; &#x0914;&#x0930; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930;&#x092E;&#x093E; &#x0915;&#x0947; &#x092C;&#x0940;&#x091A; &#x0915;&#x094B;&#x0923;&#x0940;&#x092F; &#x0926;&#x0942;&#x0930;&#x0940; &#x092A;&#x0930; &#x0906;&#x0927;&#x093E;&#x0930;&#x093F;&#x0924; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930; &#x0926;&#x093F;&#x0935;&#x0938; &#x0939;&#x0948;&#x0964; &#x090F;&#x0915; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930; &#x092E;&#x093E;&#x0938; &#x092E;&#x0947;&#x0902; 30 &#x0924;&#x093F;&#x0925;&#x093F;&#x092F;&#x093E;&#x0902; &#x0939;&#x094B;&#x0924;&#x0940; &#x0939;&#x0948;&#x0902;, &#x0936;&#x0941;&#x0915;&#x094D;&#x0932; &#x092A;&#x0915;&#x094D;&#x0937; &#x0914;&#x0930; &#x0915;&#x0943;&#x0937;&#x094D;&#x0923; &#x092A;&#x0915;&#x094D;&#x0937; &#x092E;&#x0947;&#x0902;&#x0964;" } },
+  { q: { en: "What is Nakshatra?", hi: "&#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930; &#x0915;&#x094D;&#x092F;&#x093E; &#x0939;&#x0948;?" }, a: { en: "Nakshatra is the lunar mansion or birth star that the Moon occupies on a given day. There are 27 nakshatras in Vedic astrology, each spanning 13 degrees and 20 minutes of the zodiac. Your birth nakshatra determines your Rashi and plays a key role in Kundli matching, muhurta selection, and daily predictions.", hi: "&#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930; &#x0935;&#x0939; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930; &#x0917;&#x0943;&#x0939; &#x0939;&#x0948; &#x091C;&#x093F;&#x0938;&#x092E;&#x0947;&#x0902; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930;&#x092E;&#x093E; &#x0915;&#x093F;&#x0938;&#x0940; &#x0926;&#x093F;&#x0928; &#x0938;&#x094D;&#x0925;&#x093F;&#x0924; &#x0939;&#x094B;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964; &#x0935;&#x0948;&#x0926;&#x093F;&#x0915; &#x091C;&#x094D;&#x092F;&#x094B;&#x0924;&#x093F;&#x0937; &#x092E;&#x0947;&#x0902; 27 &#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930; &#x0939;&#x094B;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964; &#x0906;&#x092A;&#x0915;&#x093E; &#x091C;&#x0928;&#x094D;&#x092E; &#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930; &#x0906;&#x092A;&#x0915;&#x0940; &#x0930;&#x093E;&#x0936;&#x093F; &#x0928;&#x093F;&#x0930;&#x094D;&#x0927;&#x093E;&#x0930;&#x093F;&#x0924; &#x0915;&#x0930;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964;" } },
+  { q: { en: "How is Panchang calculated?", hi: "&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0915;&#x0940; &#x0917;&#x0923;&#x0928;&#x093E; &#x0915;&#x0948;&#x0938;&#x0947; &#x0939;&#x094B;&#x0924;&#x0940; &#x0939;&#x0948;?" }, a: { en: "HoroTalk computes Panchang using Swiss Ephemeris-grade astronomical algorithms. Tithi is derived from the Moon-Sun angular distance. Nakshatra is determined by the Moon's sidereal longitude using Lahiri ayanamsa. Yoga is calculated from the sum of Sun and Moon sidereal longitudes. All data refreshes automatically every morning based on real planetary positions.", hi: "HoroTalk Swiss Ephemeris &#x0938;&#x094D;&#x0924;&#x0930; &#x0915;&#x0947; &#x0916;&#x0917;&#x094B;&#x0932;&#x0940;&#x092F; &#x090F;&#x0932;&#x094D;&#x0917;&#x094B;&#x0930;&#x093F;&#x0926;&#x092E; &#x0938;&#x0947; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0915;&#x0940; &#x0917;&#x0923;&#x0928;&#x093E; &#x0915;&#x0930;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964; &#x0924;&#x093F;&#x0925;&#x093F; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930;-&#x0938;&#x0942;&#x0930;&#x094D;&#x092F; &#x0915;&#x094B;&#x0923;&#x0940;&#x092F; &#x0926;&#x0942;&#x0930;&#x0940; &#x0938;&#x0947;, &#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930; &#x091A;&#x0902;&#x0926;&#x094D;&#x0930;&#x092E;&#x093E; &#x0915;&#x0940; &#x0938;&#x093E;&#x092F;&#x0928; &#x0930;&#x0947;&#x0916;&#x093E;&#x0902;&#x0936; &#x0938;&#x0947;, &#x0914;&#x0930; &#x092F;&#x094B;&#x0917; &#x0938;&#x0942;&#x0930;&#x094D;&#x092F;-&#x091A;&#x0902;&#x0926;&#x094D;&#x0930; &#x0930;&#x0947;&#x0916;&#x093E;&#x0902;&#x0936; &#x0915;&#x0947; &#x092F;&#x094B;&#x0917; &#x0938;&#x0947;&#x0964; &#x0938;&#x092D;&#x0940; &#x0921;&#x0947;&#x091F;&#x093E; &#x0939;&#x0930; &#x0938;&#x0941;&#x092C;&#x0939; &#x0938;&#x094D;&#x0935;&#x0924;&#x0903; &#x0905;&#x092A;&#x0921;&#x0947;&#x091F; &#x0939;&#x094B;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964;" } },
+];
+
+const panchangFaqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": panchangFaqs.map(f => ({
+    "@type": "Question",
+    "name": f.q.en,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a.en }
+  }))
+});
 ---
 
-<Layout title="Today's Panchang - Tithi, Nakshatra, Yoga | HoroTalk">
+<Layout title="Today's Panchang - Tithi, Nakshatra, Yoga, Karana | HoroTalk">
 
-  <!-- Page Header -->
-  <section class="bg-gradient-to-br from-white via-primary-light to-white py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-sm text-text-light mb-2">
-        <a href="/" class="hover:text-saffron">Home</a> &rsaquo; Panchang
+  <script type="application/ld+json" set:html={panchangFaqSchema} />
+
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-ivory via-primary-light to-ivory py-10 md:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
+      <p class="text-sm text-charcoal/40 mb-2">
+        <a href="/" class="hover:text-maroon">Home</a> &rsaquo; <span class="i18n" data-en="Panchang" data-hi="&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917;">Panchang</span>
       </p>
-      <h1 class="text-3xl md:text-5xl font-bold leading-tight" id="page-title">Today's Panchang</h1>
-      <p class="mt-3 text-charcoal/60 text-base md:text-lg">
+      <h1 class="text-2xl md:text-4xl font-bold text-charcoal i18n" data-en="Today's Panchang" data-hi="&#x0906;&#x091C; &#x0915;&#x093E; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917;">Today's Panchang</h1>
+      <p class="mt-2 text-charcoal/50 text-sm md:text-base">
         <span id="date-en">{dateEn}</span>
         <span id="date-hi" class="hidden">{dateHi}</span>
       </p>
+      <p class="mt-2 text-xs text-charcoal/40 i18n" data-en="Computed from real planetary positions using Lahiri ayanamsa. Updated daily." data-hi="&#x0932;&#x093E;&#x0939;&#x093F;&#x0930;&#x0940; &#x0905;&#x092F;&#x0928;&#x093E;&#x0902;&#x0936; &#x0938;&#x0947; &#x0935;&#x093E;&#x0938;&#x094D;&#x0924;&#x0935;&#x093F;&#x0915; &#x0917;&#x094D;&#x0930;&#x0939; &#x0938;&#x094D;&#x0925;&#x093F;&#x0924;&#x093F; &#x0938;&#x0947; &#x0917;&#x0923;&#x0928;&#x093E;&#x0964; &#x092A;&#x094D;&#x0930;&#x0924;&#x093F;&#x0926;&#x093F;&#x0928; &#x0905;&#x092A;&#x0921;&#x0947;&#x091F;&#x0964;">Computed from real planetary positions using Lahiri ayanamsa. Updated daily.</p>
     </div>
   </section>
 
-  <!-- Panchang Cards -->
-  <section class="py-12 md:py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+  <!-- Panchang data -->
+  <section class="py-8 sm:py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
 
-      <!-- Main Panchang Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-
-        <!-- Tithi -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg shadow-charcoal/5 border border-charcoal/5">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 bg-saffron/10 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40" data-label-en="Tithi" data-label-hi="तिथि">Tithi</div>
-          </div>
-          <div class="text-lg font-bold text-charcoal">
-            <span class="panchang-en">{panchang.tithi.en}</span>
-            <span class="panchang-hi hidden">{panchang.tithi.hi}</span>
-          </div>
+      <!-- 5 Panchang elements in compact grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-charcoal/5">
+          <div class="text-[9px] uppercase tracking-widest font-bold text-charcoal/35 mb-1" data-label-en="Tithi" data-label-hi="&#x0924;&#x093F;&#x0925;&#x093F;">Tithi</div>
+          <div class="text-base font-bold text-charcoal"><span class="panchang-en">{panchang.tithi.en}</span><span class="panchang-hi hidden">{panchang.tithi.hi}</span></div>
         </div>
-
-        <!-- Nakshatra -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg shadow-charcoal/5 border border-charcoal/5">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 bg-saffron/10 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40" data-label-en="Nakshatra" data-label-hi="नक्षत्र">Nakshatra</div>
-          </div>
-          <div class="text-lg font-bold text-charcoal">
-            <span class="panchang-en">{panchang.nakshatra.en}</span>
-            <span class="panchang-hi hidden">{panchang.nakshatra.hi}</span>
-          </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-charcoal/5">
+          <div class="text-[9px] uppercase tracking-widest font-bold text-charcoal/35 mb-1" data-label-en="Nakshatra" data-label-hi="&#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930;">Nakshatra</div>
+          <div class="text-base font-bold text-charcoal"><span class="panchang-en">{panchang.nakshatra.en}</span><span class="panchang-hi hidden">{panchang.nakshatra.hi}</span></div>
         </div>
-
-        <!-- Yoga -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg shadow-charcoal/5 border border-charcoal/5">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 bg-saffron/10 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40" data-label-en="Yoga" data-label-hi="योग">Yoga</div>
-          </div>
-          <div class="text-lg font-bold text-charcoal">
-            <span class="panchang-en">{panchang.yoga.en}</span>
-            <span class="panchang-hi hidden">{panchang.yoga.hi}</span>
-          </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-charcoal/5">
+          <div class="text-[9px] uppercase tracking-widest font-bold text-charcoal/35 mb-1" data-label-en="Yoga" data-label-hi="&#x092F;&#x094B;&#x0917;">Yoga</div>
+          <div class="text-base font-bold text-charcoal"><span class="panchang-en">{panchang.yoga.en}</span><span class="panchang-hi hidden">{panchang.yoga.hi}</span></div>
         </div>
-
-        <!-- Karana -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg shadow-charcoal/5 border border-charcoal/5">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 bg-saffron/10 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40" data-label-en="Karana" data-label-hi="करण">Karana</div>
-          </div>
-          <div class="text-lg font-bold text-charcoal">
-            <span class="panchang-en">{panchang.karana.en}</span>
-            <span class="panchang-hi hidden">{panchang.karana.hi}</span>
-          </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-charcoal/5">
+          <div class="text-[9px] uppercase tracking-widest font-bold text-charcoal/35 mb-1" data-label-en="Karana" data-label-hi="&#x0915;&#x0930;&#x0923;">Karana</div>
+          <div class="text-base font-bold text-charcoal"><span class="panchang-en">{panchang.karana.en}</span><span class="panchang-hi hidden">{panchang.karana.hi}</span></div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-charcoal/5">
+          <div class="text-[9px] uppercase tracking-widest font-bold text-charcoal/35 mb-1" data-label-en="Day (Var)" data-label-hi="&#x0935;&#x093E;&#x0930;">Day (Var)</div>
+          <div class="text-base font-bold text-charcoal"><span class="panchang-en">{panchang.var.en}</span><span class="panchang-hi hidden">{panchang.var.hi}</span></div>
         </div>
       </div>
 
-      <!-- Var (Day) -->
-      <div class="bg-white rounded-2xl p-6 shadow-lg shadow-charcoal/5 border border-charcoal/5 mb-8">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 bg-saffron/10 rounded-full flex items-center justify-center">
-            <svg class="w-5 h-5 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          </div>
-          <div class="text-[10px] uppercase tracking-widest font-bold text-charcoal/40" data-label-en="Day (Var)" data-label-hi="वार">Day (Var)</div>
-        </div>
-        <div class="text-lg font-bold text-charcoal">
-          <span class="panchang-en">{panchang.var.en}</span>
-          <span class="panchang-hi hidden">{panchang.var.hi}</span>
+      <!-- Explore more tools -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        <a href="/" class="text-xs bg-maroon/5 text-maroon px-3 py-1.5 rounded-full font-medium hover:bg-maroon/10 transition-colors i18n" data-en="&#x2190; Daily Horoscope" data-hi="&#x2190; &#x0926;&#x0948;&#x0928;&#x093F;&#x0915; &#x0930;&#x093E;&#x0936;&#x093F;&#x092B;&#x0932;">&larr; Daily Horoscope</a>
+        <a href="/rashi-calculator" class="text-xs bg-maroon/5 text-maroon px-3 py-1.5 rounded-full font-medium hover:bg-maroon/10 transition-colors i18n" data-en="Find Your Rashi &#x2192;" data-hi="&#x0905;&#x092A;&#x0928;&#x0940; &#x0930;&#x093E;&#x0936;&#x093F; &#x091C;&#x093E;&#x0928;&#x0947;&#x0902; &#x2192;">Find Your Rashi &rarr;</a>
+      </div>
+
+      <!-- What is Panchang (SEO/AEO content) -->
+      <div class="mb-10">
+        <h2 class="text-lg sm:text-xl font-bold text-charcoal mb-2 i18n" data-en="Understanding Today's Panchang" data-hi="&#x0906;&#x091C; &#x0915;&#x093E; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0938;&#x092E;&#x091D;&#x0947;&#x0902;">Understanding Today's Panchang</h2>
+        <div class="w-10 h-0.5 bg-gold rounded-full mb-4"></div>
+        <div class="text-sm text-charcoal/55 leading-relaxed space-y-3">
+          <p class="i18n" data-en="Panchang (also spelled Panchangam) is the Vedic Hindu calendar that guides daily life decisions. The word comes from Sanskrit: 'Pancha' meaning five and 'Anga' meaning limb. These five limbs are Tithi, Nakshatra, Yoga, Karana, and Var." data-hi="&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0935;&#x0948;&#x0926;&#x093F;&#x0915; &#x0939;&#x093F;&#x0902;&#x0926;&#x0942; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0939;&#x0948; &#x091C;&#x094B; &#x0926;&#x0948;&#x0928;&#x093F;&#x0915; &#x091C;&#x0940;&#x0935;&#x0928; &#x0915;&#x0947; &#x0928;&#x093F;&#x0930;&#x094D;&#x0923;&#x092F;&#x094B;&#x0902; &#x0915;&#x093E; &#x092E;&#x093E;&#x0930;&#x094D;&#x0917;&#x0926;&#x0930;&#x094D;&#x0936;&#x0928; &#x0915;&#x0930;&#x0924;&#x093E; &#x0939;&#x0948;&#x0964; &#x092F;&#x0939; &#x0936;&#x092C;&#x094D;&#x0926; &#x0938;&#x0902;&#x0938;&#x094D;&#x0915;&#x0943;&#x0924; &#x0938;&#x0947; &#x0906;&#x0924;&#x093E; &#x0939;&#x0948;: '&#x092A;&#x0902;&#x091A;' &#x092E;&#x0924;&#x0932;&#x092C; &#x092A;&#x093E;&#x0902;&#x091A; &#x0914;&#x0930; '&#x0905;&#x0902;&#x0917;' &#x092E;&#x0924;&#x0932;&#x092C; &#x0905;&#x0902;&#x0917;&#x0964; &#x092F;&#x0947; &#x092A;&#x093E;&#x0902;&#x091A; &#x0905;&#x0902;&#x0917; &#x0939;&#x0948;&#x0902;: &#x0924;&#x093F;&#x0925;&#x093F;, &#x0928;&#x0915;&#x094D;&#x0937;&#x0924;&#x094D;&#x0930;, &#x092F;&#x094B;&#x0917;, &#x0915;&#x0930;&#x0923; &#x0914;&#x0930; &#x0935;&#x093E;&#x0930;&#x0964;">Panchang (also spelled Panchangam) is the Vedic Hindu calendar that guides daily life decisions. The word comes from Sanskrit: 'Pancha' meaning five and 'Anga' meaning limb. These five limbs are Tithi, Nakshatra, Yoga, Karana, and Var.</p>
+          <p class="i18n" data-en="Millions of Hindus check the Panchang daily before starting important work, planning travel, scheduling ceremonies, or choosing auspicious timings (muhurta). HoroTalk computes these values from actual planetary positions, not from pre-published tables, ensuring accuracy for your specific location and date." data-hi="&#x0915;&#x0930;&#x094B;&#x0921;&#x093C;&#x094B;&#x0902; &#x0939;&#x093F;&#x0902;&#x0926;&#x0942; &#x092E;&#x0939;&#x0924;&#x094D;&#x0935;&#x092A;&#x0942;&#x0930;&#x094D;&#x0923; &#x0915;&#x093E;&#x0930;&#x094D;&#x092F; &#x0936;&#x0941;&#x0930;&#x0942; &#x0915;&#x0930;&#x0928;&#x0947;, &#x092F;&#x093E;&#x0924;&#x094D;&#x0930;&#x093E; &#x0915;&#x0940; &#x092F;&#x094B;&#x091C;&#x0928;&#x093E; &#x092C;&#x0928;&#x093E;&#x0928;&#x0947;, &#x0905;&#x0928;&#x0941;&#x0937;&#x094D;&#x0920;&#x093E;&#x0928; &#x0928;&#x093F;&#x0930;&#x094D;&#x0927;&#x093E;&#x0930;&#x093F;&#x0924; &#x0915;&#x0930;&#x0928;&#x0947; &#x0938;&#x0947; &#x092A;&#x0939;&#x0932;&#x0947; &#x092A;&#x094D;&#x0930;&#x0924;&#x093F;&#x0926;&#x093F;&#x0928; &#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x0926;&#x0947;&#x0916;&#x0924;&#x0947; &#x0939;&#x0948;&#x0902;&#x0964; HoroTalk &#x0935;&#x093E;&#x0938;&#x094D;&#x0924;&#x0935;&#x093F;&#x0915; &#x0917;&#x094D;&#x0930;&#x0939; &#x0938;&#x094D;&#x0925;&#x093F;&#x0924;&#x093F; &#x0938;&#x0947; &#x0917;&#x0923;&#x0928;&#x093E; &#x0915;&#x0930;&#x0924;&#x093E; &#x0939;&#x0948;, &#x092A;&#x0942;&#x0930;&#x094D;&#x0935;-&#x092A;&#x094D;&#x0930;&#x0915;&#x093E;&#x0936;&#x093F;&#x0924; &#x0924;&#x093E;&#x0932;&#x093F;&#x0915;&#x093E;&#x0913;&#x0902; &#x0938;&#x0947; &#x0928;&#x0939;&#x0940;&#x0902;&#x0964;">Millions of Hindus check the Panchang daily before starting important work, planning travel, scheduling ceremonies, or choosing auspicious timings (muhurta). HoroTalk computes these values from actual planetary positions, not from pre-published tables, ensuring accuracy for your specific location and date.</p>
         </div>
       </div>
 
-      <!-- Info note -->
-      <div class="bg-cream rounded-2xl p-5 border-l-4 border-saffron mb-8">
-        <p class="text-sm text-charcoal/70 leading-relaxed" id="info-text">
-          Panchang data is computed daily using real planetary positions via Swiss Ephemeris-grade astronomical algorithms with Lahiri ayanamsa. Updated automatically every morning.
-        </p>
+      <!-- FAQ -->
+      <div class="mb-10">
+        <h2 class="text-lg sm:text-xl font-bold text-charcoal mb-2 i18n" data-en="Panchang FAQ" data-hi="&#x092A;&#x0902;&#x091A;&#x093E;&#x0902;&#x0917; &#x092A;&#x094D;&#x0930;&#x0936;&#x094D;&#x0928;&#x094B;&#x0924;&#x094D;&#x0924;&#x0930;">Panchang FAQ</h2>
+        <div class="w-10 h-0.5 bg-gold rounded-full mb-4"></div>
+        <div class="space-y-2">
+          {panchangFaqs.map(faq => (
+            <details class="group bg-white rounded-xl border border-charcoal/5 shadow-sm">
+              <summary class="px-4 py-3 cursor-pointer flex justify-between items-center text-sm font-semibold text-charcoal list-none">
+                <span class="i18n" data-en={faq.q.en} data-hi={faq.q.hi}>{faq.q.en}</span>
+                <svg class="w-4 h-4 text-charcoal/30 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-4 pb-3 text-xs text-charcoal/55 leading-relaxed">
+                <span class="i18n" data-en={faq.a.en} data-hi={faq.a.hi}>{faq.a.en}</span>
+              </div>
+            </details>
+          ))}
+        </div>
       </div>
 
-      <!-- WhatsApp CTA -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-charcoal/5 text-center">
-        <h3 class="text-lg sm:text-xl font-bold text-charcoal mb-2" id="cta-title">Need Personalized Muhurta?</h3>
-        <p class="text-sm text-charcoal/60 mb-5" id="cta-sub">
-          Get auspicious timings based on your birth chart for important events — marriage, business, travel, and more.
-        </p>
-        <a
-          href={waLink('Hi HoroTalk, I need a personalized muhurta')}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:bg-[#25D366]/90 transition-all shadow-lg shadow-[#25D366]/20 active:scale-95"
-        >
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span id="cta-btn-text">Ask HoroTalk for Muhurta</span>
+      <!-- CTA -->
+      <div class="bg-maroon rounded-2xl p-6 sm:p-8 text-center shadow-xl shadow-maroon/20">
+        <h3 class="text-lg font-bold text-white mb-2 i18n" data-en="Need Personalized Muhurta?" data-hi="&#x0935;&#x094D;&#x092F;&#x0915;&#x094D;&#x0924;&#x093F;&#x0917;&#x0924; &#x092E;&#x0941;&#x0939;&#x0942;&#x0930;&#x094D;&#x0924; &#x091A;&#x093E;&#x0939;&#x093F;&#x090F;?">Need Personalized Muhurta?</h3>
+        <p class="text-xs text-white/60 mb-5 i18n" data-en="Get auspicious timings based on your birth chart for marriage, business, travel, and more." data-hi="&#x0935;&#x093F;&#x0935;&#x093E;&#x0939;, &#x0935;&#x094D;&#x092F;&#x093E;&#x092A;&#x093E;&#x0930;, &#x092F;&#x093E;&#x0924;&#x094D;&#x0930;&#x093E; &#x0915;&#x0947; &#x0932;&#x093F;&#x090F; &#x0906;&#x092A;&#x0915;&#x0940; &#x0915;&#x0941;&#x0902;&#x0921;&#x0932;&#x0940; &#x0915;&#x0947; &#x0906;&#x0927;&#x093E;&#x0930; &#x092A;&#x0930; &#x0936;&#x0941;&#x092D; &#x0938;&#x092E;&#x092F; &#x092A;&#x094D;&#x0930;&#x093E;&#x092A;&#x094D;&#x0924; &#x0915;&#x0930;&#x0947;&#x0902;&#x0964;">Get auspicious timings based on your birth chart for marriage, business, travel, and more.</p>
+        <a href={waLink('Hi HoroTalk, I need a personalized muhurta')} target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold px-7 py-3.5 rounded-lg text-sm transition-all active:scale-[0.97] shadow-lg">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="i18n" data-en="Ask HoroTalk for Muhurta" data-hi="HoroTalk &#x0938;&#x0947; &#x092E;&#x0941;&#x0939;&#x0942;&#x0930;&#x094D;&#x0924; &#x092A;&#x0942;&#x091B;&#x0947;&#x0902;">Ask HoroTalk for Muhurta</span>
         </a>
       </div>
 
     </div>
   </section>
 
+  <style>
+    details summary::-webkit-details-marker { display: none; }
+  </style>
+
 </Layout>
 
 <script>
-  // Language toggle support
   window.addEventListener('lang-change', ((e: CustomEvent) => {
     const lang = e.detail.lang as 'en' | 'hi';
-
-    // Toggle panchang values
     document.querySelectorAll('.panchang-en').forEach(el => el.classList.toggle('hidden', lang === 'hi'));
     document.querySelectorAll('.panchang-hi').forEach(el => el.classList.toggle('hidden', lang === 'en'));
-
-    // Toggle date
     document.getElementById('date-en')?.classList.toggle('hidden', lang === 'hi');
     document.getElementById('date-hi')?.classList.toggle('hidden', lang === 'en');
-
-    // Toggle labels
     document.querySelectorAll('[data-label-en]').forEach(el => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.textContent = lang === 'hi' ? (htmlEl.dataset.labelHi || '') : (htmlEl.dataset.labelEn || '');
+      const h = el as HTMLElement;
+      h.textContent = lang === 'hi' ? (h.dataset.labelHi || '') : (h.dataset.labelEn || '');
     });
   }) as EventListener);
 </script>
