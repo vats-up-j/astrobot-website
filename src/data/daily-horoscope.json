@@ -1,37 +1,37 @@
 {
-  "date": "2026-06-30",
+  "date": "2026-07-01",
   "panchang": {
     "tithi": {
-      "en": "Krishna Pratipada",
-      "hi": "कृष्ण प्रतिपदा"
+      "en": "Krishna Dwitiya",
+      "hi": "कृष्ण द्वितीया"
     },
     "nakshatra": {
-      "en": "Purva Ashadha",
-      "hi": "पूर्वाषाढ़ा"
+      "en": "Uttara Ashadha",
+      "hi": "उत्तराषाढ़ा"
     },
     "yoga": {
-      "en": "Indra",
-      "hi": "इन्द्र"
+      "en": "Vaidhriti",
+      "hi": "वैधृति"
     },
     "karana": {
-      "en": "Balava",
-      "hi": "बालव"
+      "en": "Taitila",
+      "hi": "तैतिल"
     },
     "var": {
-      "en": "Tuesday",
-      "hi": "मंगलवार"
+      "en": "Wednesday",
+      "hi": "बुधवार"
     },
     "rahuKaal": {
-      "start": "3:00 PM",
-      "end": "4:30 PM"
+      "start": "12:00 PM",
+      "end": "1:30 PM"
     },
     "verdict": {
       "en": "Moderate",
       "hi": "सामान्य"
     },
     "goodFor": {
-      "en": "Starting new ventures, travel",
-      "hi": "नए कार्य शुरू करना, यात्रा"
+      "en": "Marriage preparations, celebrations",
+      "hi": "विवाह की तैयारी, उत्सव"
     },
     "avoidToday": {
       "en": "No major restrictions today. Proceed with awareness.",
@@ -43,12 +43,12 @@
     {
       "id": "aries",
       "guidance": {
-        "en": "Luck is on your side today, especially in matters of wisdom and growth. A teacher, mentor, or spiritual guide may enter your life. Be open to perspectives different from your own. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज भाग्य आपके पक्ष में है, खासकर ज्ञान और विकास के मामलों में। एक शिक्षक, गुरु, या आध्यात्मिक मार्गदर्शक आपके जीवन में आ सकते हैं। अपने से भिन्न दृष्टिकोणों के लिए खुले रहें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Career matters demand your attention today. A promotion, recognition, or important meeting could shape your professional trajectory. Dress well and present your best self. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज करियर के मामले आपका ध्यान मांगते हैं। पदोन्नति, मान्यता, या एक महत्वपूर्ण बैठक आपके पेशेवर मार्ग को आकार दे सकती है। अच्छे से तैयार हों और अपना सर्वश्रेष्ठ प्रस्तुत करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
-        "career": 4,
+        "career": 5,
         "love": 3,
         "health": 3,
         "finance": 3
@@ -61,8 +61,8 @@
     {
       "id": "taurus",
       "guidance": {
-        "en": "Transformation is in the air. Let go of what no longer serves you. Whether it is a habit, a belief, or a relationship dynamic, releasing the old makes room for something better. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "परिवर्तन हवा में है। जो अब काम नहीं आता उसे जाने दें। चाहे कोई आदत हो, विश्वास हो, या रिश्ते की गतिशीलता, पुराने को छोड़ना बेहतर के लिए जगह बनाता है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Luck is on your side today, especially in matters of wisdom and growth. A teacher, mentor, or spiritual guide may enter your life. Be open to perspectives different from your own. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज भाग्य आपके पक्ष में है, खासकर ज्ञान और विकास के मामलों में। एक शिक्षक, गुरु, या आध्यात्मिक मार्गदर्शक आपके जीवन में आ सकते हैं। अपने से भिन्न दृष्टिकोणों के लिए खुले रहें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
@@ -79,13 +79,13 @@
     {
       "id": "gemini",
       "guidance": {
-        "en": "Relationships are in the spotlight today. If you are in a partnership, give your partner extra attention. Single? Keep your eyes open because a meaningful connection is possible today. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज रिश्ते सुर्खियों में हैं। अगर आप किसी रिश्ते में हैं, तो अपने साथी को अतिरिक्त ध्यान दें। सिंगल हैं? आंखें खुली रखें क्योंकि आज एक सार्थक जुड़ाव संभव है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Transformation is in the air. Let go of what no longer serves you. Whether it is a habit, a belief, or a relationship dynamic, releasing the old makes room for something better. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "परिवर्तन हवा में है। जो अब काम नहीं आता उसे जाने दें। चाहे कोई आदत हो, विश्वास हो, या रिश्ते की गतिशीलता, पुराने को छोड़ना बेहतर के लिए जगह बनाता है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
         "career": 3,
-        "love": 4,
+        "love": 3,
         "health": 3,
         "finance": 5
       },
@@ -97,13 +97,13 @@
     {
       "id": "cancer",
       "guidance": {
-        "en": "Your ability to solve problems is sharp today. Tackle that difficult task you have been avoiding. Health-wise, stay hydrated and take breaks. Helping a colleague will bring unexpected rewards. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज आपकी समस्या-समाधान क्षमता तेज है। उस कठिन काम से निपटें जिसे टाल रहे थे। स्वास्थ्य के लिए पानी पीते रहें और ब्रेक लें। किसी सहकर्मी की मदद अप्रत्याशित लाभ लाएगी। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Relationships are in the spotlight today. If you are in a partnership, give your partner extra attention. Single? Keep your eyes open because a meaningful connection is possible today. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज रिश्ते सुर्खियों में हैं। अगर आप किसी रिश्ते में हैं, तो अपने साथी को अतिरिक्त ध्यान दें। सिंगल हैं? आंखें खुली रखें क्योंकि आज एक सार्थक जुड़ाव संभव है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
         "career": 3,
-        "love": 4,
+        "love": 5,
         "health": 4,
         "finance": 2
       },
@@ -115,8 +115,8 @@
     {
       "id": "leo",
       "guidance": {
-        "en": "Express yourself boldly today. Your creative ideas have real potential. Investments in education, children, or speculative ventures may show promise. Follow your heart. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज बेझिझक अपनी बात कहें। आपके रचनात्मक विचारों में वास्तविक संभावना है। शिक्षा, बच्चों, या सट्टा उद्यमों में निवेश आशाजनक हो सकता है। दिल की सुनें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Your ability to solve problems is sharp today. Tackle that difficult task you have been avoiding. Health-wise, stay hydrated and take breaks. Helping a colleague will bring unexpected rewards. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपकी समस्या-समाधान क्षमता तेज है। उस कठिन काम से निपटें जिसे टाल रहे थे। स्वास्थ्य के लिए पानी पीते रहें और ब्रेक लें। किसी सहकर्मी की मदद अप्रत्याशित लाभ लाएगी। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
@@ -133,8 +133,8 @@
     {
       "id": "virgo",
       "guidance": {
-        "en": "Home and family take priority today. If there is tension at home, this is a good time to address it calmly. Your emotional intuition is strong, so trust what you feel. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज घर और परिवार प्राथमिकता पर हैं। अगर घर में तनाव है, तो शांति से संबोधित करने का यह अच्छा समय है। आपकी भावनात्मक अंतर्ज्ञान मजबूत है, इसलिए जो महसूस करें उस पर भरोसा करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Express yourself boldly today. Your creative ideas have real potential. Investments in education, children, or speculative ventures may show promise. Follow your heart. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज बेझिझक अपनी बात कहें। आपके रचनात्मक विचारों में वास्तविक संभावना है। शिक्षा, बच्चों, या सट्टा उद्यमों में निवेश आशाजनक हो सकता है। दिल की सुनें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
@@ -151,8 +151,8 @@
     {
       "id": "libra",
       "guidance": {
-        "en": "Stay connected with siblings and close friends today. An unexpected call or message may open doors you did not expect. Your writing and verbal skills are especially sharp. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज भाई-बहनों और करीबी दोस्तों से जुड़े रहें। एक अप्रत्याशित कॉल या संदेश ऐसे दरवाजे खोल सकता है जिसकी उम्मीद नहीं थी। आपके लेखन और वाचन कौशल विशेष रूप से तेज हैं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Home and family take priority today. If there is tension at home, this is a good time to address it calmly. Your emotional intuition is strong, so trust what you feel. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज घर और परिवार प्राथमिकता पर हैं। अगर घर में तनाव है, तो शांति से संबोधित करने का यह अच्छा समय है। आपकी भावनात्मक अंतर्ज्ञान मजबूत है, इसलिए जो महसूस करें उस पर भरोसा करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
@@ -169,15 +169,15 @@
     {
       "id": "scorpio",
       "guidance": {
-        "en": "Your income potential looks favorable today. If you have been negotiating a deal or waiting for a payment, expect positive movement. Spend quality time with loved ones this evening. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज आपकी आय की संभावना अनुकूल दिखती है। अगर कोई सौदा या भुगतान का इंतजार था, तो सकारात्मक प्रगति की उम्मीद रखें। शाम को अपनों के साथ समय बिताएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Stay connected with siblings and close friends today. An unexpected call or message may open doors you did not expect. Your writing and verbal skills are especially sharp. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज भाई-बहनों और करीबी दोस्तों से जुड़े रहें। एक अप्रत्याशित कॉल या संदेश ऐसे दरवाजे खोल सकता है जिसकी उम्मीद नहीं थी। आपके लेखन और वाचन कौशल विशेष रूप से तेज हैं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 87,
       "ratings": {
         "career": 2,
         "love": 3,
         "health": 3,
-        "finance": 4
+        "finance": 3
       },
       "luckyColor": {
         "en": "Red",
@@ -187,15 +187,15 @@
     {
       "id": "sagittarius",
       "guidance": {
-        "en": "Your confidence and energy are at a peak today. People around you will notice your presence and respond positively. If you have been putting off a personal decision, this is the day to act on it. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज आपका आत्मविश्वास और ऊर्जा चरम पर है। आपके आसपास के लोग आपकी उपस्थिति को महसूस करेंगे। अगर कोई व्यक्तिगत फैसला टाल रहे थे, तो आज कदम उठाएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Your income potential looks favorable today. If you have been negotiating a deal or waiting for a payment, expect positive movement. Spend quality time with loved ones this evening. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपकी आय की संभावना अनुकूल दिखती है। अगर कोई सौदा या भुगतान का इंतजार था, तो सकारात्मक प्रगति की उम्मीद रखें। शाम को अपनों के साथ समय बिताएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
         "career": 3,
         "love": 3,
         "health": 4,
-        "finance": 4
+        "finance": 5
       },
       "luckyColor": {
         "en": "Yellow",
@@ -205,14 +205,14 @@
     {
       "id": "capricorn",
       "guidance": {
-        "en": "Behind-the-scenes work pays off today. Not everything needs to be visible. Focus on preparation, research, and inner work. A retreat or quiet day at home will recharge you more than socializing. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज पर्दे के पीछे का काम फल देता है। हर चीज को दिखने की जरूरत नहीं। तैयारी, शोध और आंतरिक कार्य पर ध्यान दें। एकांतवास या घर पर शांत दिन आपको सामाजिकता से ज्यादा रिचार्ज करेगा। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Your confidence and energy are at a peak today. People around you will notice your presence and respond positively. If you have been putting off a personal decision, this is the day to act on it. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपका आत्मविश्वास और ऊर्जा चरम पर है। आपके आसपास के लोग आपकी उपस्थिति को महसूस करेंगे। अगर कोई व्यक्तिगत फैसला टाल रहे थे, तो आज कदम उठाएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
         "career": 3,
         "love": 5,
-        "health": 3,
+        "health": 4,
         "finance": 2
       },
       "luckyColor": {
@@ -223,8 +223,8 @@
     {
       "id": "aquarius",
       "guidance": {
-        "en": "Your dreams and long-term aspirations get a boost today. Share your vision with people who support you. A friend may introduce you to someone who can help make those dreams real. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज आपके सपनों और दीर्घकालिक आकांक्षाओं को बढ़ावा मिलता है। अपना दृष्टिकोण उन लोगों के साथ साझा करें जो आपका समर्थन करते हैं। कोई दोस्त ऐसे व्यक्ति से मिलवा सकता है जो उन सपनों को साकार करने में मदद करे। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Behind-the-scenes work pays off today. Not everything needs to be visible. Focus on preparation, research, and inner work. A retreat or quiet day at home will recharge you more than socializing. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज पर्दे के पीछे का काम फल देता है। हर चीज को दिखने की जरूरत नहीं। तैयारी, शोध और आंतरिक कार्य पर ध्यान दें। एकांतवास या घर पर शांत दिन आपको सामाजिकता से ज्यादा रिचार्ज करेगा। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
@@ -241,12 +241,12 @@
     {
       "id": "pisces",
       "guidance": {
-        "en": "Career matters demand your attention today. A promotion, recognition, or important meeting could shape your professional trajectory. Dress well and present your best self. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
-        "hi": "आज करियर के मामले आपका ध्यान मांगते हैं। पदोन्नति, मान्यता, या एक महत्वपूर्ण बैठक आपके पेशेवर मार्ग को आकार दे सकती है। अच्छे से तैयार हों और अपना सर्वश्रेष्ठ प्रस्तुत करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
+        "en": "Your dreams and long-term aspirations get a boost today. Share your vision with people who support you. A friend may introduce you to someone who can help make those dreams real. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपके सपनों और दीर्घकालिक आकांक्षाओं को बढ़ावा मिलता है। अपना दृष्टिकोण उन लोगों के साथ साझा करें जो आपका समर्थन करते हैं। कोई दोस्त ऐसे व्यक्ति से मिलवा सकता है जो उन सपनों को साकार करने में मदद करे। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
-        "career": 4,
+        "career": 3,
         "love": 3,
         "health": 3,
         "finance": 3
