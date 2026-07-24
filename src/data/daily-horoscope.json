@@ -1,55 +1,58 @@
 {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "panchang": {
     "tithi": {
-      "en": "Shukla Dashami",
-      "hi": "शुक्ल दशमी"
+      "en": "Shukla Ekadashi",
+      "hi": "शुक्ल एकादशी"
     },
     "nakshatra": {
-      "en": "Vishakha",
-      "hi": "विशाखा"
+      "en": "Anuradha",
+      "hi": "अनुराधा"
     },
     "yoga": {
-      "en": "Shubha",
-      "hi": "शुभ"
+      "en": "Shukla",
+      "hi": "शुक्ल"
     },
     "karana": {
-      "en": "Taitila",
-      "hi": "तैतिल"
+      "en": "Vanija",
+      "hi": "वणिज"
     },
     "var": {
-      "en": "Thursday",
-      "hi": "गुरुवार"
+      "en": "Friday",
+      "hi": "शुक्रवार"
     },
     "rahuKaal": {
-      "start": "1:30 PM",
-      "end": "3:00 PM"
+      "start": "10:30 AM",
+      "end": "12:00 PM"
     },
     "verdict": {
-      "en": "Moderate",
-      "hi": "सामान्य"
+      "en": "Highly Auspicious",
+      "hi": "अत्यंत शुभ"
     },
     "goodFor": {
-      "en": "Business deals, property matters",
-      "hi": "व्यापारिक सौदे, संपत्ति"
+      "en": "Spiritual practices, fasting, charity",
+      "hi": "आध्यात्मिक अभ्यास, उपवास, दान"
     },
     "avoidToday": {
       "en": "No major restrictions today. Proceed with awareness.",
       "hi": "आज कोई बड़ा प्रतिबंध नहीं। जागरूकता के साथ आगे बढ़ें।"
     },
-    "specialDay": null
+    "specialDay": {
+      "en": "Ekadashi (Fasting Day)",
+      "hi": "एकादशी (व्रत का दिन)"
+    }
   },
   "signs": [
     {
       "id": "aries",
       "guidance": {
-        "en": "Business partnerships and personal relationships both benefit from honest conversation today. If there is a pending agreement or contract, today favors signing it. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "व्यापारिक साझेदारी और व्यक्तिगत रिश्ते दोनों आज ईमानदार बातचीत से लाभान्वित होंगे। अगर कोई लंबित समझौता या अनुबंध है, तो आज हस्ताक्षर करना अनुकूल है। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Transformation is in the air. Let go of what no longer serves you. Whether it is a habit, a belief, or a relationship dynamic, releasing the old makes room for something better. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "परिवर्तन हवा में है। जो अब काम नहीं आता उसे जाने दें। चाहे कोई आदत हो, विश्वास हो, या रिश्ते की गतिशीलता, पुराने को छोड़ना बेहतर के लिए जगह बनाता है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
         "career": 4,
-        "love": 4,
+        "love": 3,
         "health": 3,
         "finance": 3
       },
@@ -61,8 +64,8 @@
     {
       "id": "taurus",
       "guidance": {
-        "en": "Service and discipline are your themes today. Focus on your to-do list and check off those overdue items. A visit to a doctor or starting a health routine is well-timed. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "सेवा और अनुशासन आज आपके विषय हैं। अपनी कार्य सूची पर ध्यान दें और लंबित मदों को पूरा करें। डॉक्टर से मिलना या स्वास्थ्य दिनचर्या शुरू करना सही समय है। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Relationships are in the spotlight today. If you are in a partnership, give your partner extra attention. Single? Keep your eyes open because a meaningful connection is possible today. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज रिश्ते सुर्खियों में हैं। अगर आप किसी रिश्ते में हैं, तो अपने साथी को अतिरिक्त ध्यान दें। सिंगल हैं? आंखें खुली रखें क्योंकि आज एक सार्थक जुड़ाव संभव है। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 87,
       "ratings": {
@@ -79,8 +82,8 @@
     {
       "id": "gemini",
       "guidance": {
-        "en": "Creativity flows freely today. Whether it is a work project, a hobby, or time with children, bring your playful side forward. Romance is also favored, so surprise your partner. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज रचनात्मकता स्वतंत्र रूप से बह रही है। काम का प्रोजेक्ट हो, शौक हो, या बच्चों के साथ समय, अपना मजेदार पक्ष सामने लाएं। प्रेम भी अनुकूल है, तो अपने साथी को सरप्राइज दें। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Your ability to solve problems is sharp today. Tackle that difficult task you have been avoiding. Health-wise, stay hydrated and take breaks. Helping a colleague will bring unexpected rewards. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपकी समस्या-समाधान क्षमता तेज है। उस कठिन काम से निपटें जिसे टाल रहे थे। स्वास्थ्य के लिए पानी पीते रहें और ब्रेक लें। किसी सहकर्मी की मदद अप्रत्याशित लाभ लाएगी। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
@@ -97,8 +100,8 @@
     {
       "id": "cancer",
       "guidance": {
-        "en": "Spend time creating comfort in your living space. Small improvements to your home environment will lift your mood. A parent or elder may share wisdom that helps you today. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "अपने रहने की जगह को बेहतर बनाने में समय लगाएं। घर के माहौल में छोटे सुधार आपका मूड बढ़ाएंगे। कोई बड़ा या माता-पिता ऐसी बात बता सकते हैं जो आज काम आए। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Express yourself boldly today. Your creative ideas have real potential. Investments in education, children, or speculative ventures may show promise. Follow your heart. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज बेझिझक अपनी बात कहें। आपके रचनात्मक विचारों में वास्तविक संभावना है। शिक्षा, बच्चों, या सट्टा उद्यमों में निवेश आशाजनक हो सकता है। दिल की सुनें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
@@ -115,14 +118,14 @@
     {
       "id": "leo",
       "guidance": {
-        "en": "Today favors learning and sharing knowledge. Sign up for that course, read that article, or teach someone what you know. Short travels are also well-starred. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज सीखने और ज्ञान बांटने का दिन है। उस कोर्स में भर्ती हों, वो लेख पढ़ें, या किसी को सिखाएं। छोटी यात्राएं भी शुभ हैं। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Home and family take priority today. If there is tension at home, this is a good time to address it calmly. Your emotional intuition is strong, so trust what you feel. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज घर और परिवार प्राथमिकता पर हैं। अगर घर में तनाव है, तो शांति से संबोधित करने का यह अच्छा समय है। आपकी भावनात्मक अंतर्ज्ञान मजबूत है, इसलिए जो महसूस करें उस पर भरोसा करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
         "career": 3,
         "love": 3,
-        "health": 3,
+        "health": 4,
         "finance": 3
       },
       "luckyColor": {
@@ -133,15 +136,15 @@
     {
       "id": "virgo",
       "guidance": {
-        "en": "Financial matters need your attention today. Review any pending payments or investments before making new commitments. A conversation with a family member could bring good news about money. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज वित्तीय मामलों पर ध्यान दें। नई प्रतिबद्धताओं से पहले बकाया भुगतान या निवेश की समीक्षा करें। परिवार के किसी सदस्य से बातचीत पैसों के बारे में अच्छी खबर ला सकती है। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Stay connected with siblings and close friends today. An unexpected call or message may open doors you did not expect. Your writing and verbal skills are especially sharp. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज भाई-बहनों और करीबी दोस्तों से जुड़े रहें। एक अप्रत्याशित कॉल या संदेश ऐसे दरवाजे खोल सकता है जिसकी उम्मीद नहीं थी। आपके लेखन और वाचन कौशल विशेष रूप से तेज हैं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
         "career": 3,
         "love": 3,
         "health": 4,
-        "finance": 4
+        "finance": 3
       },
       "luckyColor": {
         "en": "Green",
@@ -151,8 +154,8 @@
     {
       "id": "libra",
       "guidance": {
-        "en": "A strong day for personal initiatives. Your natural charm is working in your favor, making this an ideal time for interviews, presentations, or meeting new people. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "व्यक्तिगत पहल के लिए शानदार दिन। आपका प्राकृतिक आकर्षण आपके पक्ष में है। इंटरव्यू, प्रेजेंटेशन या नए लोगों से मिलने का बढ़िया समय। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Your income potential looks favorable today. If you have been negotiating a deal or waiting for a payment, expect positive movement. Spend quality time with loved ones this evening. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपकी आय की संभावना अनुकूल दिखती है। अगर कोई सौदा या भुगतान का इंतजार था, तो सकारात्मक प्रगति की उम्मीद रखें। शाम को अपनों के साथ समय बिताएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 83,
       "ratings": {
@@ -169,14 +172,14 @@
     {
       "id": "scorpio",
       "guidance": {
-        "en": "Your spiritual side is strong today. Pay attention to your dreams and intuitions. If something feels off, it probably is. Trust your inner voice over external opinions. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज आपका आध्यात्मिक पक्ष मजबूत है। अपने सपनों और अंतर्ज्ञान पर ध्यान दें। अगर कुछ गलत लगता है, तो शायद है। बाहरी राय से ज्यादा अपनी आंतरिक आवाज पर भरोसा करें। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Your confidence and energy are at a peak today. People around you will notice your presence and respond positively. If you have been putting off a personal decision, this is the day to act on it. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपका आत्मविश्वास और ऊर्जा चरम पर है। आपके आसपास के लोग आपकी उपस्थिति को महसूस करेंगे। अगर कोई व्यक्तिगत फैसला टाल रहे थे, तो आज कदम उठाएं। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 87,
       "ratings": {
         "career": 3,
         "love": 3,
-        "health": 3,
+        "health": 4,
         "finance": 3
       },
       "luckyColor": {
@@ -187,8 +190,8 @@
     {
       "id": "sagittarius",
       "guidance": {
-        "en": "Social connections bring rewards today. Attend that gathering, respond to that message, or reconnect with an old friend. Your network is your net worth right now. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज सामाजिक संपर्क लाभ लाते हैं। उस मिलन में जाएं, उस संदेश का जवाब दें, या किसी पुराने दोस्त से दोबारा जुड़ें। अभी आपका नेटवर्क आपकी संपत्ति है। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Behind-the-scenes work pays off today. Not everything needs to be visible. Focus on preparation, research, and inner work. A retreat or quiet day at home will recharge you more than socializing. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज पर्दे के पीछे का काम फल देता है। हर चीज को दिखने की जरूरत नहीं। तैयारी, शोध और आंतरिक कार्य पर ध्यान दें। एकांतवास या घर पर शांत दिन आपको सामाजिकता से ज्यादा रिचार्ज करेगा। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
@@ -205,12 +208,12 @@
     {
       "id": "capricorn",
       "guidance": {
-        "en": "Your reputation is your currency today. Every action is being noticed, so make them count. If you have been working toward a goal at work, today brings progress and possibly public acknowledgment. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज आपकी प्रतिष्ठा आपकी मुद्रा है। हर कार्य पर नजर है, तो उन्हें सार्थक बनाएं। अगर काम पर किसी लक्ष्य की ओर बढ़ रहे थे, तो आज प्रगति और संभवतः सार्वजनिक मान्यता मिलेगी। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Your dreams and long-term aspirations get a boost today. Share your vision with people who support you. A friend may introduce you to someone who can help make those dreams real. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज आपके सपनों और दीर्घकालिक आकांक्षाओं को बढ़ावा मिलता है। अपना दृष्टिकोण उन लोगों के साथ साझा करें जो आपका समर्थन करते हैं। कोई दोस्त ऐसे व्यक्ति से मिलवा सकता है जो उन सपनों को साकार करने में मदद करे। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
-        "career": 4,
+        "career": 3,
         "love": 4,
         "health": 3,
         "finance": 3
@@ -223,8 +226,8 @@
     {
       "id": "aquarius",
       "guidance": {
-        "en": "Today favors bold decisions and big-picture thinking. Do not get lost in details. Focus on where you want to be in a year, not what went wrong yesterday. Fortune rewards the brave today. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज साहसिक निर्णय और बड़ी तस्वीर सोचने का दिन है। छोटी-छोटी बातों में न उलझें। इस पर ध्यान दें कि एक साल बाद कहां होना चाहते हैं। आज भाग्य बहादुरों का साथ देता है। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Career matters demand your attention today. A promotion, recognition, or important meeting could shape your professional trajectory. Dress well and present your best self. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज करियर के मामले आपका ध्यान मांगते हैं। पदोन्नति, मान्यता, या एक महत्वपूर्ण बैठक आपके पेशेवर मार्ग को आकार दे सकती है। अच्छे से तैयार हों और अपना सर्वश्रेष्ठ प्रस्तुत करें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 79,
       "ratings": {
@@ -241,8 +244,8 @@
     {
       "id": "pisces",
       "guidance": {
-        "en": "Expect the unexpected today. Changes that seem disruptive now will prove beneficial in the long run. Trust the process. If someone owes you money, today is a good day to follow up. A practical day for getting things done. No dramatic highs or lows expected. Focus on execution over planning.",
-        "hi": "आज अप्रत्याशित की उम्मीद करें। जो बदलाव अभी परेशान करने वाले लगते हैं, वे लंबे समय में फायदेमंद साबित होंगे। प्रक्रिया पर भरोसा करें। अगर किसी से पैसे लेने हैं, तो आज फॉलो अप करें। काम निपटाने का व्यावहारिक दिन। कोई नाटकीय उतार-चढ़ाव अपेक्षित नहीं। योजना बनाने से ज्यादा क्रियान्वयन पर ध्यान दें।"
+        "en": "Luck is on your side today, especially in matters of wisdom and growth. A teacher, mentor, or spiritual guide may enter your life. Be open to perspectives different from your own. Neither strong winds nor calm seas today. Use this stable energy to catch up on pending work and strengthen your foundation.",
+        "hi": "आज भाग्य आपके पक्ष में है, खासकर ज्ञान और विकास के मामलों में। एक शिक्षक, गुरु, या आध्यात्मिक मार्गदर्शक आपके जीवन में आ सकते हैं। अपने से भिन्न दृष्टिकोणों के लिए खुले रहें। आज न तेज हवाएं हैं न शांत समुद्र। इस स्थिर ऊर्जा का उपयोग लंबित काम निपटाने और अपनी नींव मजबूत करने में करें।"
       },
       "probability": 75,
       "ratings": {
